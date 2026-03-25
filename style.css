@@ -1,0 +1,272 @@
+/* ---------- RESET ---------- */
+/* Applies box-sizing to all elements so padding and borders are included in width/height calculations */
+* {
+  box-sizing: border-box;
+}
+
+/* ---------- BASE PAGE STYLING ---------- */
+body {
+  margin: 0; /* Removes default browser spacing */
+  font-family: Arial, sans-serif; /* Main font for the site */
+  background: #030303; /* Very dark background */
+  color: #e5e5e5; /* Light text colour for contrast */
+}
+
+/* ---------- LOGIN PAGE ---------- */
+.login-body {
+  min-height: 100vh; /* Makes the page at least the full height of the screen */
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  background: #030303; /* Dark background for login page */
+}
+
+.login-container {
+  width: 100%; /* Takes full available width */
+  max-width: 400px; /* Prevents the login area becoming too wide */
+  padding: 20px; /* Space around the login box */
+}
+
+.login-card {
+  width: 100%; /* Makes the card fill the container */
+  padding: 30px; /* Inner space */
+  border: 1px solid #222; /* Thin border for minimalist look */
+  background: #070707; /* Slightly lighter than page background */
+}
+
+.login-card h1 {
+  margin: 0 0 10px; /* Removes top margin and adds spacing below */
+  color: #ff2e2e; /* Red accent colour */
+  font-size: 22px; /* Title size */
+}
+
+.subtitle {
+  font-size: 12px; /* Smaller supporting text */
+  color: #777; /* Muted grey */
+  margin-bottom: 20px; /* Space below subtitle */
+}
+
+/* ---------- FORM ELEMENTS ---------- */
+label {
+  display: block; /* Forces labels onto their own line */
+  margin-bottom: 6px; /* Small gap below labels */
+  color: #ccc; /* Light grey text */
+  font-size: 13px;
+}
+
+input,
+textarea {
+  width: 100%; /* Inputs span full width */
+  padding: 10px; /* Inner spacing */
+  margin-top: 8px; /* Space above input */
+  margin-bottom: 16px; /* Space below input */
+  background: #030303; /* Dark field background */
+  border: 1px solid #222; /* Thin border */
+  color: #fff; /* White typed text */
+  outline: none; /* Removes default focus outline */
+}
+
+input:focus,
+textarea:focus {
+  border-color: #ff2e2e; /* Red border when the field is selected */
+}
+
+/* ---------- BUTTONS ---------- */
+button,
+.card-btn {
+  width: 100%; /* Full width buttons */
+  padding: 10px; /* Button height */
+  background: transparent; /* Transparent background */
+  border: 1px solid #ff2e2e; /* Red outline */
+  color: #ff2e2e; /* Red text */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 12px;
+  letter-spacing: 1px; /* Slightly spaced letters */
+  transition: 0.2s; /* Smooth hover animation */
+  text-decoration: none; /* Removes underline from link-buttons */
+  display: inline-block; /* Allows link to behave like a button */
+  text-align: center; /* Centers button text */
+}
+
+button:hover,
+.card-btn:hover {
+  background: #ff2e2e; /* Fill button with red on hover */
+  color: black; /* Switch text to black for contrast */
+}
+
+/* ---------- SMALL MESSAGE AREAS ---------- */
+.message {
+  min-height: 20px; /* Keeps the area visible even when empty */
+  color: #ff4d4d; /* Red text for error messages */
+}
+
+.demo-box {
+  margin-top: 20px; /* Space above demo login box */
+  padding: 12px; /* Inner spacing */
+  border: 1px solid #111; /* Thin border */
+  background: #050505; /* Slightly different dark tone */
+  font-size: 12px;
+}
+
+/* ---------- HEADER ---------- */
+.site-header {
+  padding: 20px; /* Space around the header */
+  border-bottom: 1px solid #111; /* Thin divider line */
+}
+
+.site-header h1 {
+  margin: 0; /* Removes default heading margin */
+  font-size: 18px;
+  color: #ff2e2e; /* Red brand colour */
+}
+
+/* ---------- NAVIGATION ---------- */
+.navbar {
+  margin-top: 10px; /* Space below the heading block */
+  display: flex; /* Places items in a row */
+  gap: 20px; /* Space between nav items */
+  flex-wrap: wrap; /* Moves items to next line if screen is narrow */
+  align-items: center; /* Vertically aligns items */
+}
+
+.navbar a {
+  text-decoration: none; /* Removes underlines */
+  color: #888; /* Grey nav text */
+  font-size: 12px;
+}
+
+.navbar a:hover {
+  color: #ff2e2e; /* Turns red on hover */
+}
+
+.logout-btn {
+  width: auto; /* Stops logout button taking full width in nav */
+  background: none; /* Transparent background */
+  border: 1px solid #ff2e2e; /* Red border */
+  color: #ff2e2e; /* Red text */
+  padding: 6px 10px; /* Smaller nav-style button */
+  font-size: 11px;
+}
+
+/* ---------- MAIN CONTENT WRAPPER ---------- */
+.page-container {
+  max-width: 900px; /* Restricts content width for readability */
+  margin: 40px auto; /* Centers the container and adds vertical spacing */
+  padding: 0 20px; /* Horizontal padding for small screens */
+}
+
+/* ---------- HERO SECTION ---------- */
+.hero {
+  margin-bottom: 40px; /* Space below intro section */
+}
+
+.hero h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #777; /* Muted paragraph text */
+  font-size: 14px;
+}
+
+/* ---------- CARD GRID ---------- */
+.card-grid {
+  display: grid; /* Grid layout for homepage cards */
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px; /* Space between cards */
+}
+
+.card {
+  padding: 20px; /* Inner spacing */
+  border: 1px solid #111; /* Thin border */
+  background: #050505; /* Dark background */
+}
+
+.card h3 {
+  margin-top: 0; /* Removes default heading top margin */
+  color: #ff2e2e; /* Red card headings */
+}
+
+.card p {
+  font-size: 13px;
+  color: #777;
+}
+
+/* ---------- SINGLE CONTENT BOX ---------- */
+.single-card {
+  padding: 20px;
+  border: 1px solid #111;
+  background: #050505;
+}
+
+.single-card h2 {
+  color: #ff2e2e;
+}
+
+/* ---------- LISTS ---------- */
+ul {
+  padding-left: 18px; /* Indents bullet list */
+}
+
+li {
+  margin-bottom: 6px; /* Space between bullet items */
+  font-size: 13px;
+}
+
+/* ---------- CODE EXAMPLE BOX ---------- */
+.code-box {
+  margin-top: 10px;
+  padding: 10px;
+  background: black; /* Dark code background */
+  border: 1px solid #222;
+  color: #ff2e2e; /* Red code text */
+  font-family: monospace; /* Monospace font for code */
+}
+
+/* ---------- WARNING BOX ---------- */
+.warning-box {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ff2e2e; /* Red outline */
+  color: #ff2e2e; /* Red text */
+  font-size: 12px;
+}
+
+/* ---------- QUIZ ---------- */
+.quiz-question {
+  margin-bottom: 20px; /* Space between questions */
+  border-bottom: 1px solid #111; /* Divider line */
+  padding-bottom: 10px;
+}
+
+.quiz-question h3 {
+  font-size: 14px;
+}
+
+.result-box {
+  margin-top: 20px;
+  color: #ff2e2e; /* Red score text */
+  min-height: 20px; /* Keeps space even before score appears */
+}
+
+/* ---------- FORUM / COMMENTS ---------- */
+.comments-list {
+  margin-top: 20px; /* Space above the posted comments area */
+}
+
+.comment-item {
+  border-bottom: 1px solid #111; /* Divider between comments */
+  padding: 10px 0;
+}
+
+.comment-item strong {
+  color: #ff2e2e; /* Username in red */
+}
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr; /* Stack cards in one column on smaller screens */
+  }
+}
