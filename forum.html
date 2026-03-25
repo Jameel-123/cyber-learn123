@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forum</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <script>
+    // Redirect to login page if the user is not logged in
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <header class="site-header">
+    <div>
+      <h1>CYBERLEARN</h1>
+      <p class="subtitle">Community discussion area</p>
+    </div>
+
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="download.html">Download Tool</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="forum.html">Forum</a>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </nav>
+  </header>
+
+  <main class="page-container">
+    <section class="single-card">
+      <h2>Forum / Comments</h2>
+      <p>Users can type and post comments in this prototype discussion area.</p>
+
+      <form id="commentForm">
+        <label for="commentInput">Write a comment</label>
+
+        <textarea
+          id="commentInput"
+          rows="5"
+          placeholder="Write your comment here..."
+        ></textarea>
+
+        <button type="submit">Post Comment</button>
+      </form>
+
+      <div id="commentsList" class="comments-list">
+        <!-- Existing starter comment -->
+        <div class="comment-item">
+          <strong>Admin:</strong>
+          <p>Welcome to the discussion area. Keep posts professional and respectful.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

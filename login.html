@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- Tells the browser this is an HTML5 document -->
+
+<html lang="en">
+<!-- Root element of the page, language is English -->
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- Allows the page to display standard characters correctly -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Makes the page scale properly on phones and tablets -->
+
+  <title>Login</title>
+  <!-- Title shown in the browser tab -->
+
+  <link rel="stylesheet" href="style.css" />
+  <!-- Connects this page to the external CSS file -->
+</head>
+
+<body class="login-body">
+  <!-- Main visible page area -->
+  <!-- The class "login-body" applies special styling for the login page -->
+
+  <div class="login-container">
+    <!-- Outer wrapper used to keep the login box centered -->
+
+    <div class="login-card">
+      <!-- Main login box/card -->
+
+      <h1>CYBERLEARN</h1>
+      <!-- Main title shown on the login page -->
+
+      <p class="subtitle">Secure educational platform access</p>
+      <!-- Small line of text under the title -->
+
+      <form id="loginForm">
+        <!-- Form used for login -->
+        <!-- JavaScript will detect and handle this form -->
+
+        <label for="username">Username</label>
+        <!-- Text label for the username field -->
+
+        <input type="text" id="username" placeholder="Enter username" required />
+        <!-- Input where the user types their username -->
+        <!-- id="username" lets JavaScript read this value -->
+        <!-- required means the form cannot submit if empty -->
+
+        <label for="password">Password</label>
+        <!-- Text label for the password field -->
+
+        <input type="password" id="password" placeholder="Enter password" required />
+        <!-- Password field hides typed characters -->
+        <!-- id="password" lets JavaScript read this value -->
+
+        <button type="submit">Login</button>
+        <!-- Clicking this submits the form -->
+        <!-- JavaScript intercepts the submit event -->
+
+        <p id="loginMessage" class="message"></p>
+        <!-- Empty paragraph used to display login errors -->
+      </form>
+
+      <div class="demo-box">
+        <!-- Small helper box showing the demo login -->
+
+        <p><strong>Demo login:</strong></p>
+        <p>Username: <code>student</code></p>
+        <p>Password: <code>pentest123</code></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <!-- Connects the page to the JavaScript file -->
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <script>
+    // Prevent access without login
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <header class="site-header">
+    <div>
+      <h1>CYBERLEARN</h1>
+      <p class="subtitle">Knowledge assessment</p>
+    </div>
+
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="download.html">Download Tool</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="forum.html">Forum</a>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </nav>
+  </header>
+
+  <main class="page-container">
+    <section class="single-card">
+      <h2>Quiz</h2>
+      <p>Answer the questions below and submit your score.</p>
+
+      <form id="quizForm">
+        <!-- JavaScript handles the score calculation -->
+
+        <div class="quiz-question">
+          <h3>Easy: What is the purpose of a security assessment?</h3>
+
+          <label>
+            <input type="radio" name="q1" value="a" />
+            To identify weaknesses in an authorised environment
+          </label>
+
+          <label>
+            <input type="radio" name="q1" value="b" />
+            To damage systems
+          </label>
+
+          <label>
+            <input type="radio" name="q1" value="c" />
+            To make a network slower
+          </label>
+        </div>
+
+        <div class="quiz-question">
+          <h3>Medium: Which phase focuses on information gathering?</h3>
+
+          <label>
+            <input type="radio" name="q2" value="a" />
+            Reporting
+          </label>
+
+          <label>
+            <input type="radio" name="q2" value="b" />
+            Reconnaissance
+          </label>
+
+          <label>
+            <input type="radio" name="q2" value="c" />
+            Remediation
+          </label>
+        </div>
+
+        <div class="quiz-question">
+          <h3>Hard: Why is permission important before testing?</h3>
+
+          <label>
+            <input type="radio" name="q3" value="a" />
+            It makes the process faster
+          </label>
+
+          <label>
+            <input type="radio" name="q3" value="b" />
+            It ensures the activity is lawful and allowed
+          </label>
+
+          <label>
+            <input type="radio" name="q3" value="c" />
+            It removes logs automatically
+          </label>
+        </div>
+
+        <button type="submit">Submit Quiz</button>
+      </form>
+
+      <p id="quizResult" class="result-box"></p>
+      <!-- JavaScript writes the score here -->
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

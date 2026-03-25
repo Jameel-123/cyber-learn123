@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <script>
+    // Block access if the user is not logged in
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <header class="site-header">
+    <div>
+      <h1>CYBERLEARN</h1>
+      <p class="subtitle">Step-by-step learning guide</p>
+    </div>
+
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="download.html">Download Tool</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="forum.html">Forum</a>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </nav>
+  </header>
+
+  <main class="page-container">
+    <section class="single-card">
+      <h2>How to Use the Tool</h2>
+
+      <p>
+        This page explains the basic workflow for using the automated scanner
+        in a safe and educational context.
+      </p>
+
+      <h3>Step 1: Choose the target environment</h3>
+      <p>
+        Make sure the system or network being tested is one you are authorised to assess.
+      </p>
+
+      <h3>Step 2: Prepare the tool</h3>
+      <p>
+        Confirm that the file is in the correct directory and the environment is ready.
+      </p>
+
+      <h3>Step 3: Run the command</h3>
+      <div class="code-box">
+        python scanner.py 192.168.1.10
+      </div>
+      <!-- Styled code example -->
+
+      <h3>Step 4: Review the results</h3>
+      <p>
+        After the scan finishes, review the displayed output and document the findings.
+      </p>
+
+      <h3>Step 5: Apply responsible practice</h3>
+      <p>
+        Use all results for learning, reporting, or authorised defensive purposes only.
+      </p>
+
+      <div class="warning-box">
+        Legal and ethical use is essential. Never test systems without permission.
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

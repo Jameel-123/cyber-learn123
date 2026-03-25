@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <script>
+    // Protect this page from direct access without login
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <header class="site-header">
+    <div>
+      <h1>CYBERLEARN</h1>
+      <p class="subtitle">Download area</p>
+    </div>
+
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="download.html">Download Tool</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="forum.html">Forum</a>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </nav>
+  </header>
+
+  <main class="page-container">
+    <section class="single-card">
+      <h2>Automated Network Scanner</h2>
+      <!-- Main title of the page -->
+
+      <p>
+        This section gives users access to the tool and explains its intended use.
+      </p>
+
+      <h3>Purpose</h3>
+      <p>
+        The tool supports automated scanning in an authorised environment and can be
+        used alongside the learning pages in this educational platform.
+      </p>
+
+      <h3>Features</h3>
+      <ul>
+        <li>Automated scanning workflow</li>
+        <li>Supports educational demonstration</li>
+        <li>Designed to help explain discovery and assessment concepts</li>
+      </ul>
+
+      <h3>Download</h3>
+      <p>
+        The button below is currently a placeholder for your real downloadable file.
+      </p>
+
+      <a
+        class="card-btn"
+        href="#"
+        onclick="alert('Replace this with your real downloadable file later.')"
+      >
+        Download
+      </a>
+      <!-- Temporary placeholder action -->
+
+      <div class="warning-box">
+        Important: Only use the tool in environments where you have permission.
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

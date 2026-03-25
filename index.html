@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- HTML5 document -->
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Character encoding -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Responsive scaling -->
+
+  <title>Home</title>
+  <!-- Browser tab title -->
+
+  <link rel="stylesheet" href="style.css" />
+  <!-- Links the shared stylesheet -->
+</head>
+
+<body>
+  <!-- SECURITY CHECK -->
+  <script>
+    // Check whether the browser has a "loggedIn" value stored
+    if (localStorage.getItem("loggedIn") !== "true") {
+      // If not logged in, send the user back to the login page
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <header class="site-header">
+    <!-- Top header section used on all main pages -->
+
+    <div>
+      <h1>CYBERLEARN</h1>
+      <!-- Website name -->
+
+      <p class="subtitle">Minimal educational security platform</p>
+      <!-- Small supporting subtitle -->
+    </div>
+
+    <nav class="navbar">
+      <!-- Navigation bar for moving between pages -->
+
+      <a href="index.html">Home</a>
+      <a href="download.html">Download Tool</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="forum.html">Forum</a>
+
+      <button class="logout-btn" onclick="logout()">Logout</button>
+      <!-- Calls the logout() function from script.js -->
+    </nav>
+  </header>
+
+  <main class="page-container">
+    <!-- Main page content wrapper -->
+
+    <section class="hero">
+      <!-- Intro section at the top of the home page -->
+
+      <h2>Welcome</h2>
+      <p>
+        This prototype website demonstrates a simple educational interface
+        for tool access, guided learning, quiz testing, and discussion.
+      </p>
+    </section>
+
+    <section class="card-grid">
+      <!-- Grid layout holding feature cards -->
+
+      <div class="card">
+        <h3>Download Tool</h3>
+        <p>Access the downloadable scanner area and review its purpose.</p>
+        <a class="card-btn" href="download.html">Open</a>
+      </div>
+
+      <div class="card">
+        <h3>Tool Tutorial</h3>
+        <p>Read the step-by-step guide explaining how the tool is used.</p>
+        <a class="card-btn" href="tutorial.html">Open</a>
+      </div>
+
+      <div class="card">
+        <h3>Knowledge Quiz</h3>
+        <p>Complete questions that increase in difficulty.</p>
+        <a class="card-btn" href="quiz.html">Open</a>
+      </div>
+
+      <div class="card">
+        <h3>Forum</h3>
+        <p>Post comments and take part in the community section.</p>
+        <a class="card-btn" href="forum.html">Open</a>
+      </div>
+    </section>
+
+    <section class="single-card" style="margin-top: 20px;">
+      <!-- Extra information section -->
+      <!-- Inline style adds spacing above this box -->
+
+      <h2>Prototype Goals</h2>
+      <ul>
+        <li>Provide a clear and simple user interface</li>
+        <li>Demonstrate navigation between learning pages</li>
+        <li>Show how the educational platform could function</li>
+        <li>Support later expansion into a full secure system</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <!-- Loads shared JavaScript functions -->
+</body>
+</html>
