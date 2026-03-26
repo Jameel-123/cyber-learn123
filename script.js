@@ -32,7 +32,7 @@ if (loginForm) {
       window.location.href = "index.html";
     } else {
       // Show an error message if the credentials are wrong
-      loginMessage.textContent = "Invalid username or password.";
+      loginMessage.textContent = "Access Denied: Invalid username or password.";
     }
   });
 }
