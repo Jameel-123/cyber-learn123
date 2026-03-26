@@ -3,11 +3,11 @@
   box-sizing: border-box;
 }
 
-/* ---------- BASE PAGE STYLING ---------- */
+/* ---------- BASE PAGE ---------- */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f5f7fb; /* light background */
+  background: #f5f7fb; /* LIGHT BACKGROUND */
   color: #333;
 }
 
@@ -29,35 +29,24 @@ body {
 }
 
 .login-card h1 {
-  margin: 0 0 10px;
-  color: #2563eb; /* blue */
-  font-size: 22px;
+  color: #2563eb; /* BLUE */
 }
 
+/* ---------- TEXT ---------- */
 .subtitle {
-  font-size: 12px;
   color: #666;
-  margin-bottom: 20px;
 }
 
-/* ---------- FORM ELEMENTS ---------- */
-label {
-  display: block;
-  margin-bottom: 6px;
-  color: #555;
-  font-size: 13px;
-}
-
+/* ---------- INPUTS ---------- */
 input,
 textarea {
   width: 100%;
   padding: 10px;
   margin-top: 8px;
   margin-bottom: 16px;
-  background: white;
   border: 1px solid #ccc;
+  background: white;
   color: #333;
-  outline: none;
   border-radius: 6px;
 }
 
@@ -74,14 +63,11 @@ button,
   background: #2563eb;
   color: white;
   border: none;
-  cursor: pointer;
-  font-size: 12px;
-  letter-spacing: 1px;
-  transition: 0.2s;
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
   border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
 }
 
 button:hover,
@@ -89,47 +75,29 @@ button:hover,
   background: #1d4ed8;
 }
 
-/* ---------- SMALL MESSAGE AREAS ---------- */
-.message {
-  min-height: 20px;
-  color: #dc2626; /* red for errors */
-  font-weight: bold;
-}
-
-.demo-box {
-  margin-top: 20px;
-  padding: 12px;
-  border: 1px solid #ddd;
-  background: #f9fafb;
-  font-size: 12px;
-}
-
 /* ---------- HEADER ---------- */
 .site-header {
   padding: 20px;
-  border-bottom: 1px solid #ddd;
   background: white;
+  border-bottom: 1px solid #ddd;
 }
 
 .site-header h1 {
   margin: 0;
-  font-size: 18px;
   color: #2563eb;
 }
 
-/* ---------- NAVIGATION ---------- */
+/* ---------- NAV ---------- */
 .navbar {
   margin-top: 10px;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  align-items: center;
 }
 
 .navbar a {
   text-decoration: none;
   color: #555;
-  font-size: 12px;
 }
 
 .navbar a:hover {
@@ -137,42 +105,30 @@ button:hover,
 }
 
 .logout-btn {
-  width: auto;
   background: #ef4444;
-  color: white;
-  padding: 6px 10px;
-  font-size: 11px;
-  border-radius: 6px;
 }
 
 .logout-btn:hover {
   background: #dc2626;
 }
 
-/* ---------- MAIN CONTENT WRAPPER ---------- */
+/* ---------- MAIN ---------- */
 .page-container {
   max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
-/* ---------- HERO SECTION ---------- */
-.hero {
-  margin-bottom: 40px;
-}
-
+/* ---------- HERO ---------- */
 .hero h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
   color: #2563eb;
 }
 
 .hero p {
   color: #555;
-  font-size: 14px;
 }
 
-/* ---------- CARD GRID ---------- */
+/* ---------- CARDS ---------- */
 .card-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -187,16 +143,10 @@ button:hover,
 }
 
 .card h3 {
-  margin-top: 0;
   color: #2563eb;
 }
 
-.card p {
-  font-size: 13px;
-  color: #555;
-}
-
-/* ---------- SINGLE CONTENT BOX ---------- */
+/* ---------- SINGLE CARD ---------- */
 .single-card {
   padding: 20px;
   border: 1px solid #ddd;
@@ -204,72 +154,48 @@ button:hover,
   border-radius: 10px;
 }
 
-.single-card h2 {
-  color: #2563eb;
-}
-
-/* ---------- LISTS ---------- */
-ul {
-  padding-left: 18px;
-}
-
-li {
-  margin-bottom: 6px;
-  font-size: 13px;
-}
-
-/* ---------- CODE EXAMPLE BOX ---------- */
-.code-box {
-  margin-top: 10px;
-  padding: 10px;
-  background: #111;
-  border: 1px solid #ddd;
-  color: #22c55e;
-  font-family: monospace;
-}
-
-/* ---------- WARNING BOX ---------- */
+/* ---------- WARNING ---------- */
 .warning-box {
   margin-top: 20px;
   padding: 10px;
   border: 1px solid #facc15;
-  color: #92400e;
   background: #fef9c3;
-  font-size: 12px;
+  color: #92400e;
+}
+
+/* ---------- CODE ---------- */
+.code-box {
+  margin-top: 10px;
+  padding: 10px;
+  background: #111;
+  color: #22c55e;
+  font-family: monospace;
 }
 
 /* ---------- QUIZ ---------- */
 .quiz-question {
   margin-bottom: 20px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
 }
 
-.quiz-question h3 {
-  font-size: 14px;
-}
-
+/* ---------- RESULTS ---------- */
 .result-box {
   margin-top: 20px;
   color: #2563eb;
-  min-height: 20px;
 }
 
-/* ---------- FORUM / COMMENTS ---------- */
-.comments-list {
-  margin-top: 20px;
-}
-
+/* ---------- COMMENTS ---------- */
 .comment-item {
   border-bottom: 1px solid #ddd;
   padding: 10px 0;
 }
 
-.comment-item strong {
-  color: #2563eb;
+/* ---------- LOGIN MESSAGE ---------- */
+.message {
+  color: #dc2626;
+  font-weight: bold;
 }
 
-/* ---------- MOBILE RESPONSIVE ---------- */
+/* ---------- MOBILE ---------- */
 @media (max-width: 768px) {
   .card-grid {
     grid-template-columns: 1fr;
