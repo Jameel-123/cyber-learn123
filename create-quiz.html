@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Character encoding -->
+  <meta charset="UTF-8" />
+
+  <!-- Mobile responsive settings -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Browser tab title -->
+  <title>Create Quiz</title>
+
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <script>
+    // SECURITY CHECK
+    // Redirects users if not logged in
+
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <!-- WEBSITE HEADER -->
+  <header class="site-header">
+
+    <div>
+      <h1>CYBERLEARN</h1>
+
+      <p class="subtitle">
+        Create Your Own Quiz
+      </p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+
+      <a href="index.html">Home</a>
+      <a href="download.html">Download Tool</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="forum.html">Forum</a>
+
+      <!-- Logout button -->
+      <button class="logout-btn" onclick="logout()">
+        Logout
+      </button>
+
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="page-container">
+
+    <section class="single-card">
+
+      <h2>Create Your Own Quiz</h2>
+
+      <p>
+        Build a custom quiz with between 3 and 15 questions.
+      </p>
+
+      <!-- BUTTON USED TO ADD QUESTIONS -->
+      <button id="addQuestionBtn">
+        Add Question
+      </button>
+
+      <!-- QUESTION CONTAINER -->
+      <!-- JavaScript inserts new question blocks here -->
+      <div id="questionsContainer"></div>
+
+      <!-- SAVE QUIZ BUTTON -->
+      <button id="saveQuizBtn" style="margin-top: 20px;">
+        Save Quiz
+      </button>
+
+      <!-- RESULT MESSAGE -->
+      <p id="quizSaveMessage" class="result-box"></p>
+
+    </section>
+  </main>
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
