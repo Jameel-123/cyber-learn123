@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Character encoding -->
   <meta charset="UTF-8" />
+
+  <!-- Makes the page responsive on phones and tablets -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Browser tab title -->
   <title>Create Account</title>
 
+  <!-- Links the CSS file -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="login-body">
 
+  <!-- Centers the account creation card on the page -->
   <div class="login-container">
+
+    <!-- Main account creation box -->
     <div class="login-card">
 
       <h1>Create Account</h1>
@@ -20,33 +28,80 @@
         Enter your details to create a prototype account.
       </p>
 
+      <!-- ACCOUNT CREATION FORM -->
       <form id="createAccountForm">
 
+        <!-- Full name input -->
         <label for="accountName">Full Name</label>
-        <input type="text" id="accountName" placeholder="Enter your name" required />
+        <input
+          type="text"
+          id="accountName"
+          placeholder="Enter your full name"
+          required
+        />
 
+        <!-- Age input -->
         <label for="accountAge">Age</label>
-        <input type="number" id="accountAge" placeholder="Enter your age" required />
+        <input
+          type="number"
+          id="accountAge"
+          placeholder="Enter your age"
+          required
+        />
 
+        <!-- Email input -->
         <label for="accountEmail">Email</label>
-        <input type="email" id="accountEmail" placeholder="Enter your email" required />
+        <input
+          type="email"
+          id="accountEmail"
+          placeholder="Enter your email"
+          required
+        />
 
+        <!-- Username input -->
+        <label for="accountUsername">Username</label>
+        <input
+          type="text"
+          id="accountUsername"
+          placeholder="Create a username"
+          required
+        />
+
+        <!-- Password input -->
+        <label for="accountPassword">Password</label>
+        <input
+          type="password"
+          id="accountPassword"
+          placeholder="Create a password"
+          required
+        />
+
+        <!-- Confirm password input -->
+        <label for="confirmPassword">Confirm Password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          placeholder="Re-enter your password"
+          required
+        />
+
+        <!-- Submit button -->
         <button type="submit">Create Account</button>
 
       </form>
 
+      <!-- JavaScript shows success/error messages here -->
       <p id="accountMessage" class="message"></p>
 
+      <!-- Returns user to login page -->
       <a class="card-btn" href="login.html" style="margin-top: 20px;">
         Back to Login
       </a>
-      <a class="card-btn" href="create-account.html" style="margin-top: 20px;">
-  Create Account
-</a>
 
     </div>
   </div>
 
+  <!-- Loads JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
