@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- Character encoding -->
   <meta charset="UTF-8" />
+
+  <!-- Mobile responsive settings -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Take Custom Quiz</title>
+  <!-- Browser tab title -->
+  <title>Create Quiz</title>
 
+  <!-- External CSS stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -18,42 +24,72 @@
     }
   </script>
 
+  <!-- WEBSITE HEADER -->
   <header class="site-header">
+
     <div>
       <h1>CYBERLEARN</h1>
-      <p class="subtitle">Take your custom quiz</p>
+
+      <p class="subtitle">
+        Create Your Own Quiz
+      </p>
     </div>
 
+    <!-- NAVIGATION BAR -->
     <nav class="navbar">
+
       <a href="index.html">Home</a>
       <a href="download.html">Download Tool</a>
       <a href="tutorial.html">Tutorial</a>
       <a href="quiz.html">Quiz</a>
       <a href="forum.html">Forum</a>
-      <button class="logout-btn" onclick="logout()">Logout</button>
+
+      <!-- Logout button -->
+      <button class="logout-btn" onclick="logout()">
+        Logout
+      </button>
+
     </nav>
   </header>
 
+  <!-- MAIN CONTENT -->
   <main class="page-container">
+
     <section class="single-card">
-      <h2>Take Custom Quiz</h2>
+
+      <h2>Create Your Own Quiz</h2>
 
       <p>
-        This page loads the quiz you created and saved in the browser.
+        Build a custom quiz with between 3 and 15 questions.
       </p>
 
-      <!-- JavaScript will place the saved quiz questions here -->
-      <form id="takeCustomQuizForm"></form>
+      <!-- BUTTON USED TO ADD QUESTIONS -->
+      <button id="addQuestionBtn">
+        Add Question
+      </button>
 
-      <!-- JavaScript will show the score here -->
-      <p id="customQuizResult" class="result-box"></p>
+      <!-- JavaScript inserts question blocks here -->
+      <div id="questionsContainer"></div>
 
-      <a class="card-btn" href="create-quiz.html" style="margin-top: 20px;">
-        Back to Create Quiz
+      <!-- SAVE QUIZ BUTTON -->
+      <button id="saveQuizBtn" style="margin-top: 20px;">
+        Save Quiz
+      </button>
+
+      <!-- TAKE SAVED QUIZ BUTTON -->
+      <!-- Opens the saved custom quiz -->
+      <a class="card-btn" href="take-custom-quiz.html" style="margin-top: 20px;">
+        Take Saved Quiz
       </a>
+
+      <!-- SAVE RESULT MESSAGE -->
+      <p id="quizSaveMessage" class="result-box"></p>
+
     </section>
   </main>
 
+  <!-- EXTERNAL JAVASCRIPT -->
   <script src="script.js"></script>
+
 </body>
 </html>
