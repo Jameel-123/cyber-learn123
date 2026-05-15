@@ -451,3 +451,54 @@ if (takeCustomQuizForm) {
     });
   }
 }
+// ---------- CREATE ACCOUNT SYSTEM ----------
+
+// Find the create account form
+const createAccountForm = document.getElementById("createAccountForm");
+
+// Only run this code if the form exists
+if (createAccountForm) {
+
+  // Listen for form submission
+  createAccountForm.addEventListener("submit", function (event) {
+
+    // Stop page refresh
+    event.preventDefault();
+
+    // Read values from input fields
+    const name = document.getElementById("accountName").value.trim();
+
+    const age = document.getElementById("accountAge").value.trim();
+
+    const email = document.getElementById("accountEmail").value.trim();
+
+    // Find message display area
+    const accountMessage = document.getElementById("accountMessage");
+
+    // Validation check
+    if (!name || !age || !email) {
+
+      accountMessage.textContent =
+        "Please complete all fields.";
+
+      return;
+    }
+
+    // Create account object
+    const account = {
+      name: name,
+      age: age,
+      email: email
+    };
+
+    // Save account into browser storage
+    localStorage.setItem(
+      "createdAccount",
+      JSON.stringify(account)
+    );
+
+    // Success message
+    accountMessage.textContent =
+      "Account created successfully!";
+  });
+}
