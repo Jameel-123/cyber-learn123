@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Take Custom Quiz</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <script>
+    // Prevent access without login
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <header class="site-header">
+    <div>
+      <h1>CYBERLEARN</h1>
+      <p class="subtitle">Take your custom quiz</p>
+    </div>
+
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="download.html">Download Tool</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="forum.html">Forum</a>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </nav>
+  </header>
+
+  <main class="page-container">
+    <section class="single-card">
+      <h2>Take Custom Quiz</h2>
+
+      <p>
+        This page loads the quiz you created and saved in the browser.
+      </p>
+
+      <!-- JavaScript will place the saved quiz questions here -->
+      <form id="takeCustomQuizForm"></form>
+
+      <!-- JavaScript will show the score here -->
+      <p id="customQuizResult" class="result-box"></p>
+
+      <a class="card-btn" href="create-quiz.html" style="margin-top: 20px;">
+        Back to Create Quiz
+      </a>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
