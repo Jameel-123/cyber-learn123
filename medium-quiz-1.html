@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Character encoding -->
+  <meta charset="UTF-8" />
+
+  <!-- Responsive mobile scaling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Browser tab title -->
+  <title>Medium Quiz 1</title>
+
+  <!-- External CSS stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <script>
+    // SECURITY CHECK
+    // Redirects users if they are not logged in
+
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <!-- WEBSITE HEADER -->
+  <header class="site-header">
+
+    <div>
+      <h1>CYBERLEARN</h1>
+
+      <p class="subtitle">
+        Medium Quiz 1 - Reconnaissance and Information Gathering
+      </p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+
+      <a href="index.html">Home</a>
+      <a href="download.html">Download Tool</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="forum.html">Forum</a>
+
+      <!-- Logout button -->
+      <button class="logout-btn" onclick="logout()">
+        Logout
+      </button>
+
+    </nav>
+  </header>
+
+  <!-- MAIN PAGE CONTENT -->
+  <main class="page-container">
+
+    <section class="single-card">
+
+      <h2>Medium Quiz 1</h2>
+
+      <p>
+        This quiz focuses on reconnaissance and information gathering concepts used during security assessments.
+      </p>
+
+      <!-- QUIZ FORM -->
+      <form id="mediumQuiz1Form">
+
+        <!-- QUESTION 1 -->
+        <div class="quiz-question">
+          <h3>1. What is reconnaissance in cybersecurity?</h3>
+
+          <label>
+            <input type="radio" name="q1" value="a">
+            Gathering information about a target
+          </label>
+
+          <label>
+            <input type="radio" name="q1" value="b">
+            Deleting network logs
+          </label>
+
+          <label>
+            <input type="radio" name="q1" value="c">
+            Installing operating systems
+          </label>
+        </div>
+
+        <!-- QUESTION 2 -->
+        <div class="quiz-question">
+          <h3>2. What is passive reconnaissance?</h3>
+
+          <label>
+            <input type="radio" name="q2" value="a">
+            Gathering information without directly interacting with the target
+          </label>
+
+          <label>
+            <input type="radio" name="q2" value="b">
+            Physically damaging hardware
+          </label>
+
+          <label>
+            <input type="radio" name="q2" value="c">
+            Blocking network traffic
+          </label>
+        </div>
+
+        <!-- QUESTION 3 -->
+        <div class="quiz-question">
+          <h3>3. What is active reconnaissance?</h3>
+
+          <label>
+            <input type="radio" name="q3" value="a">
+            Direct interaction with the target system
+          </label>
+
+          <label>
+            <input type="radio" name="q3" value="b">
+            Disconnecting from the internet
+          </label>
+
+          <label>
+            <input type="radio" name="q3" value="c">
+            Creating backups
+          </label>
+        </div>
+
+        <!-- QUESTION 4 -->
+        <div class="quiz-question">
+          <h3>4. What information can DNS records reveal?</h3>
+
+          <label>
+            <input type="radio" name="q4" value="a">
+            Domain and server details
+          </label>
+
+          <label>
+            <input type="radio" name="q4" value="b">
+            CPU temperature
+          </label>
+
+          <label>
+            <input type="radio" name="q4" value="c">
+            Monitor resolution
+          </label>
+        </div>
+
+        <!-- QUESTION 5 -->
+        <div class="quiz-question">
+          <h3>5. Why is public information useful during reconnaissance?</h3>
+
+          <label>
+            <input type="radio" name="q5" value="a">
+            It can reveal system and organisational details
+          </label>
+
+          <label>
+            <input type="radio" name="q5" value="b">
+            It automatically patches systems
+          </label>
+
+          <label>
+            <input type="radio" name="q5" value="c">
+            It increases internet speed
+          </label>
+        </div>
+
+        <!-- QUESTION 6 -->
+        <div class="quiz-question">
+          <h3>6. What is footprinting?</h3>
+
+          <label>
+            <input type="radio" name="q6" value="a">
+            Collecting information about a target environment
+          </label>
+
+          <label>
+            <input type="radio" name="q6" value="b">
+            Installing software updates
+          </label>
+
+          <label>
+            <input type="radio" name="q6" value="c">
+            Creating encrypted passwords
+          </label>
+        </div>
+
+        <!-- QUESTION 7 -->
+        <div class="quiz-question">
+          <h3>7. Why are social media accounts sometimes reviewed during reconnaissance?</h3>
+
+          <label>
+            <input type="radio" name="q7" value="a">
+            They may expose useful information
+          </label>
+
+          <label>
+            <input type="radio" name="q7" value="b">
+            They increase firewall performance
+          </label>
+
+          <label>
+            <input type="radio" name="q7" value="c">
+            They block malicious traffic
+          </label>
+        </div>
+
+        <!-- QUESTION 8 -->
+        <div class="quiz-question">
+          <h3>8. What is WHOIS commonly used for?</h3>
+
+          <label>
+            <input type="radio" name="q8" value="a">
+            Looking up domain registration information
+          </label>
+
+          <label>
+            <input type="radio" name="q8" value="b">
+            Encrypting hard drives
+          </label>
+
+          <label>
+            <input type="radio" name="q8" value="c">
+            Monitoring CPU usage
+          </label>
+        </div>
+
+        <!-- QUESTION 9 -->
+        <div class="quiz-question">
+          <h3>9. Why should reconnaissance remain within authorised scope?</h3>
+
+          <label>
+            <input type="radio" name="q9" value="a">
+            To ensure the assessment remains lawful
+          </label>
+
+          <label>
+            <input type="radio" name="q9" value="b">
+            To speed up internet access
+          </label>
+
+          <label>
+            <input type="radio" name="q9" value="c">
+            To disable security controls
+          </label>
+        </div>
+
+        <!-- QUESTION 10 -->
+        <div class="quiz-question">
+          <h3>10. What is one goal of reconnaissance?</h3>
+
+          <label>
+            <input type="radio" name="q10" value="a">
+            Understanding the target environment
+          </label>
+
+          <label>
+            <input type="radio" name="q10" value="b">
+            Deleting system backups
+          </label>
+
+          <label>
+            <input type="radio" name="q10" value="c">
+            Removing user accounts
+          </label>
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <button type="submit">
+          Submit Quiz
+        </button>
+
+      </form>
+
+      <!-- RESULT AREA -->
+      <p id="mediumQuiz1Result" class="result-box"></p>
+
+    </section>
+  </main>
+
+  <!-- EXTERNAL JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
