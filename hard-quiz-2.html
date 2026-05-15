@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Character encoding -->
+  <meta charset="UTF-8" />
+
+  <!-- Mobile responsive settings -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Browser tab title -->
+  <title>Hard Quiz 2</title>
+
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <script>
+    // SECURITY CHECK
+    // Redirects users if they are not logged in
+
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <!-- WEBSITE HEADER -->
+  <header class="site-header">
+
+    <div>
+      <h1>CYBERLEARN</h1>
+
+      <p class="subtitle">
+        Hard Quiz 2 - Web Security and Authentication
+      </p>
+    </div>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+
+      <a href="index.html">Home</a>
+      <a href="download.html">Download Tool</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="forum.html">Forum</a>
+
+      <!-- Logout button -->
+      <button class="logout-btn" onclick="logout()">
+        Logout
+      </button>
+
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="page-container">
+
+    <section class="single-card">
+
+      <h2>Hard Quiz 2</h2>
+
+      <p>
+        This quiz focuses on web application security, authentication,
+        sessions, and secure design principles.
+      </p>
+
+      <!-- QUIZ FORM -->
+      <form id="hardQuiz2Form">
+
+        <!-- QUESTION 1 -->
+        <div class="quiz-question">
+          <h3>1. Why is HTTPS important?</h3>
+
+          <label>
+            <input type="radio" name="q1" value="a">
+            It encrypts communication between users and websites
+          </label>
+
+          <label>
+            <input type="radio" name="q1" value="b">
+            It increases screen brightness
+          </label>
+
+          <label>
+            <input type="radio" name="q1" value="c">
+            It upgrades operating systems
+          </label>
+        </div>
+
+        <!-- QUESTION 2 -->
+        <div class="quiz-question">
+          <h3>2. What is session management used for?</h3>
+
+          <label>
+            <input type="radio" name="q2" value="a">
+            Keeping users authenticated between requests
+          </label>
+
+          <label>
+            <input type="radio" name="q2" value="b">
+            Repairing hardware devices
+          </label>
+
+          <label>
+            <input type="radio" name="q2" value="c">
+            Updating graphics drivers
+          </label>
+        </div>
+
+        <!-- QUESTION 3 -->
+        <div class="quiz-question">
+          <h3>3. Why should user input be validated?</h3>
+
+          <label>
+            <input type="radio" name="q3" value="a">
+            To reduce security risks and invalid data
+          </label>
+
+          <label>
+            <input type="radio" name="q3" value="b">
+            To increase internet speed
+          </label>
+
+          <label>
+            <input type="radio" name="q3" value="c">
+            To improve battery life
+          </label>
+        </div>
+
+        <!-- QUESTION 4 -->
+        <div class="quiz-question">
+          <h3>4. What is authentication responsible for?</h3>
+
+          <label>
+            <input type="radio" name="q4" value="a">
+            Verifying the identity of users
+          </label>
+
+          <label>
+            <input type="radio" name="q4" value="b">
+            Blocking all network traffic
+          </label>
+
+          <label>
+            <input type="radio" name="q4" value="c">
+            Creating backups automatically
+          </label>
+        </div>
+
+        <!-- QUESTION 5 -->
+        <div class="quiz-question">
+          <h3>5. Why are strong password policies important?</h3>
+
+          <label>
+            <input type="radio" name="q5" value="a">
+            They help reduce weak account security
+          </label>
+
+          <label>
+            <input type="radio" name="q5" value="b">
+            They increase processor speed
+          </label>
+
+          <label>
+            <input type="radio" name="q5" value="c">
+            They improve network cabling
+          </label>
+        </div>
+
+        <!-- QUESTION 6 -->
+        <div class="quiz-question">
+          <h3>6. What is secure coding designed to reduce?</h3>
+
+          <label>
+            <input type="radio" name="q6" value="a">
+            Software vulnerabilities
+          </label>
+
+          <label>
+            <input type="radio" name="q6" value="b">
+            Screen resolution
+          </label>
+
+          <label>
+            <input type="radio" name="q6" value="c">
+            File storage space
+          </label>
+        </div>
+
+        <!-- QUESTION 7 -->
+        <div class="quiz-question">
+          <h3>7. Why should session tokens be protected?</h3>
+
+          <label>
+            <input type="radio" name="q7" value="a">
+            Attackers could hijack authenticated sessions
+          </label>
+
+          <label>
+            <input type="radio" name="q7" value="b">
+            They control monitor brightness
+          </label>
+
+          <label>
+            <input type="radio" name="q7" value="c">
+            They increase internet bandwidth
+          </label>
+        </div>
+
+        <!-- QUESTION 8 -->
+        <div class="quiz-question">
+          <h3>8. What is one purpose of rate limiting?</h3>
+
+          <label>
+            <input type="radio" name="q8" value="a">
+            Reducing repeated request abuse
+          </label>
+
+          <label>
+            <input type="radio" name="q8" value="b">
+            Upgrading operating systems
+          </label>
+
+          <label>
+            <input type="radio" name="q8" value="c">
+            Encrypting monitors
+          </label>
+        </div>
+
+        <!-- QUESTION 9 -->
+        <div class="quiz-question">
+          <h3>9. Why should error messages be controlled carefully?</h3>
+
+          <label>
+            <input type="radio" name="q9" value="a">
+            Detailed errors may expose sensitive information
+          </label>
+
+          <label>
+            <input type="radio" name="q9" value="b">
+            They increase CPU speed
+          </label>
+
+          <label>
+            <input type="radio" name="q9" value="c">
+            They repair damaged files
+          </label>
+        </div>
+
+        <!-- QUESTION 10 -->
+        <div class="quiz-question">
+          <h3>10. What is one goal of secure web design?</h3>
+
+          <label>
+            <input type="radio" name="q10" value="a">
+            Protecting data and user accounts
+          </label>
+
+          <label>
+            <input type="radio" name="q10" value="b">
+            Making websites physically larger
+          </label>
+
+          <label>
+            <input type="radio" name="q10" value="c">
+            Increasing fan speed
+          </label>
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <button type="submit">
+          Submit Quiz
+        </button>
+
+      </form>
+
+      <!-- RESULT DISPLAY -->
+      <p id="hardQuiz2Result" class="result-box"></p>
+
+    </section>
+  </main>
+
+  <!-- EXTERNAL JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
