@@ -1,46 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- Character encoding -->
   <meta charset="UTF-8" />
+
+  <!-- Mobile responsive settings -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Browser tab title -->
   <title>Login</title>
+
+  <!-- External CSS stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="login-body">
 
+  <!-- LOGIN CONTAINER -->
   <div class="login-container">
 
+    <!-- LOGIN CARD -->
     <div class="login-card">
+
+      <!-- Website title -->
       <h1>CYBERLEARN</h1>
-      <p class="subtitle">Secure educational platform access</p>
+
+      <!-- Small subtitle -->
+      <p class="subtitle">
+        Secure educational platform access
+      </p>
 
       <!-- LOGIN FORM -->
       <form id="loginForm">
 
+        <!-- USERNAME FIELD -->
         <label for="username">Username</label>
-        <input type="text" id="username" placeholder="Enter username" required />
 
+        <input
+          type="text"
+          id="username"
+          placeholder="Enter username"
+          required
+        />
+
+        <!-- PASSWORD FIELD -->
         <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter password" required />
 
-        <button type="submit">Login</button>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter password"
+          required
+        />
 
+        <!-- LOGIN BUTTON -->
+        <button type="submit">
+          Login
+        </button>
+
+        <!-- LOGIN MESSAGE AREA -->
+        <!-- JavaScript displays login errors here -->
         <p id="loginMessage" class="message"></p>
 
       </form>
 
-      <!-- DEMO LOGIN -->
+      <!-- CREATE ACCOUNT BUTTON -->
+      <a
+        class="card-btn"
+        href="create-account.html"
+        style="margin-top: 20px;"
+      >
+        Create Account
+      </a>
+
+      <!-- DEMO LOGIN BOX -->
       <div class="demo-box">
+
         <p><strong>Demo login:</strong></p>
-        <p>Username: <code>student</code></p>
-        <p>Password: <code>pentest123</code></p>
+
+        <p>
+          Username:
+          <code>student</code>
+        </p>
+
+        <p>
+          Password:
+          <code>pentest123</code>
+        </p>
+
       </div>
 
     </div>
 
   </div>
 
+  <!-- External JavaScript -->
   <script src="script.js"></script>
 
 </body>
