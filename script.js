@@ -132,3 +132,168 @@ if (commentForm) {
     commentInput.value = "";
   });
 }
+
+// ---------- REUSABLE QUIZ MARKING FUNCTION ----------
+
+// This function marks any quiz that has:
+// 1. a form ID
+// 2. a result paragraph ID
+// 3. an answer key object
+function markQuiz(formId, resultId, correctAnswers) {
+  // Find the quiz form using its ID
+  const quizForm = document.getElementById(formId);
+
+  // Only run if this quiz form exists on the current page
+  if (quizForm) {
+    // Listen for the quiz being submitted
+    quizForm.addEventListener("submit", function (event) {
+      // Stop the page refreshing
+      event.preventDefault();
+
+      // Start score at 0
+      let score = 0;
+
+      // Loop through each question in the answer key
+      for (let question in correctAnswers) {
+        // Find the selected radio button for this question
+        const selectedAnswer = document.querySelector(
+          `input[name="${question}"]:checked`
+        );
+
+        // If selected answer matches correct answer, add 1 point
+        if (selectedAnswer && selectedAnswer.value === correctAnswers[question]) {
+          score++;
+        }
+      }
+
+      // Find the result display area
+      const resultBox = document.getElementById(resultId);
+
+      // Display final score
+      resultBox.textContent = `You scored ${score} out of 10.`;
+    });
+  }
+}
+
+// ---------- EASY QUIZZES ----------
+
+markQuiz("easyQuiz1Form", "easyQuiz1Result", {
+  q1: "a",
+  q2: "a",
+  q3: "a",
+  q4: "a",
+  q5: "a",
+  q6: "a",
+  q7: "a",
+  q8: "a",
+  q9: "a",
+  q10: "a"
+});
+
+markQuiz("easyQuiz2Form", "easyQuiz2Result", {
+  q1: "b",
+  q2: "a",
+  q3: "a",
+  q4: "b",
+  q5: "a",
+  q6: "a",
+  q7: "a",
+  q8: "a",
+  q9: "a",
+  q10: "a"
+});
+
+markQuiz("easyQuiz3Form", "easyQuiz3Result", {
+  q1: "a",
+  q2: "a",
+  q3: "a",
+  q4: "a",
+  q5: "a",
+  q6: "a",
+  q7: "a",
+  q8: "a",
+  q9: "a",
+  q10: "a"
+});
+
+// ---------- MEDIUM QUIZZES ----------
+
+markQuiz("mediumQuiz1Form", "mediumQuiz1Result", {
+  q1: "a",
+  q2: "a",
+  q3: "a",
+  q4: "a",
+  q5: "a",
+  q6: "a",
+  q7: "a",
+  q8: "a",
+  q9: "a",
+  q10: "a"
+});
+
+markQuiz("mediumQuiz2Form", "mediumQuiz2Result", {
+  q1: "a",
+  q2: "a",
+  q3: "a",
+  q4: "a",
+  q5: "a",
+  q6: "a",
+  q7: "a",
+  q8: "a",
+  q9: "a",
+  q10: "a"
+});
+
+markQuiz("mediumQuiz3Form", "mediumQuiz3Result", {
+  q1: "a",
+  q2: "a",
+  q3: "a",
+  q4: "a",
+  q5: "a",
+  q6: "a",
+  q7: "a",
+  q8: "a",
+  q9: "a",
+  q10: "a"
+});
+
+// ---------- HARD QUIZZES ----------
+
+markQuiz("hardQuiz1Form", "hardQuiz1Result", {
+  q1: "a",
+  q2: "a",
+  q3: "a",
+  q4: "a",
+  q5: "a",
+  q6: "a",
+  q7: "a",
+  q8: "a",
+  q9: "a",
+  q10: "a"
+});
+
+markQuiz("hardQuiz2Form", "hardQuiz2Result", {
+  q1: "a",
+  q2: "a",
+  q3: "a",
+  q4: "a",
+  q5: "a",
+  q6: "a",
+  q7: "a",
+  q8: "a",
+  q9: "a",
+  q10: "a"
+});
+
+markQuiz("hardQuiz3Form", "hardQuiz3Result", {
+  q1: "a",
+  q2: "a",
+  q3: "a",
+  q4: "a",
+  q5: "a",
+  q6: "a",
+  q7: "a",
+  q8: "a",
+  q9: "a",
+  q10: "a"
+});
