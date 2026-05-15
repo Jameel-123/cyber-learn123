@@ -1,109 +1,120 @@
 <!DOCTYPE html>
+<!-- Defines this document as a HTML5 webpage -->
+
 <html lang="en">
 <head>
+  <!-- Stores page settings and metadata -->
+
   <meta charset="UTF-8" />
+  <!-- Allows standard character encoding -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quiz</title>
+  <!-- Makes the page responsive on mobile devices -->
+
+  <title>Quiz Centre</title>
+  <!-- Text shown in browser tab -->
+
   <link rel="stylesheet" href="style.css" />
+  <!-- Links the external CSS stylesheet -->
 </head>
 
 <body>
+
   <script>
-    // Prevent access without login
+    // SECURITY CHECK
+    // Prevents users from accessing the page unless logged in
+
     if (localStorage.getItem("loggedIn") !== "true") {
+      // Redirect unauthorised users back to login page
       window.location.href = "login.html";
     }
   </script>
 
+  <!-- WEBSITE HEADER -->
   <header class="site-header">
+
     <div>
+      <!-- Main website title -->
       <h1>CYBERLEARN</h1>
-      <p class="subtitle">Knowledge assessment</p>
+
+      <!-- Small subtitle under title -->
+      <p class="subtitle">Quiz centre</p>
     </div>
 
+    <!-- NAVIGATION BAR -->
     <nav class="navbar">
+
+      <!-- Navigation links to other pages -->
       <a href="index.html">Home</a>
       <a href="download.html">Download Tool</a>
       <a href="tutorial.html">Tutorial</a>
       <a href="quiz.html">Quiz</a>
       <a href="forum.html">Forum</a>
+
+      <!-- Logout button calls logout() function from script.js -->
       <button class="logout-btn" onclick="logout()">Logout</button>
+
     </nav>
   </header>
 
+  <!-- MAIN PAGE CONTENT -->
   <main class="page-container">
+
+    <!-- Main quiz selection section -->
     <section class="single-card">
-      <h2>Quiz</h2>
-      <p>Answer the questions below and submit your score.</p>
 
-      <form id="quizForm">
-        <!-- JavaScript handles the score calculation -->
+      <!-- Page heading -->
+      <h2>Quiz Centre</h2>
 
-        <div class="quiz-question">
-          <h3>Easy: What is the purpose of a security assessment?</h3>
+      <!-- Introductory paragraph -->
+      <p>
+        Choose whether you want to complete a pre-made quiz
+        or create your own custom quiz.
+      </p>
 
-          <label>
-            <input type="radio" name="q1" value="a" />
-            To identify weaknesses in an authorised environment
-          </label>
+      <!-- Grid layout holding both quiz options -->
+      <div class="card-grid">
 
-          <label>
-            <input type="radio" name="q1" value="b" />
-            To damage systems
-          </label>
+        <!-- PRE-MADE QUIZ CARD -->
+        <div class="card">
 
-          <label>
-            <input type="radio" name="q1" value="c" />
-            To make a network slower
-          </label>
+          <h3>Pre-made Quiz</h3>
+
+          <p>
+            Test your knowledge using built-in questions
+            with easy, medium, and hard levels.
+          </p>
+
+          <!-- Button linking to pre-made quiz page -->
+          <a class="card-btn" href="premade-quiz.html">
+            Start Pre-made Quiz
+          </a>
+
         </div>
 
-        <div class="quiz-question">
-          <h3>Medium: Which phase focuses on information gathering?</h3>
+        <!-- CREATE QUIZ CARD -->
+        <div class="card">
 
-          <label>
-            <input type="radio" name="q2" value="a" />
-            Reporting
-          </label>
+          <h3>Create Your Own Quiz</h3>
 
-          <label>
-            <input type="radio" name="q2" value="b" />
-            Reconnaissance
-          </label>
+          <p>
+            Build a custom quiz by adding your own questions,
+            answer options, and correct answers.
+          </p>
 
-          <label>
-            <input type="radio" name="q2" value="c" />
-            Remediation
-          </label>
+          <!-- Button linking to custom quiz creator -->
+          <a class="card-btn" href="create-quiz.html">
+            Create Quiz
+          </a>
+
         </div>
 
-        <div class="quiz-question">
-          <h3>Hard: Why is permission important before testing?</h3>
-
-          <label>
-            <input type="radio" name="q3" value="a" />
-            It makes the process faster
-          </label>
-
-          <label>
-            <input type="radio" name="q3" value="b" />
-            It ensures the activity is lawful and allowed
-          </label>
-
-          <label>
-            <input type="radio" name="q3" value="c" />
-            It removes logs automatically
-          </label>
-        </div>
-
-        <button type="submit">Submit Quiz</button>
-      </form>
-
-      <p id="quizResult" class="result-box"></p>
-      <!-- JavaScript writes the score here -->
+      </div>
     </section>
   </main>
 
+  <!-- Loads external JavaScript file -->
   <script src="script.js"></script>
+
 </body>
 </html>
