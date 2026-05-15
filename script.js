@@ -297,3 +297,92 @@ markQuiz("hardQuiz3Form", "hardQuiz3Result", {
   q9: "a",
   q10: "a"
 });
+// ---------- CREATE YOUR OWN QUIZ ----------
+
+const addQuestionBtn = document.getElementById("addQuestionBtn");
+const questionsContainer = document.getElementById("questionsContainer");
+const saveQuizBtn = document.getElementById("saveQuizBtn");
+const quizSaveMessage = document.getElementById("quizSaveMessage");
+
+let customQuestionCount = 0;
+const minQuestions = 3;
+const maxQuestions = 15;
+
+if (addQuestionBtn) {
+  addQuestionBtn.addEventListener("click", function () {
+    if (customQuestionCount >= maxQuestions) {
+      quizSaveMessage.textContent = "Maximum of 15 questions reached.";
+      return;
+    }
+
+    customQuestionCount++;
+
+    const questionBlock = document.createElement("div");
+    questionBlock.classList.add("quiz-question");
+
+    questionBlock.innerHTML = `
+      <h3>Question ${customQuestionCount}</h3>
+
+      <label>Question text</label>
+      <input type="text" class="custom-question" placeholder="Enter your question" />
+
+      <label>Answer A</label>
+      <input type="text" class="custom-option-a" placeholder="Enter answer A" />
+
+      <label>Answer B</label>
+      <input type="text" class="custom-option-b" placeholder="Enter answer B" />
+
+      <label>Answer C</label>
+      <input type="text" class="custom-option-c" placeholder="Enter answer C" />
+
+      <label>Correct answer</label>
+      <select class="custom-correct-answer">
+        <option value="">Select correct answer</option>
+        <option value="a">Answer A</option>
+        <option value="b">Answer B</option>
+        <option value="c">Answer C</option>
+      </select>
+    `;
+
+    questionsContainer.appendChild(questionBlock);
+  });
+}
+
+if (saveQuizBtn) {
+  saveQuizBtn.addEventListener("click", function () {
+    const questionBlocks = document.querySelectorAll(".quiz-question");
+
+    if (questionBlocks.length < minQuestions) {
+      quizSaveMessage.textContent = "Please add at least 3 questions.";
+      return;
+    }
+
+    const customQuiz = [];
+
+    for (let block of questionBlocks) {
+      const question = block.querySelector(".custom-question").value.trim();
+      const optionA = block.querySelector(".custom-option-a").value.trim();
+      const optionB = block.querySelector(".custom-option-b").value.trim();
+      const optionC = block.querySelector(".custom-option-c").value.trim();
+      const correct = block.querySelector(".custom-correct-answer").value;
+
+      if (!question || !optionA || !optionB || !optionC || !correct) {
+        quizSaveMessage.textContent = "Please complete every field before saving.";
+        return;
+      }
+
+      customQuiz.push({
+        question: question,
+        options: {
+          a: optionA,
+          b: optionB,
+          c: optionC
+        },
+        correct: correct
+      });
+    }
+
+    localStorage.setItem("customQuiz", JSON.stringify(customQuiz));
+    quizSaveMessage.textContent = "Custom quiz saved successfully!";
+  });
+}
