@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Character encoding -->
+  <meta charset="UTF-8" />
+
+  <!-- Mobile responsive settings -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Browser tab title -->
+  <title>Medium Quiz 2</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <script>
+    // Prevents users from accessing the page unless logged in
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <!-- WEBSITE HEADER -->
+  <header class="site-header">
+
+    <div>
+      <h1>CYBERLEARN</h1>
+
+      <p class="subtitle">
+        Medium Quiz 2 - Scanning and Enumeration
+      </p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+
+      <a href="index.html">Home</a>
+      <a href="download.html">Download Tool</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="forum.html">Forum</a>
+
+      <!-- Logout button -->
+      <button class="logout-btn" onclick="logout()">
+        Logout
+      </button>
+
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="page-container">
+
+    <section class="single-card">
+
+      <h2>Medium Quiz 2</h2>
+
+      <p>
+        This quiz focuses on scanning, enumeration, and identifying services during assessments.
+      </p>
+
+      <!-- QUIZ FORM -->
+      <form id="mediumQuiz2Form">
+
+        <!-- QUESTION 1 -->
+        <div class="quiz-question">
+          <h3>1. What is port scanning used for?</h3>
+
+          <label>
+            <input type="radio" name="q1" value="a">
+            Identifying open ports and services
+          </label>
+
+          <label>
+            <input type="radio" name="q1" value="b">
+            Increasing internet speed
+          </label>
+
+          <label>
+            <input type="radio" name="q1" value="c">
+            Repairing hardware
+          </label>
+        </div>
+
+        <!-- QUESTION 2 -->
+        <div class="quiz-question">
+          <h3>2. What can an open port indicate?</h3>
+
+          <label>
+            <input type="radio" name="q2" value="a">
+            A service may be running
+          </label>
+
+          <label>
+            <input type="radio" name="q2" value="b">
+            The computer is turned off
+          </label>
+
+          <label>
+            <input type="radio" name="q2" value="c">
+            The firewall is disabled
+          </label>
+        </div>
+
+        <!-- QUESTION 3 -->
+        <div class="quiz-question">
+          <h3>3. What is enumeration?</h3>
+
+          <label>
+            <input type="radio" name="q3" value="a">
+            Extracting detailed information from services
+          </label>
+
+          <label>
+            <input type="radio" name="q3" value="b">
+            Cleaning browser history
+          </label>
+
+          <label>
+            <input type="radio" name="q3" value="c">
+            Updating passwords
+          </label>
+        </div>
+
+        <!-- QUESTION 4 -->
+        <div class="quiz-question">
+          <h3>4. Why is service identification important?</h3>
+
+          <label>
+            <input type="radio" name="q4" value="a">
+            It helps identify possible weaknesses
+          </label>
+
+          <label>
+            <input type="radio" name="q4" value="b">
+            It improves monitor quality
+          </label>
+
+          <label>
+            <input type="radio" name="q4" value="c">
+            It creates stronger Wi-Fi signals
+          </label>
+        </div>
+
+        <!-- QUESTION 5 -->
+        <div class="quiz-question">
+          <h3>5. What protocol commonly uses port 80?</h3>
+
+          <label>
+            <input type="radio" name="q5" value="a">
+            HTTP
+          </label>
+
+          <label>
+            <input type="radio" name="q5" value="b">
+            FTP
+          </label>
+
+          <label>
+            <input type="radio" name="q5" value="c">
+            SSH
+          </label>
+        </div>
+
+        <!-- QUESTION 6 -->
+        <div class="quiz-question">
+          <h3>6. What protocol commonly uses port 443?</h3>
+
+          <label>
+            <input type="radio" name="q6" value="a">
+            HTTPS
+          </label>
+
+          <label>
+            <input type="radio" name="q6" value="b">
+            SMTP
+          </label>
+
+          <label>
+            <input type="radio" name="q6" value="c">
+            DNS
+          </label>
+        </div>
+
+        <!-- QUESTION 7 -->
+        <div class="quiz-question">
+          <h3>7. Why are outdated services risky?</h3>
+
+          <label>
+            <input type="radio" name="q7" value="a">
+            They may contain known vulnerabilities
+          </label>
+
+          <label>
+            <input type="radio" name="q7" value="b">
+            They increase battery life
+          </label>
+
+          <label>
+            <input type="radio" name="q7" value="c">
+            They improve graphics performance
+          </label>
+        </div>
+
+        <!-- QUESTION 8 -->
+        <div class="quiz-question">
+          <h3>8. What is banner grabbing?</h3>
+
+          <label>
+            <input type="radio" name="q8" value="a">
+            Collecting service information from responses
+          </label>
+
+          <label>
+            <input type="radio" name="q8" value="b">
+            Blocking websites
+          </label>
+
+          <label>
+            <input type="radio" name="q8" value="c">
+            Creating firewall rules
+          </label>
+        </div>
+
+        <!-- QUESTION 9 -->
+        <div class="quiz-question">
+          <h3>9. Why is scanning kept within scope?</h3>
+
+          <label>
+            <input type="radio" name="q9" value="a">
+            To remain authorised and lawful
+          </label>
+
+          <label>
+            <input type="radio" name="q9" value="b">
+            To increase internet speed
+          </label>
+
+          <label>
+            <input type="radio" name="q9" value="c">
+            To disable antivirus software
+          </label>
+        </div>
+
+        <!-- QUESTION 10 -->
+        <div class="quiz-question">
+          <h3>10. What can enumeration sometimes reveal?</h3>
+
+          <label>
+            <input type="radio" name="q10" value="a">
+            Usernames and service information
+          </label>
+
+          <label>
+            <input type="radio" name="q10" value="b">
+            Physical damage to devices
+          </label>
+
+          <label>
+            <input type="radio" name="q10" value="c">
+            New operating systems
+          </label>
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <button type="submit">
+          Submit Quiz
+        </button>
+
+      </form>
+
+      <!-- RESULT DISPLAY -->
+      <p id="mediumQuiz2Result" class="result-box"></p>
+
+    </section>
+  </main>
+
+  <!-- EXTERNAL JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
