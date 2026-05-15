@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Character encoding -->
+  <meta charset="UTF-8" />
+
+  <!-- Mobile responsive settings -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Browser tab title -->
+  <title>Easy Quiz 3</title>
+
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <script>
+    // Prevents users accessing the page without logging in
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <!-- HEADER -->
+  <header class="site-header">
+
+    <div>
+      <h1>CYBERLEARN</h1>
+
+      <p class="subtitle">
+        Easy Quiz 3 - Networking Fundamentals
+      </p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+
+      <a href="index.html">Home</a>
+      <a href="download.html">Download Tool</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="forum.html">Forum</a>
+
+      <!-- Logout button -->
+      <button class="logout-btn" onclick="logout()">
+        Logout
+      </button>
+
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="page-container">
+
+    <section class="single-card">
+
+      <h2>Easy Quiz 3</h2>
+
+      <p>
+        This quiz focuses on basic networking concepts used in cybersecurity and penetration testing.
+      </p>
+
+      <!-- QUIZ FORM -->
+      <form id="easyQuiz3Form">
+
+        <!-- QUESTION 1 -->
+        <div class="quiz-question">
+          <h3>1. What is an IP address?</h3>
+
+          <label>
+            <input type="radio" name="q1" value="a">
+            An identifier used for devices on a network
+          </label>
+
+          <label>
+            <input type="radio" name="q1" value="b">
+            A type of antivirus
+          </label>
+
+          <label>
+            <input type="radio" name="q1" value="c">
+            A computer monitor
+          </label>
+        </div>
+
+        <!-- QUESTION 2 -->
+        <div class="quiz-question">
+          <h3>2. What does HTTP stand for?</h3>
+
+          <label>
+            <input type="radio" name="q2" value="a">
+            HyperText Transfer Protocol
+          </label>
+
+          <label>
+            <input type="radio" name="q2" value="b">
+            High Transfer Testing Process
+          </label>
+
+          <label>
+            <input type="radio" name="q2" value="c">
+            Hyper Tool Tracking Program
+          </label>
+        </div>
+
+        <!-- QUESTION 3 -->
+        <div class="quiz-question">
+          <h3>3. What is HTTPS mainly used for?</h3>
+
+          <label>
+            <input type="radio" name="q3" value="a">
+            Secure encrypted web communication
+          </label>
+
+          <label>
+            <input type="radio" name="q3" value="b">
+            Making computers faster
+          </label>
+
+          <label>
+            <input type="radio" name="q3" value="c">
+            Blocking all internet traffic
+          </label>
+        </div>
+
+        <!-- QUESTION 4 -->
+        <div class="quiz-question">
+          <h3>4. What is a port used for in networking?</h3>
+
+          <label>
+            <input type="radio" name="q4" value="a">
+            Allowing communication between services
+          </label>
+
+          <label>
+            <input type="radio" name="q4" value="b">
+            Charging the computer
+          </label>
+
+          <label>
+            <input type="radio" name="q4" value="c">
+            Increasing storage space
+          </label>
+        </div>
+
+        <!-- QUESTION 5 -->
+        <div class="quiz-question">
+          <h3>5. What does Wi-Fi allow devices to do?</h3>
+
+          <label>
+            <input type="radio" name="q5" value="a">
+            Connect wirelessly to a network
+          </label>
+
+          <label>
+            <input type="radio" name="q5" value="b">
+            Repair hardware automatically
+          </label>
+
+          <label>
+            <input type="radio" name="q5" value="c">
+            Delete viruses
+          </label>
+        </div>
+
+        <!-- QUESTION 6 -->
+        <div class="quiz-question">
+          <h3>6. What device is commonly used to direct network traffic?</h3>
+
+          <label>
+            <input type="radio" name="q6" value="a">
+            Router
+          </label>
+
+          <label>
+            <input type="radio" name="q6" value="b">
+            Printer
+          </label>
+
+          <label>
+            <input type="radio" name="q6" value="c">
+            Webcam
+          </label>
+        </div>
+
+        <!-- QUESTION 7 -->
+        <div class="quiz-question">
+          <h3>7. What does DNS do?</h3>
+
+          <label>
+            <input type="radio" name="q7" value="a">
+            Translates domain names into IP addresses
+          </label>
+
+          <label>
+            <input type="radio" name="q7" value="b">
+            Increases computer brightness
+          </label>
+
+          <label>
+            <input type="radio" name="q7" value="c">
+            Creates malware
+          </label>
+        </div>
+
+        <!-- QUESTION 8 -->
+        <div class="quiz-question">
+          <h3>8. What is a VPN commonly used for?</h3>
+
+          <label>
+            <input type="radio" name="q8" value="a">
+            Creating secure private connections
+          </label>
+
+          <label>
+            <input type="radio" name="q8" value="b">
+            Speeding up hardware fans
+          </label>
+
+          <label>
+            <input type="radio" name="q8" value="c">
+            Installing games
+          </label>
+        </div>
+
+        <!-- QUESTION 9 -->
+        <div class="quiz-question">
+          <h3>9. What is packet loss?</h3>
+
+          <label>
+            <input type="radio" name="q9" value="a">
+            Data failing to reach its destination
+          </label>
+
+          <label>
+            <input type="radio" name="q9" value="b">
+            A type of firewall
+          </label>
+
+          <label>
+            <input type="radio" name="q9" value="c">
+            A password manager
+          </label>
+        </div>
+
+        <!-- QUESTION 10 -->
+        <div class="quiz-question">
+          <h3>10. What is bandwidth?</h3>
+
+          <label>
+            <input type="radio" name="q10" value="a">
+            The amount of data that can be transferred
+          </label>
+
+          <label>
+            <input type="radio" name="q10" value="b">
+            A type of malware
+          </label>
+
+          <label>
+            <input type="radio" name="q10" value="c">
+            A network attack
+          </label>
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <button type="submit">
+          Submit Quiz
+        </button>
+
+      </form>
+
+      <!-- RESULT DISPLAY -->
+      <p id="easyQuiz3Result" class="result-box"></p>
+
+    </section>
+  </main>
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
