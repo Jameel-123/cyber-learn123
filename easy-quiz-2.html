@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Page settings -->
+  <meta charset="UTF-8" />
+
+  <!-- Makes the page responsive on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Browser tab title -->
+  <title>Easy Quiz 2</title>
+
+  <!-- Links CSS styling -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <script>
+    // Prevents users from accessing this page unless logged in
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <!-- Website header -->
+  <header class="site-header">
+    <div>
+      <h1>CYBERLEARN</h1>
+      <p class="subtitle">Easy Quiz 2 - Passwords and Safe Behaviour</p>
+    </div>
+
+    <!-- Navigation links -->
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="download.html">Download Tool</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="forum.html">Forum</a>
+
+      <!-- Runs logout function from script.js -->
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </nav>
+  </header>
+
+  <!-- Main quiz content -->
+  <main class="page-container">
+    <section class="single-card">
+
+      <h2>Easy Quiz 2</h2>
+
+      <p>
+        This quiz focuses on passwords, account safety, permissions, and safe online behaviour.
+      </p>
+
+      <!-- Quiz form -->
+      <form id="easyQuiz2Form">
+
+        <!-- QUESTION 1 -->
+        <div class="quiz-question">
+          <h3>1. Which password is the strongest?</h3>
+
+          <label>
+            <input type="radio" name="q1" value="a">
+            Password123
+          </label>
+
+          <label>
+            <input type="radio" name="q1" value="b">
+            J@meel!93#Tool
+          </label>
+
+          <label>
+            <input type="radio" name="q1" value="c">
+            123456
+          </label>
+        </div>
+
+        <!-- QUESTION 2 -->
+        <div class="quiz-question">
+          <h3>2. What does two-factor authentication add?</h3>
+
+          <label>
+            <input type="radio" name="q2" value="a">
+            Extra security during login
+          </label>
+
+          <label>
+            <input type="radio" name="q2" value="b">
+            Faster Wi-Fi
+          </label>
+
+          <label>
+            <input type="radio" name="q2" value="c">
+            More storage space
+          </label>
+        </div>
+
+        <!-- QUESTION 3 -->
+        <div class="quiz-question">
+          <h3>3. Why should passwords not be reused?</h3>
+
+          <label>
+            <input type="radio" name="q3" value="a">
+            One leaked password could affect multiple accounts
+          </label>
+
+          <label>
+            <input type="radio" name="q3" value="b">
+            It makes typing slower
+          </label>
+
+          <label>
+            <input type="radio" name="q3" value="c">
+            It changes the screen colour
+          </label>
+        </div>
+
+        <!-- QUESTION 4 -->
+        <div class="quiz-question">
+          <h3>4. What should you do with a suspicious email link?</h3>
+
+          <label>
+            <input type="radio" name="q4" value="a">
+            Click it immediately
+          </label>
+
+          <label>
+            <input type="radio" name="q4" value="b">
+            Ignore or report it
+          </label>
+
+          <label>
+            <input type="radio" name="q4" value="c">
+            Forward it to everyone
+          </label>
+        </div>
+
+        <!-- QUESTION 5 -->
+        <div class="quiz-question">
+          <h3>5. What does “least privilege” mean?</h3>
+
+          <label>
+            <input type="radio" name="q5" value="a">
+            Users only get the access they need
+          </label>
+
+          <label>
+            <input type="radio" name="q5" value="b">
+            Everyone gets admin access
+          </label>
+
+          <label>
+            <input type="radio" name="q5" value="c">
+            No one can log in
+          </label>
+        </div>
+
+        <!-- QUESTION 6 -->
+        <div class="quiz-question">
+          <h3>6. Why should you lock your computer when away?</h3>
+
+          <label>
+            <input type="radio" name="q6" value="a">
+            To prevent unauthorised access
+          </label>
+
+          <label>
+            <input type="radio" name="q6" value="b">
+            To make it charge faster
+          </label>
+
+          <label>
+            <input type="radio" name="q6" value="c">
+            To delete malware
+          </label>
+        </div>
+
+        <!-- QUESTION 7 -->
+        <div class="quiz-question">
+          <h3>7. What is a password manager used for?</h3>
+
+          <label>
+            <input type="radio" name="q7" value="a">
+            Storing and generating strong passwords
+          </label>
+
+          <label>
+            <input type="radio" name="q7" value="b">
+            Blocking all websites
+          </label>
+
+          <label>
+            <input type="radio" name="q7" value="c">
+            Turning off the internet
+          </label>
+        </div>
+
+        <!-- QUESTION 8 -->
+        <div class="quiz-question">
+          <h3>8. What should you check before entering login details on a website?</h3>
+
+          <label>
+            <input type="radio" name="q8" value="a">
+            That the website is legitimate
+          </label>
+
+          <label>
+            <input type="radio" name="q8" value="b">
+            That the page has bright colours
+          </label>
+
+          <label>
+            <input type="radio" name="q8" value="c">
+            That the website loads slowly
+          </label>
+        </div>
+
+        <!-- QUESTION 9 -->
+        <div class="quiz-question">
+          <h3>9. What is shoulder surfing?</h3>
+
+          <label>
+            <input type="radio" name="q9" value="a">
+            Watching someone enter private information
+          </label>
+
+          <label>
+            <input type="radio" name="q9" value="b">
+            A type of firewall
+          </label>
+
+          <label>
+            <input type="radio" name="q9" value="c">
+            A software update
+          </label>
+        </div>
+
+        <!-- QUESTION 10 -->
+        <div class="quiz-question">
+          <h3>10. What should you do if you think your password is compromised?</h3>
+
+          <label>
+            <input type="radio" name="q10" value="a">
+            Change it immediately
+          </label>
+
+          <label>
+            <input type="radio" name="q10" value="b">
+            Share it online
+          </label>
+
+          <label>
+            <input type="radio" name="q10" value="c">
+            Keep using it
+          </label>
+        </div>
+
+        <!-- Submit quiz -->
+        <button type="submit">Submit Quiz</button>
+      </form>
+
+      <!-- Result appears here -->
+      <p id="easyQuiz2Result" class="result-box"></p>
+
+    </section>
+  </main>
+
+  <!-- Loads JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
