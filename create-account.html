@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Create Account</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="login-body">
+
+  <div class="login-container">
+    <div class="login-card">
+
+      <h1>Create Account</h1>
+
+      <p class="subtitle">
+        Enter your details to create a prototype account.
+      </p>
+
+      <form id="createAccountForm">
+
+        <label for="accountName">Full Name</label>
+        <input type="text" id="accountName" placeholder="Enter your name" required />
+
+        <label for="accountAge">Age</label>
+        <input type="number" id="accountAge" placeholder="Enter your age" required />
+
+        <label for="accountEmail">Email</label>
+        <input type="email" id="accountEmail" placeholder="Enter your email" required />
+
+        <button type="submit">Create Account</button>
+
+      </form>
+
+      <p id="accountMessage" class="message"></p>
+
+      <a class="card-btn" href="login.html" style="margin-top: 20px;">
+        Back to Login
+      </a>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
