@@ -386,3 +386,68 @@ if (saveQuizBtn) {
     quizSaveMessage.textContent = "Custom quiz saved successfully!";
   });
 }
+// ---------- TAKE CUSTOM QUIZ ----------
+
+const takeCustomQuizForm = document.getElementById("takeCustomQuizForm");
+const customQuizResult = document.getElementById("customQuizResult");
+
+if (takeCustomQuizForm) {
+  const savedQuiz = JSON.parse(localStorage.getItem("customQuiz"));
+
+  if (!savedQuiz || savedQuiz.length === 0) {
+    takeCustomQuizForm.innerHTML = `
+      <p>No custom quiz found. Please create a quiz first.</p>
+      <a class="card-btn" href="create-quiz.html">Create Quiz</a>
+    `;
+  } else {
+    savedQuiz.forEach(function (item, index) {
+      const questionBlock = document.createElement("div");
+      questionBlock.classList.add("quiz-question");
+
+      questionBlock.innerHTML = `
+        <h3>${index + 1}. ${item.question}</h3>
+
+        <label>
+          <input type="radio" name="customQ${index}" value="a">
+          ${item.options.a}
+        </label>
+
+        <label>
+          <input type="radio" name="customQ${index}" value="b">
+          ${item.options.b}
+        </label>
+
+        <label>
+          <input type="radio" name="customQ${index}" value="c">
+          ${item.options.c}
+        </label>
+      `;
+
+      takeCustomQuizForm.appendChild(questionBlock);
+    });
+
+    const submitButton = document.createElement("button");
+    submitButton.type = "submit";
+    submitButton.textContent = "Submit Custom Quiz";
+    takeCustomQuizForm.appendChild(submitButton);
+
+    takeCustomQuizForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      let score = 0;
+
+      savedQuiz.forEach(function (item, index) {
+        const selectedAnswer = document.querySelector(
+          `input[name="customQ${index}"]:checked`
+        );
+
+        if (selectedAnswer && selectedAnswer.value === item.correct) {
+          score++;
+        }
+      });
+
+      customQuizResult.textContent =
+        `You scored ${score} out of ${savedQuiz.length}.`;
+    });
+  }
+}
