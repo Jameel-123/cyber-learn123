@@ -42,35 +42,80 @@ function logout() {
 }
 
 
-// ---------- FORUM COMMENT HANDLING ----------
+// ---------- SAVED FORUM SYSTEM ----------
 
+// Find the forum form on the page
 const commentForm = document.getElementById("commentForm");
 
+// Displays one saved forum message in the correct forum section
+function displayForumMessage(message) {
+  const sectionMap = {
+    general: "generalMessages",
+    recommendations: "recommendationsMessages",
+    information: "informationMessages",
+    topics: "topicsMessages"
+  };
+
+  const targetList = document.getElementById(sectionMap[message.section]);
+
+  if (!targetList) return;
+
+  const commentItem = document.createElement("div");
+  commentItem.classList.add("comment-item");
+
+  commentItem.innerHTML = `
+    <strong>${message.user}</strong>
+    <p>${message.text}</p>
+    <small>${message.date}</small>
+  `;
+
+  targetList.prepend(commentItem);
+}
+
+// Loads saved messages from localStorage
+function loadForumMessages() {
+  const savedMessages =
+    JSON.parse(localStorage.getItem("forumMessages")) || [];
+
+  savedMessages.forEach(function (message) {
+    displayForumMessage(message);
+  });
+}
+
+// Only runs this code on forum.html
 if (commentForm) {
+  loadForumMessages();
+
   commentForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
+    const forumSection = document.getElementById("forumSection").value;
     const commentInput = document.getElementById("commentInput");
-    const commentsList = document.getElementById("commentsList");
     const commentText = commentInput.value.trim();
 
     if (commentText === "") return;
 
     const currentUser = localStorage.getItem("currentUser") || "User";
 
-    const commentItem = document.createElement("div");
-    commentItem.classList.add("comment-item");
+    const newMessage = {
+      section: forumSection,
+      user: currentUser,
+      text: commentText,
+      date: new Date().toLocaleString()
+    };
 
-    commentItem.innerHTML = `
-      <strong>${currentUser}:</strong>
-      <p>${commentText}</p>
-    `;
+    const savedMessages =
+      JSON.parse(localStorage.getItem("forumMessages")) || [];
 
-    commentsList.prepend(commentItem);
+    savedMessages.push(newMessage);
+
+    localStorage.setItem("forumMessages", JSON.stringify(savedMessages));
+
+    displayForumMessage(newMessage);
+
     commentInput.value = "";
   });
 }
-
 
 // ---------- REUSABLE QUIZ MARKING FUNCTION ----------
 
