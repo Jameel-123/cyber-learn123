@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Character encoding -->
   <meta charset="UTF-8" />
+
+  <!-- Makes the page responsive on mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Browser tab title -->
   <title>Forum</title>
+
+  <!-- Links the CSS file -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -15,49 +22,91 @@
     }
   </script>
 
+  <!-- HEADER -->
   <header class="site-header">
     <div>
       <h1>CYBERLEARN</h1>
       <p class="subtitle">Community discussion area</p>
     </div>
 
+    <!-- NAVIGATION BAR -->
     <nav class="navbar">
       <a href="index.html">Home</a>
       <a href="download.html">Download Tool</a>
       <a href="tutorial.html">Tutorial</a>
       <a href="quiz.html">Quiz</a>
       <a href="forum.html">Forum</a>
+
+      <!-- Logs the user out using the logout() function in script.js -->
       <button class="logout-btn" onclick="logout()">Logout</button>
     </nav>
   </header>
 
+  <!-- MAIN CONTENT -->
   <main class="page-container">
     <section class="single-card">
-      <h2>Forum / Comments</h2>
-      <p>Users can type and post comments in this prototype discussion area.</p>
 
+      <h2>Forum</h2>
+
+      <p>
+        Choose a section and post a message. Messages are saved in the browser
+        so they remain visible after refresh or logout.
+      </p>
+
+      <!-- FORUM POST FORM -->
       <form id="commentForm">
-        <label for="commentInput">Write a comment</label>
+
+        <!-- Section selector -->
+        <label for="forumSection">Choose a section</label>
+        <select id="forumSection" required>
+          <option value="general">General Chat</option>
+          <option value="recommendations">Recommendations</option>
+          <option value="information">Information</option>
+          <option value="topics">Topics</option>
+        </select>
+
+        <!-- Message input -->
+        <label for="commentInput">Write a message</label>
 
         <textarea
           id="commentInput"
           rows="5"
-          placeholder="Write your comment here..."
+          placeholder="Write your message here..."
+          required
         ></textarea>
 
-        <button type="submit">Post Comment</button>
+        <!-- Submit button -->
+        <button type="submit">Post Message</button>
       </form>
 
-      <div id="commentsList" class="comments-list">
-        <!-- Existing starter comment -->
-        <div class="comment-item">
-          <strong>Admin:</strong>
-          <p>Welcome to the discussion area. Keep posts professional and respectful.</p>
-        </div>
+      <!-- GENERAL CHAT SECTION -->
+      <div class="forum-section">
+        <h3>General Chat</h3>
+        <div id="generalMessages" class="comments-list"></div>
       </div>
+
+      <!-- RECOMMENDATIONS SECTION -->
+      <div class="forum-section">
+        <h3>Recommendations</h3>
+        <div id="recommendationsMessages" class="comments-list"></div>
+      </div>
+
+      <!-- INFORMATION SECTION -->
+      <div class="forum-section">
+        <h3>Information</h3>
+        <div id="informationMessages" class="comments-list"></div>
+      </div>
+
+      <!-- TOPICS SECTION -->
+      <div class="forum-section">
+        <h3>Topics</h3>
+        <div id="topicsMessages" class="comments-list"></div>
+      </div>
+
     </section>
   </main>
 
+  <!-- Loads JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
