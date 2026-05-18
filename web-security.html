@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding -->
+  <meta charset="UTF-8" />
+
+  <!-- Responsive page scaling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Browser tab title -->
+  <title>Web Security</title>
+
+  <!-- Shared stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <script>
+    // Prevent access if user is not logged in
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <!-- HEADER -->
+  <header class="site-header">
+
+    <div>
+      <h1>CYBERLEARN</h1>
+      <p class="subtitle">Web Security</p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="learning.html">Learning</a>
+      <a href="download.html">Download Tool</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="forum.html">Forum</a>
+
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </nav>
+
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="page-container">
+
+    <!-- INTRO -->
+    <section class="single-card">
+
+      <h2>Web Security</h2>
+
+      <p>
+        Web security focuses on protecting websites, web applications,
+        and online services from attacks and unauthorised access.
+      </p>
+
+      <p>
+        Because many organisations rely on web applications,
+        web security has become one of the most important areas
+        in cybersecurity.
+      </p>
+
+    </section>
+
+    <!-- AUTHENTICATION -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>Authentication</h2>
+
+      <p>
+        Authentication is the process of verifying a user’s identity.
+      </p>
+
+      <p>
+        Common authentication methods include:
+      </p>
+
+      <ul>
+        <li>Usernames and passwords</li>
+        <li>Multi-factor authentication (MFA)</li>
+        <li>Biometrics</li>
+        <li>Security tokens</li>
+      </ul>
+
+      <div class="code-box">
+        Example:
+        Username + Password + Verification Code
+      </div>
+
+    </section>
+
+    <!-- AUTHORISATION -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>Authorisation</h2>
+
+      <p>
+        Authorisation controls what users are allowed to access
+        after they have successfully logged in.
+      </p>
+
+      <p>
+        Different users may have different permissions.
+      </p>
+
+      <ul>
+        <li>Admin users</li>
+        <li>Standard users</li>
+        <li>Guest users</li>
+      </ul>
+
+    </section>
+
+    <!-- SESSION MANAGEMENT -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>Session Management</h2>
+
+      <p>
+        Session management keeps users logged in while they move
+        between pages of a website.
+      </p>
+
+      <p>
+        Poor session handling can allow attackers to hijack accounts.
+      </p>
+
+      <div class="code-box">
+        Example:
+        localStorage is used in this prototype
+        to simulate login sessions.
+      </div>
+
+    </section>
+
+    <!-- INPUT VALIDATION -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>Input Validation</h2>
+
+      <p>
+        Input validation checks user input before it is processed.
+      </p>
+
+      <p>
+        Without validation, attackers may inject harmful data
+        into applications.
+      </p>
+
+      <ul>
+        <li>Checking input length</li>
+        <li>Removing dangerous characters</li>
+        <li>Restricting invalid input types</li>
+      </ul>
+
+    </section>
+
+    <!-- SQL INJECTION -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>SQL Injection</h2>
+
+      <p>
+        SQL Injection occurs when attackers inject malicious SQL commands
+        into database queries.
+      </p>
+
+      <p>
+        Poorly protected applications may allow attackers
+        to read or modify database data.
+      </p>
+
+      <div class="warning-box">
+        Applications should validate and sanitise input
+        to reduce SQL Injection risk.
+      </div>
+
+    </section>
+
+    <!-- CROSS SITE SCRIPTING -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>Cross-Site Scripting (XSS)</h2>
+
+      <p>
+        XSS occurs when attackers inject malicious scripts
+        into web pages viewed by other users.
+      </p>
+
+      <p>
+        XSS can be used to:
+      </p>
+
+      <ul>
+        <li>Steal session information</li>
+        <li>Redirect users</li>
+        <li>Modify page content</li>
+        <li>Run malicious scripts</li>
+      </ul>
+
+    </section>
+
+    <!-- HTTPS -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>HTTPS and Encryption</h2>
+
+      <p>
+        HTTPS encrypts communication between users and websites.
+      </p>
+
+      <p>
+        Encryption helps protect sensitive information
+        such as passwords and personal data.
+      </p>
+
+      <div class="code-box">
+        HTTP = Unencrypted
+
+        HTTPS = Encrypted
+      </div>
+
+    </section>
+
+    <!-- SECURE DESIGN -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>Secure Design Principles</h2>
+
+      <p>
+        Secure applications should be designed with security in mind
+        from the beginning.
+      </p>
+
+      <ul>
+        <li>Least privilege</li>
+        <li>Strong authentication</li>
+        <li>Input validation</li>
+        <li>Secure session handling</li>
+        <li>Regular patching</li>
+      </ul>
+
+    </section>
+
+    <!-- QUICK CHECK -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>Quick Knowledge Check</h2>
+
+      <ul>
+        <li>What is authentication?</li>
+        <li>Why is HTTPS important?</li>
+        <li>What is SQL Injection?</li>
+        <li>What does input validation do?</li>
+      </ul>
+
+    </section>
+
+    <!-- BACK BUTTON -->
+    <section class="single-card" style="margin-top: 20px; text-align: center;">
+
+      <a class="card-btn" href="learning.html">
+        Back to Learning Centre
+      </a>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>
+      Jameel's Cyber Tool © 2026 | Educational Cybersecurity Platform
+    </p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
