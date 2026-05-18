@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding -->
+  <meta charset="UTF-8" />
+
+  <!-- Responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Browser tab title -->
+  <title>Penetration Testing</title>
+
+  <!-- Shared stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <script>
+    // Prevent access if user is not logged in
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <!-- HEADER -->
+  <header class="site-header">
+
+    <div>
+      <h1>CYBERLEARN</h1>
+      <p class="subtitle">Penetration Testing</p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="learning.html">Learning</a>
+      <a href="download.html">Download Tool</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="forum.html">Forum</a>
+
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </nav>
+
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="page-container">
+
+    <!-- INTRO -->
+    <section class="single-card">
+
+      <h2>Penetration Testing</h2>
+
+      <p>
+        Penetration testing is the authorised process of assessing systems,
+        applications, or networks to identify security weaknesses before
+        attackers can exploit them.
+      </p>
+
+      <p>
+        Ethical hackers and penetration testers follow a structured process
+        to safely analyse environments and report findings professionally.
+      </p>
+
+    </section>
+
+    <!-- WHAT IS PEN TESTING -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>What is Penetration Testing?</h2>
+
+      <p>
+        A penetration test simulates realistic attack techniques in a controlled,
+        authorised, and legal manner.
+      </p>
+
+      <p>
+        The goal is to:
+      </p>
+
+      <ul>
+        <li>Identify vulnerabilities</li>
+        <li>Understand security weaknesses</li>
+        <li>Measure risk exposure</li>
+        <li>Recommend improvements</li>
+      </ul>
+
+      <div class="warning-box">
+        Penetration testing should only be performed on systems
+        where permission has been granted.
+      </div>
+
+    </section>
+
+    <!-- PLANNING -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>1. Planning and Scope</h2>
+
+      <p>
+        Before testing begins, the tester must define the scope.
+        The scope explains what systems are authorised for testing.
+      </p>
+
+      <p>
+        The planning stage may include:
+      </p>
+
+      <ul>
+        <li>Target systems</li>
+        <li>Testing objectives</li>
+        <li>Timeframes</li>
+        <li>Rules of engagement</li>
+        <li>Permissions and agreements</li>
+      </ul>
+
+    </section>
+
+    <!-- RECON -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>2. Reconnaissance</h2>
+
+      <p>
+        Reconnaissance involves gathering information about the target.
+      </p>
+
+      <p>
+        This may include:
+      </p>
+
+      <ul>
+        <li>IP addresses</li>
+        <li>Domain names</li>
+        <li>Public records</li>
+        <li>Exposed services</li>
+        <li>Technology stacks</li>
+      </ul>
+
+      <div class="code-box">
+        Example:
+        whois example.com
+      </div>
+
+    </section>
+
+    <!-- SCANNING -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>3. Scanning</h2>
+
+      <p>
+        Scanning identifies active systems, open ports,
+        and running services.
+      </p>
+
+      <div class="code-box">
+        Example:
+        nmap -sV 192.168.1.10
+      </div>
+
+      <p>
+        The tester analyses the exposed services
+        to understand possible risks.
+      </p>
+
+    </section>
+
+    <!-- ENUMERATION -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>4. Enumeration</h2>
+
+      <p>
+        Enumeration collects detailed information from services.
+      </p>
+
+      <p>
+        Examples include:
+      </p>
+
+      <ul>
+        <li>User accounts</li>
+        <li>Shared resources</li>
+        <li>Operating system information</li>
+        <li>Application versions</li>
+      </ul>
+
+    </section>
+
+    <!-- ANALYSIS -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>5. Vulnerability Analysis</h2>
+
+      <p>
+        After gathering information, the tester identifies
+        vulnerabilities and misconfigurations.
+      </p>
+
+      <p>
+        Common weaknesses include:
+      </p>
+
+      <ul>
+        <li>Weak passwords</li>
+        <li>Outdated software</li>
+        <li>Exposed services</li>
+        <li>Poor configurations</li>
+      </ul>
+
+    </section>
+
+    <!-- REPORTING -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>6. Reporting</h2>
+
+      <p>
+        Reporting is one of the most important stages.
+        Findings should be explained clearly and professionally.
+      </p>
+
+      <p>
+        Reports usually include:
+      </p>
+
+      <ul>
+        <li>Risk level</li>
+        <li>Evidence</li>
+        <li>Technical explanation</li>
+        <li>Impact assessment</li>
+        <li>Remediation advice</li>
+      </ul>
+
+    </section>
+
+    <!-- REMEDIATION -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>7. Remediation</h2>
+
+      <p>
+        Remediation means fixing identified weaknesses
+        to reduce security risk.
+      </p>
+
+      <p>
+        Examples include:
+      </p>
+
+      <ul>
+        <li>Applying patches</li>
+        <li>Removing vulnerable services</li>
+        <li>Improving passwords</li>
+        <li>Changing configurations</li>
+      </ul>
+
+    </section>
+
+    <!-- ETHICS -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>Ethics and Legal Considerations</h2>
+
+      <p>
+        Ethical hacking requires clear authorisation.
+        Unauthorised testing may be illegal and unethical.
+      </p>
+
+      <p>
+        Professional testers must:
+      </p>
+
+      <ul>
+        <li>Remain within scope</li>
+        <li>Protect collected information</li>
+        <li>Document findings responsibly</li>
+        <li>Act professionally at all times</li>
+      </ul>
+
+    </section>
+
+    <!-- QUICK CHECK -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>Quick Knowledge Check</h2>
+
+      <ul>
+        <li>Why is scope important?</li>
+        <li>What is reconnaissance?</li>
+        <li>Why is reporting important?</li>
+        <li>What is remediation?</li>
+      </ul>
+
+    </section>
+
+    <!-- BACK BUTTON -->
+    <section class="single-card" style="margin-top: 20px; text-align: center;">
+
+      <a class="card-btn" href="learning.html">
+        Back to Learning Centre
+      </a>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>
+      Jameel's Cyber Tool © 2026 | Educational Cybersecurity Platform
+    </p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
