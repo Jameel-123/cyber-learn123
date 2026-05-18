@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding -->
+  <meta charset="UTF-8" />
+
+  <!-- Makes the page responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Browser tab title -->
+  <title>Cybersecurity Basics</title>
+
+  <!-- Links the shared stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <script>
+    // Prevent access if user is not logged in
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <!-- HEADER -->
+  <header class="site-header">
+
+    <div>
+      <h1>CYBERLEARN</h1>
+      <p class="subtitle">Cybersecurity Basics</p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="learning.html">Learning</a>
+      <a href="download.html">Download Tool</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="forum.html">Forum</a>
+
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </nav>
+
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="page-container">
+
+    <!-- PAGE INTRODUCTION -->
+    <section class="single-card">
+
+      <h2>Cybersecurity Basics</h2>
+
+      <p>
+        Cybersecurity is the process of protecting computers, networks,
+        applications, and data from unauthorised access, misuse, attack,
+        or damage.
+      </p>
+
+      <p>
+        Modern organisations rely heavily on digital systems, meaning security
+        has become extremely important for businesses, governments, and
+        individual users.
+      </p>
+
+    </section>
+
+    <!-- WHAT IS CYBERSECURITY -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>What is Cybersecurity?</h2>
+
+      <p>
+        Cybersecurity focuses on protecting information systems and ensuring
+        systems remain secure, available, and trustworthy.
+      </p>
+
+      <p>
+        Security professionals work to identify risks, reduce vulnerabilities,
+        and respond to threats before they can cause harm.
+      </p>
+
+      <p>
+        Cybersecurity includes many different areas such as:
+      </p>
+
+      <ul>
+        <li>Network Security</li>
+        <li>Web Security</li>
+        <li>Application Security</li>
+        <li>Cloud Security</li>
+        <li>Digital Forensics</li>
+        <li>Penetration Testing</li>
+        <li>Incident Response</li>
+      </ul>
+
+    </section>
+
+    <!-- CIA TRIAD -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>The CIA Triad</h2>
+
+      <p>
+        The CIA Triad is one of the most important security concepts.
+        It explains three core goals of cybersecurity.
+      </p>
+
+      <h3>1. Confidentiality</h3>
+
+      <p>
+        Confidentiality means keeping information private and ensuring
+        only authorised users can access sensitive data.
+      </p>
+
+      <div class="code-box">
+        Example: Password-protected accounts and encrypted files
+      </div>
+
+      <h3>2. Integrity</h3>
+
+      <p>
+        Integrity means ensuring information remains accurate and is not
+        modified without permission.
+      </p>
+
+      <div class="code-box">
+        Example: Detecting unauthorised file changes
+      </div>
+
+      <h3>3. Availability</h3>
+
+      <p>
+        Availability means systems and services remain accessible when users
+        need them.
+      </p>
+
+      <div class="code-box">
+        Example: Keeping websites online during high traffic
+      </div>
+
+    </section>
+
+    <!-- COMMON THREATS -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>Common Cyber Threats</h2>
+
+      <h3>Malware</h3>
+
+      <p>
+        Malware is malicious software designed to damage systems,
+        steal information, or disrupt services.
+      </p>
+
+      <ul>
+        <li>Viruses</li>
+        <li>Worms</li>
+        <li>Ransomware</li>
+        <li>Trojans</li>
+        <li>Spyware</li>
+      </ul>
+
+      <h3>Phishing</h3>
+
+      <p>
+        Phishing attacks trick users into revealing sensitive information
+        such as passwords or banking details.
+      </p>
+
+      <h3>Social Engineering</h3>
+
+      <p>
+        Social engineering attacks manipulate people rather than systems.
+        Attackers may impersonate trusted individuals to gain access.
+      </p>
+
+      <h3>Password Attacks</h3>
+
+      <p>
+        Weak passwords can be guessed or cracked using automated tools.
+      </p>
+
+    </section>
+
+    <!-- PASSWORD SECURITY -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>Password Security</h2>
+
+      <p>
+        Strong passwords are one of the most basic but important security controls.
+      </p>
+
+      <h3>Good Password Practices</h3>
+
+      <ul>
+        <li>Use long passwords</li>
+        <li>Use upper and lowercase letters</li>
+        <li>Include numbers and symbols</li>
+        <li>Avoid common words</li>
+        <li>Do not reuse passwords</li>
+      </ul>
+
+      <div class="code-box">
+        Example Strong Password:
+        Cyb3r!Learn2026#
+      </div>
+
+    </section>
+
+    <!-- ETHICAL HACKING -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>Ethical Hacking</h2>
+
+      <p>
+        Ethical hacking means testing systems legally and with permission
+        to identify weaknesses before attackers can abuse them.
+      </p>
+
+      <p>
+        Ethical hackers follow rules, remain within scope,
+        and provide reports explaining findings and recommendations.
+      </p>
+
+      <div class="warning-box">
+        Ethical hacking should only be performed on systems you own
+        or have explicit permission to test.
+      </div>
+
+    </section>
+
+    <!-- QUICK KNOWLEDGE CHECK -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>Quick Knowledge Check</h2>
+
+      <ul>
+        <li>What does confidentiality mean?</li>
+        <li>Why are strong passwords important?</li>
+        <li>What is phishing?</li>
+        <li>What does ethical hacking require before testing?</li>
+      </ul>
+
+    </section>
+
+    <!-- BACK BUTTON -->
+    <section class="single-card" style="margin-top: 20px; text-align: center;">
+
+      <a class="card-btn" href="learning.html">
+        Back to Learning Centre
+      </a>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>
+      Jameel's Cyber Tool © 2026 | Educational Cybersecurity Platform
+    </p>
+  </footer>
+
+  <!-- Loads JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
