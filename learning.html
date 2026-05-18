@@ -51,235 +51,124 @@
       <h2>Learning Centre</h2>
 
       <p>
-        This page provides beginner-friendly cybersecurity learning material.
-        The aim is to help users understand key concepts before using the tool,
-        completing quizzes, or reading technical results.
+        This section is designed as the main learning hub for the platform.
+        Instead of placing all topics on one long page, each topic now has its
+        own dedicated lesson page.
       </p>
 
       <p>
-        The content is organised into categories so users can build knowledge step by step,
-        starting with basic security awareness and moving into networking, penetration testing,
-        web security, and defensive security.
+        Choose a topic below to open a detailed learning page. Each topic explains
+        key cybersecurity concepts in a structured way and supports the quizzes,
+        tutorial content, and tool usage across the website.
       </p>
     </section>
 
-    <!-- TOPIC OVERVIEW CARDS -->
+    <!-- TOPIC SELECTION CARDS -->
     <section class="card-grid">
 
+      <!-- CYBERSECURITY BASICS CARD -->
       <div class="card">
-        <h3>1. Cybersecurity Basics</h3>
+        <h3>Cybersecurity Basics</h3>
+
         <p>
-          Learn what cybersecurity is, why it matters, and how systems are protected
-          from unauthorised access, misuse, and damage.
+          Learn what cybersecurity is, why it matters, and how systems, networks,
+          users, and data are protected from threats.
         </p>
+
+        <a class="card-btn" href="cybersecurity-basics.html">
+          Start Topic
+        </a>
       </div>
 
+      <!-- NETWORKING BASICS CARD -->
       <div class="card">
-        <h3>2. Networking Basics</h3>
+        <h3>Networking Basics</h3>
+
         <p>
-          Understand IP addresses, ports, protocols, DNS, routers, and firewalls.
-          These are core foundations for cybersecurity.
+          Learn about IP addresses, ports, protocols, DNS, routers, firewalls,
+          and how devices communicate across networks.
         </p>
+
+        <a class="card-btn" href="networking-basics.html">
+          Start Topic
+        </a>
       </div>
 
+      <!-- PENETRATION TESTING CARD -->
       <div class="card">
-        <h3>3. Penetration Testing</h3>
+        <h3>Penetration Testing</h3>
+
         <p>
-          Learn the main stages of a penetration test, including planning,
-          reconnaissance, scanning, analysis, and reporting.
+          Learn the penetration testing lifecycle, including scope, reconnaissance,
+          scanning, analysis, reporting, and remediation.
         </p>
+
+        <a class="card-btn" href="penetration-testing.html">
+          Start Topic
+        </a>
       </div>
 
+      <!-- WEB SECURITY CARD -->
       <div class="card">
-        <h3>4. Web Security</h3>
+        <h3>Web Security</h3>
+
         <p>
-          Learn common web security concepts such as authentication, session handling,
-          input validation, and secure design.
+          Learn about authentication, authorisation, session handling, input
+          validation, and common web application risks.
         </p>
+
+        <a class="card-btn" href="web-security.html">
+          Start Topic
+        </a>
+      </div>
+
+      <!-- DEFENSIVE SECURITY CARD -->
+      <div class="card">
+        <h3>Defensive Security</h3>
+
+        <p>
+          Learn how organisations protect systems using firewalls, logging,
+          patching, backups, monitoring, and incident response.
+        </p>
+
+        <a class="card-btn" href="defensive-security.html">
+          Start Topic
+        </a>
+      </div>
+
+      <!-- KEY TERMS CARD -->
+      <div class="card">
+        <h3>Cybersecurity Key Terms</h3>
+
+        <p>
+          Review important cybersecurity terminology such as vulnerability,
+          exploit, risk, patching, enumeration, and remediation.
+        </p>
+
+        <a class="card-btn" href="key-terms.html">
+          Start Topic
+        </a>
       </div>
 
     </section>
 
-    <!-- CYBERSECURITY BASICS -->
+    <!-- STUDY GUIDANCE SECTION -->
     <section class="single-card" style="margin-top: 20px;">
-      <h2>Cybersecurity Basics</h2>
-
-      <h3>What is cybersecurity?</h3>
-      <p>
-        Cybersecurity is the practice of protecting computers, networks, applications,
-        and data from unauthorised access, attack, damage, or misuse.
-      </p>
-
-      <h3>The CIA Triad</h3>
-      <p>
-        The CIA Triad is a core security model that explains three important security goals:
-      </p>
-
-      <ul>
-        <li><strong>Confidentiality:</strong> Keeping information private.</li>
-        <li><strong>Integrity:</strong> Making sure information is accurate and unchanged.</li>
-        <li><strong>Availability:</strong> Making sure systems and data are accessible when needed.</li>
-      </ul>
-
-      <h3>Why cybersecurity matters</h3>
-      <p>
-        Cybersecurity helps protect personal information, business systems, financial data,
-        and critical services. Weak security can lead to data breaches, system downtime,
-        identity theft, and financial loss.
-      </p>
-    </section>
-
-    <!-- NETWORKING BASICS -->
-    <section class="single-card" style="margin-top: 20px;">
-      <h2>Networking Basics</h2>
+      <h2>Recommended Study Path</h2>
 
       <p>
-        Networking is one of the most important foundations in cybersecurity.
-        Understanding how devices communicate helps users understand scanning,
-        monitoring, and security risks.
+        Users should work through the topics in order, starting with the basics
+        before moving into more technical areas.
       </p>
 
-      <h3>IP Addresses</h3>
-      <p>
-        An IP address identifies a device on a network. Devices use IP addresses
-        to send and receive data.
-      </p>
-
-      <div class="code-box">
-        Example IP Address: 192.168.1.10
-      </div>
-
-      <h3>Ports</h3>
-      <p>
-        Ports are communication endpoints used by services. A system may have many ports,
-        and open ports can show which services are running.
-      </p>
-
-      <ul>
-        <li><strong>Port 22:</strong> SSH</li>
-        <li><strong>Port 80:</strong> HTTP</li>
-        <li><strong>Port 443:</strong> HTTPS</li>
-        <li><strong>Port 53:</strong> DNS</li>
-      </ul>
-
-      <h3>Protocols</h3>
-      <p>
-        Protocols are rules for communication. Examples include HTTP, HTTPS, DNS, FTP,
-        and SSH. Understanding protocols helps explain how data travels across networks.
-      </p>
-    </section>
-
-    <!-- PENETRATION TESTING LIFECYCLE -->
-    <section class="single-card" style="margin-top: 20px;">
-      <h2>Penetration Testing Lifecycle</h2>
-
-      <h3>1. Planning and Scope</h3>
-      <p>
-        Before testing begins, the tester must understand what systems are allowed
-        to be tested. This is known as scope. Testing outside scope can be unauthorised.
-      </p>
-
-      <h3>2. Reconnaissance</h3>
-      <p>
-        Reconnaissance means gathering information about the target environment.
-        This can include domain names, IP addresses, services, and public information.
-      </p>
-
-      <h3>3. Scanning</h3>
-      <p>
-        Scanning is used to identify active hosts, open ports, and running services.
-        This helps understand what is exposed.
-      </p>
-
-      <div class="code-box">
-        Example scan command: nmap -sV 192.168.1.10
-      </div>
-
-      <h3>4. Analysis</h3>
-      <p>
-        After scanning, results are reviewed to identify potential weaknesses,
-        misconfigurations, or risky services.
-      </p>
-
-      <h3>5. Reporting</h3>
-      <p>
-        Findings should be documented clearly, including risk level, evidence,
-        and recommended fixes.
-      </p>
-    </section>
-
-    <!-- WEB SECURITY BASICS -->
-    <section class="single-card" style="margin-top: 20px;">
-      <h2>Web Security Basics</h2>
-
-      <h3>Authentication</h3>
-      <p>
-        Authentication is the process of proving a user’s identity, usually through
-        a username and password.
-      </p>
-
-      <h3>Authorisation</h3>
-      <p>
-        Authorisation controls what a user is allowed to access after logging in.
-        For example, an admin user may have more privileges than a normal user.
-      </p>
-
-      <h3>Input Validation</h3>
-      <p>
-        Input validation checks user input before it is processed. This helps prevent
-        invalid or harmful data from affecting the application.
-      </p>
-
-      <h3>Session Management</h3>
-      <p>
-        Session management keeps users logged in while they move between pages.
-        In this prototype, localStorage is used to simulate session handling.
-      </p>
-    </section>
-
-    <!-- DEFENSIVE SECURITY -->
-    <section class="single-card" style="margin-top: 20px;">
-      <h2>Defensive Security</h2>
-
-      <h3>Firewalls</h3>
-      <p>
-        A firewall filters network traffic and helps control what is allowed in or out
-        of a network.
-      </p>
-
-      <h3>Logging</h3>
-      <p>
-        Logs record events that happen on systems. They are useful for investigating
-        incidents and understanding suspicious activity.
-      </p>
-
-      <h3>Patching</h3>
-      <p>
-        Patching means applying updates to fix bugs or security vulnerabilities.
-        Keeping software updated reduces risk.
-      </p>
-
-      <h3>Backups</h3>
-      <p>
-        Backups allow data to be restored after accidental deletion, system failure,
-        or cyber incidents.
-      </p>
-    </section>
-
-    <!-- KEY TERMS -->
-    <section class="single-card" style="margin-top: 20px;">
-      <h2>Key Terms</h2>
-
-      <ul>
-        <li><strong>Vulnerability:</strong> A weakness that could be exploited.</li>
-        <li><strong>Exploit:</strong> A method used to take advantage of a weakness.</li>
-        <li><strong>Risk:</strong> The chance and impact of something going wrong.</li>
-        <li><strong>Patch:</strong> An update used to fix a security issue.</li>
-        <li><strong>Firewall:</strong> A control that filters network traffic.</li>
-        <li><strong>Reconnaissance:</strong> Gathering information about a target.</li>
-        <li><strong>Enumeration:</strong> Collecting detailed information from services.</li>
-        <li><strong>Remediation:</strong> Fixing or reducing a security weakness.</li>
-      </ul>
+      <ol>
+        <li>Cybersecurity Basics</li>
+        <li>Networking Basics</li>
+        <li>Penetration Testing</li>
+        <li>Web Security</li>
+        <li>Defensive Security</li>
+        <li>Cybersecurity Key Terms</li>
+      </ol>
     </section>
 
   </main>
