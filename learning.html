@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Learning Centre</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <script>
+    // Protect page from users who are not logged in
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <header class="site-header">
+    <div>
+      <h1>CYBERLEARN</h1>
+      <p class="subtitle">Learning centre</p>
+    </div>
+
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="learning.html">Learning</a>
+      <a href="download.html">Download Tool</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="forum.html">Forum</a>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </nav>
+  </header>
+
+  <main class="page-container">
+
+    <section class="single-card">
+      <h2>Learning Centre</h2>
+
+      <p>
+        This page provides beginner-friendly cybersecurity learning material.
+        Read through each section to build your understanding before attempting the quizzes.
+      </p>
+    </section>
+
+    <section class="card-grid">
+
+      <div class="card">
+        <h3>1. Cybersecurity Basics</h3>
+        <p>
+          Cybersecurity is the practice of protecting systems, networks, and data
+          from unauthorised access, damage, or misuse.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>2. Ethical Hacking</h3>
+        <p>
+          Ethical hacking means testing systems with permission to find weaknesses
+          before attackers can abuse them.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>3. Networking Basics</h3>
+        <p>
+          Networks allow devices to communicate. Important concepts include IP addresses,
+          ports, protocols, DNS, routers, and firewalls.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>4. Penetration Testing</h3>
+        <p>
+          Penetration testing follows stages such as planning, reconnaissance,
+          scanning, analysis, reporting, and remediation.
+        </p>
+      </div>
+
+    </section>
+
+    <section class="single-card" style="margin-top: 20px;">
+      <h2>Penetration Testing Lifecycle</h2>
+
+      <h3>1. Planning and Scope</h3>
+      <p>
+        Before testing begins, the tester must understand what systems are allowed
+        to be tested. This is known as the scope.
+      </p>
+
+      <h3>2. Reconnaissance</h3>
+      <p>
+        Reconnaissance means gathering information about the target environment.
+        This can include domain names, IP addresses, services, and public information.
+      </p>
+
+      <h3>3. Scanning</h3>
+      <p>
+        Scanning is used to identify active hosts, open ports, and running services.
+        This helps understand what is exposed.
+      </p>
+
+      <h3>4. Analysis</h3>
+      <p>
+        After scanning, results are reviewed to identify potential weaknesses,
+        misconfigurations, or risky services.
+      </p>
+
+      <h3>5. Reporting</h3>
+      <p>
+        Findings should be documented clearly, including risk level, evidence,
+        and recommended fixes.
+      </p>
+    </section>
+
+    <section class="single-card" style="margin-top: 20px;">
+      <h2>Key Terms</h2>
+
+      <ul>
+        <li><strong>Vulnerability:</strong> A weakness that could be exploited.</li>
+        <li><strong>Exploit:</strong> A method used to take advantage of a weakness.</li>
+        <li><strong>Risk:</strong> The chance and impact of something going wrong.</li>
+        <li><strong>Patch:</strong> An update used to fix a security issue.</li>
+        <li><strong>Firewall:</strong> A control that filters network traffic.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
