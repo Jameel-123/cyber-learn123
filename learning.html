@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Character encoding -->
   <meta charset="UTF-8" />
+
+  <!-- Responsive layout for phones/tablets -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Browser tab title -->
   <title>Learning Centre</title>
 
+  <!-- Links the CSS stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -17,12 +22,14 @@
     }
   </script>
 
+  <!-- HEADER -->
   <header class="site-header">
     <div>
       <h1>CYBERLEARN</h1>
       <p class="subtitle">Learning centre</p>
     </div>
 
+    <!-- NAVIGATION BAR -->
     <nav class="navbar">
       <a href="index.html">Home</a>
       <a href="learning.html">Learning</a>
@@ -30,64 +37,146 @@
       <a href="tutorial.html">Tutorial</a>
       <a href="quiz.html">Quiz</a>
       <a href="forum.html">Forum</a>
+
+      <!-- Logout button calls logout() from script.js -->
       <button class="logout-btn" onclick="logout()">Logout</button>
     </nav>
   </header>
 
+  <!-- MAIN PAGE CONTENT -->
   <main class="page-container">
 
+    <!-- INTRODUCTION SECTION -->
     <section class="single-card">
       <h2>Learning Centre</h2>
 
       <p>
         This page provides beginner-friendly cybersecurity learning material.
-        Read through each section to build your understanding before attempting the quizzes.
+        The aim is to help users understand key concepts before using the tool,
+        completing quizzes, or reading technical results.
+      </p>
+
+      <p>
+        The content is organised into categories so users can build knowledge step by step,
+        starting with basic security awareness and moving into networking, penetration testing,
+        web security, and defensive security.
       </p>
     </section>
 
+    <!-- TOPIC OVERVIEW CARDS -->
     <section class="card-grid">
 
       <div class="card">
         <h3>1. Cybersecurity Basics</h3>
         <p>
-          Cybersecurity is the practice of protecting systems, networks, and data
-          from unauthorised access, damage, or misuse.
+          Learn what cybersecurity is, why it matters, and how systems are protected
+          from unauthorised access, misuse, and damage.
         </p>
       </div>
 
       <div class="card">
-        <h3>2. Ethical Hacking</h3>
+        <h3>2. Networking Basics</h3>
         <p>
-          Ethical hacking means testing systems with permission to find weaknesses
-          before attackers can abuse them.
+          Understand IP addresses, ports, protocols, DNS, routers, and firewalls.
+          These are core foundations for cybersecurity.
         </p>
       </div>
 
       <div class="card">
-        <h3>3. Networking Basics</h3>
+        <h3>3. Penetration Testing</h3>
         <p>
-          Networks allow devices to communicate. Important concepts include IP addresses,
-          ports, protocols, DNS, routers, and firewalls.
+          Learn the main stages of a penetration test, including planning,
+          reconnaissance, scanning, analysis, and reporting.
         </p>
       </div>
 
       <div class="card">
-        <h3>4. Penetration Testing</h3>
+        <h3>4. Web Security</h3>
         <p>
-          Penetration testing follows stages such as planning, reconnaissance,
-          scanning, analysis, reporting, and remediation.
+          Learn common web security concepts such as authentication, session handling,
+          input validation, and secure design.
         </p>
       </div>
 
     </section>
 
+    <!-- CYBERSECURITY BASICS -->
+    <section class="single-card" style="margin-top: 20px;">
+      <h2>Cybersecurity Basics</h2>
+
+      <h3>What is cybersecurity?</h3>
+      <p>
+        Cybersecurity is the practice of protecting computers, networks, applications,
+        and data from unauthorised access, attack, damage, or misuse.
+      </p>
+
+      <h3>The CIA Triad</h3>
+      <p>
+        The CIA Triad is a core security model that explains three important security goals:
+      </p>
+
+      <ul>
+        <li><strong>Confidentiality:</strong> Keeping information private.</li>
+        <li><strong>Integrity:</strong> Making sure information is accurate and unchanged.</li>
+        <li><strong>Availability:</strong> Making sure systems and data are accessible when needed.</li>
+      </ul>
+
+      <h3>Why cybersecurity matters</h3>
+      <p>
+        Cybersecurity helps protect personal information, business systems, financial data,
+        and critical services. Weak security can lead to data breaches, system downtime,
+        identity theft, and financial loss.
+      </p>
+    </section>
+
+    <!-- NETWORKING BASICS -->
+    <section class="single-card" style="margin-top: 20px;">
+      <h2>Networking Basics</h2>
+
+      <p>
+        Networking is one of the most important foundations in cybersecurity.
+        Understanding how devices communicate helps users understand scanning,
+        monitoring, and security risks.
+      </p>
+
+      <h3>IP Addresses</h3>
+      <p>
+        An IP address identifies a device on a network. Devices use IP addresses
+        to send and receive data.
+      </p>
+
+      <div class="code-box">
+        Example IP Address: 192.168.1.10
+      </div>
+
+      <h3>Ports</h3>
+      <p>
+        Ports are communication endpoints used by services. A system may have many ports,
+        and open ports can show which services are running.
+      </p>
+
+      <ul>
+        <li><strong>Port 22:</strong> SSH</li>
+        <li><strong>Port 80:</strong> HTTP</li>
+        <li><strong>Port 443:</strong> HTTPS</li>
+        <li><strong>Port 53:</strong> DNS</li>
+      </ul>
+
+      <h3>Protocols</h3>
+      <p>
+        Protocols are rules for communication. Examples include HTTP, HTTPS, DNS, FTP,
+        and SSH. Understanding protocols helps explain how data travels across networks.
+      </p>
+    </section>
+
+    <!-- PENETRATION TESTING LIFECYCLE -->
     <section class="single-card" style="margin-top: 20px;">
       <h2>Penetration Testing Lifecycle</h2>
 
       <h3>1. Planning and Scope</h3>
       <p>
         Before testing begins, the tester must understand what systems are allowed
-        to be tested. This is known as the scope.
+        to be tested. This is known as scope. Testing outside scope can be unauthorised.
       </p>
 
       <h3>2. Reconnaissance</h3>
@@ -102,6 +191,10 @@
         This helps understand what is exposed.
       </p>
 
+      <div class="code-box">
+        Example scan command: nmap -sV 192.168.1.10
+      </div>
+
       <h3>4. Analysis</h3>
       <p>
         After scanning, results are reviewed to identify potential weaknesses,
@@ -115,6 +208,65 @@
       </p>
     </section>
 
+    <!-- WEB SECURITY BASICS -->
+    <section class="single-card" style="margin-top: 20px;">
+      <h2>Web Security Basics</h2>
+
+      <h3>Authentication</h3>
+      <p>
+        Authentication is the process of proving a user’s identity, usually through
+        a username and password.
+      </p>
+
+      <h3>Authorisation</h3>
+      <p>
+        Authorisation controls what a user is allowed to access after logging in.
+        For example, an admin user may have more privileges than a normal user.
+      </p>
+
+      <h3>Input Validation</h3>
+      <p>
+        Input validation checks user input before it is processed. This helps prevent
+        invalid or harmful data from affecting the application.
+      </p>
+
+      <h3>Session Management</h3>
+      <p>
+        Session management keeps users logged in while they move between pages.
+        In this prototype, localStorage is used to simulate session handling.
+      </p>
+    </section>
+
+    <!-- DEFENSIVE SECURITY -->
+    <section class="single-card" style="margin-top: 20px;">
+      <h2>Defensive Security</h2>
+
+      <h3>Firewalls</h3>
+      <p>
+        A firewall filters network traffic and helps control what is allowed in or out
+        of a network.
+      </p>
+
+      <h3>Logging</h3>
+      <p>
+        Logs record events that happen on systems. They are useful for investigating
+        incidents and understanding suspicious activity.
+      </p>
+
+      <h3>Patching</h3>
+      <p>
+        Patching means applying updates to fix bugs or security vulnerabilities.
+        Keeping software updated reduces risk.
+      </p>
+
+      <h3>Backups</h3>
+      <p>
+        Backups allow data to be restored after accidental deletion, system failure,
+        or cyber incidents.
+      </p>
+    </section>
+
+    <!-- KEY TERMS -->
     <section class="single-card" style="margin-top: 20px;">
       <h2>Key Terms</h2>
 
@@ -124,11 +276,15 @@
         <li><strong>Risk:</strong> The chance and impact of something going wrong.</li>
         <li><strong>Patch:</strong> An update used to fix a security issue.</li>
         <li><strong>Firewall:</strong> A control that filters network traffic.</li>
+        <li><strong>Reconnaissance:</strong> Gathering information about a target.</li>
+        <li><strong>Enumeration:</strong> Collecting detailed information from services.</li>
+        <li><strong>Remediation:</strong> Fixing or reducing a security weakness.</li>
       </ul>
     </section>
 
   </main>
 
+  <!-- Loads JavaScript functions -->
   <script src="script.js"></script>
 </body>
 </html>
