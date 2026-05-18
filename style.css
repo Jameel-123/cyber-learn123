@@ -7,7 +7,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f5f7fb; /* LIGHT BACKGROUND */
+  background: #f5f7fb;
   color: #333;
 }
 
@@ -20,26 +20,45 @@ body {
   background: #f5f7fb;
 }
 
+.login-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+}
+
 .login-card {
   width: 100%;
   padding: 30px;
   border: 1px solid #ddd;
   background: white;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .login-card h1 {
-  color: #2563eb; /* BLUE */
+  color: #2563eb;
+  margin-top: 0;
 }
 
 /* ---------- TEXT ---------- */
 .subtitle {
   color: #666;
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.7;
 }
 
 /* ---------- INPUTS ---------- */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
 input,
-textarea {
+textarea,
+select {
   width: 100%;
   padding: 10px;
   margin-top: 8px;
@@ -51,7 +70,9 @@ textarea {
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
+  outline: none;
   border-color: #2563eb;
 }
 
@@ -68,6 +89,7 @@ button,
   text-decoration: none;
   text-align: center;
   display: inline-block;
+  font-weight: bold;
 }
 
 button:hover,
@@ -93,11 +115,13 @@ button:hover,
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .navbar a {
   text-decoration: none;
   color: #555;
+  font-weight: bold;
 }
 
 .navbar a:hover {
@@ -105,6 +129,7 @@ button:hover,
 }
 
 .logout-btn {
+  width: auto;
   background: #ef4444;
 }
 
@@ -114,12 +139,16 @@ button:hover,
 
 /* ---------- MAIN ---------- */
 .page-container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
 /* ---------- HERO ---------- */
+.hero {
+  margin-bottom: 30px;
+}
+
 .hero h2 {
   color: #2563eb;
 }
@@ -139,65 +168,131 @@ button:hover,
   padding: 20px;
   border: 1px solid #ddd;
   background: white;
-  border-radius: 10px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
 }
 
 .card h3 {
   color: #2563eb;
+  margin-top: 0;
 }
 
 /* ---------- SINGLE CARD ---------- */
 .single-card {
-  padding: 20px;
+  padding: 24px;
   border: 1px solid #ddd;
   background: white;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
-/* ---------- WARNING ---------- */
+.single-card h2 {
+  color: #2563eb;
+}
+
+.single-card ul,
+.single-card ol {
+  margin-left: 20px;
+}
+
+.single-card li {
+  margin-bottom: 8px;
+}
+
+/* ---------- WARNING BOX ---------- */
 .warning-box {
   margin-top: 20px;
-  padding: 10px;
-  border: 1px solid #facc15;
-  background: #fef9c3;
+  padding: 15px;
+  border-left: 5px solid #f59e0b;
+  background: #fff7ed;
   color: #92400e;
+  border-radius: 8px;
 }
 
-/* ---------- CODE ---------- */
+/* ---------- CODE BOX ---------- */
 .code-box {
   margin-top: 10px;
-  padding: 10px;
-  background: #111;
+  margin-bottom: 10px;
+  padding: 15px;
+  background: #111827;
   color: #22c55e;
   font-family: monospace;
+  white-space: pre-line;
+  border-radius: 8px;
 }
 
 /* ---------- QUIZ ---------- */
 .quiz-question {
   margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.quiz-question h3 {
+  color: #2563eb;
 }
 
 /* ---------- RESULTS ---------- */
 .result-box {
   margin-top: 20px;
   color: #2563eb;
+  font-weight: bold;
 }
 
-/* ---------- COMMENTS ---------- */
+/* ---------- COMMENTS / FORUM ---------- */
+.forum-section {
+  margin-top: 30px;
+}
+
 .comment-item {
   border-bottom: 1px solid #ddd;
-  padding: 10px 0;
+  padding: 12px 0;
 }
 
-/* ---------- LOGIN MESSAGE ---------- */
+.comment-item strong {
+  color: #2563eb;
+}
+
+.comment-item small {
+  color: #777;
+  font-size: 12px;
+}
+
+/* ---------- LOGIN / ERROR MESSAGE ---------- */
 .message {
   color: #dc2626;
   font-weight: bold;
+}
+
+/* ---------- DEMO BOX ---------- */
+.demo-box {
+  margin-top: 20px;
+  padding: 12px;
+  background: #f9fafb;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  color: #666;
+  font-size: 13px;
 }
 
 /* ---------- MOBILE ---------- */
 @media (max-width: 768px) {
   .card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    gap: 12px;
   }
 }
