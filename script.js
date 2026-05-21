@@ -397,3 +397,61 @@ if (createAccountForm) {
     accountMessage.textContent = "Account created successfully! You can now log in.";
   });
 }
+// ---------- INTERACTIVE LESSON SLIDES ----------
+
+// Keeps track of the current lesson page
+let currentLessonSlide = 0;
+
+// Finds all lesson slide sections
+const lessonSlides = document.querySelectorAll(".lesson-slide");
+
+// Finds the lesson progress text
+const lessonProgress = document.getElementById("lessonProgress");
+
+// Shows the selected lesson slide
+function showLessonSlide(index) {
+
+  // Stop errors if no slides exist
+  if (lessonSlides.length === 0) return;
+
+  // Hide all lesson slides
+  lessonSlides.forEach(function (slide) {
+    slide.classList.remove("active");
+  });
+
+  // Show the selected slide
+  lessonSlides[index].classList.add("active");
+
+  // Update progress text
+  if (lessonProgress) {
+    lessonProgress.textContent =
+      `Lesson page ${index + 1} of ${lessonSlides.length}`;
+  }
+}
+
+// Moves to the next lesson page
+function nextLessonSlide() {
+
+  // Prevent going past the final page
+  if (currentLessonSlide < lessonSlides.length - 1) {
+
+    currentLessonSlide++;
+
+    showLessonSlide(currentLessonSlide);
+  }
+}
+
+// Moves to the previous lesson page
+function previousLessonSlide() {
+
+  // Prevent going below page 1
+  if (currentLessonSlide > 0) {
+
+    currentLessonSlide--;
+
+    showLessonSlide(currentLessonSlide);
+  }
+}
+
+// Load the first lesson slide automatically
+showLessonSlide(currentLessonSlide);
