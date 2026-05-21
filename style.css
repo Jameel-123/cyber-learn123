@@ -296,3 +296,24 @@ button:hover,
     gap: 12px;
   }
 }
+/* ---------- INTERACTIVE LESSON SLIDES ---------- */
+
+.lesson-slide {
+  display: none;
+}
+
+.lesson-slide.active {
+  display: block;
+}
+
+.lesson-controls {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.lesson-progress {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #2563eb;
+}
