@@ -1,208 +1,266 @@
-<!-- MAIN CONTENT -->
-<main class="page-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding -->
+  <meta charset="UTF-8" />
 
-  <!-- LESSON PAGE 1 -->
-  <section class="single-card lesson-slide active">
+  <!-- Responsive layout -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <h2>Page 1 - Introduction to Networking</h2>
+  <!-- Browser title -->
+  <title>Networking Basics</title>
 
-    <p>
-      Networking allows devices to communicate and exchange data.
-      Understanding networking is extremely important in cybersecurity.
-    </p>
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <p>
-      Security professionals use networking knowledge to:
-    </p>
+<body>
 
-    <ul>
-      <li>Analyse traffic</li>
-      <li>Identify threats</li>
-      <li>Secure systems</li>
-      <li>Monitor communication</li>
-    </ul>
+  <script>
+    // Redirect user if not logged in
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
 
-    <div class="code-box">
-      Example:
-      Computers communicate using networks and protocols.
+  <!-- HEADER -->
+  <header class="site-header">
+    <div>
+      <h1>CYBERLEARN</h1>
+      <p class="subtitle">Networking Basics</p>
     </div>
 
-  </section>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="learning.html">Learning</a>
+      <a href="download.html">Download Tool</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="forum.html">Forum</a>
 
-  <!-- LESSON PAGE 2 -->
-  <section class="single-card lesson-slide">
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </nav>
+  </header>
 
-    <h2>Page 2 - IP Addresses</h2>
+  <!-- MAIN CONTENT -->
+  <main class="page-container">
 
-    <p>
-      An IP address identifies a device on a network.
-    </p>
+    <!-- LESSON PAGE 1 -->
+    <section class="single-card lesson-slide active">
 
-    <h3>IPv4</h3>
+      <h2>Page 1 - Introduction to Networking</h2>
 
-    <div class="code-box">
-      Example:
-      192.168.1.10
+      <p>
+        Networking allows devices to communicate and exchange data.
+        Understanding networking is extremely important in cybersecurity.
+      </p>
+
+      <p>
+        Security professionals use networking knowledge to:
+      </p>
+
+      <ul>
+        <li>Analyse traffic</li>
+        <li>Identify threats</li>
+        <li>Secure systems</li>
+        <li>Monitor communication</li>
+      </ul>
+
+      <div class="code-box">
+        Example:
+        Computers communicate using networks and protocols.
+      </div>
+
+    </section>
+
+    <!-- LESSON PAGE 2 -->
+    <section class="single-card lesson-slide">
+
+      <h2>Page 2 - IP Addresses</h2>
+
+      <p>
+        An IP address identifies a device on a network.
+      </p>
+
+      <h3>IPv4</h3>
+
+      <div class="code-box">
+        Example:
+        192.168.1.10
+      </div>
+
+      <h3>IPv6</h3>
+
+      <div class="code-box">
+        Example:
+        2001:0db8:85a3::8a2e:0370:7334
+      </div>
+
+      <p>
+        Devices use IP addresses to send and receive information.
+      </p>
+
+    </section>
+
+    <!-- LESSON PAGE 3 -->
+    <section class="single-card lesson-slide">
+
+      <h2>Page 3 - Public and Private IP Addresses</h2>
+
+      <h3>Public IP</h3>
+
+      <p>
+        Public IP addresses are accessible over the internet.
+      </p>
+
+      <h3>Private IP</h3>
+
+      <p>
+        Private IP addresses are used inside local networks.
+      </p>
+
+      <div class="code-box">
+        Common Private Ranges:
+
+        192.168.x.x
+        10.x.x.x
+        172.16.x.x - 172.31.x.x
+      </div>
+
+    </section>
+
+    <!-- LESSON PAGE 4 -->
+    <section class="single-card lesson-slide">
+
+      <h2>Page 4 - Ports and Services</h2>
+
+      <p>
+        Ports are communication endpoints used by services.
+      </p>
+
+      <h3>Common Ports</h3>
+
+      <ul>
+        <li>21 - FTP</li>
+        <li>22 - SSH</li>
+        <li>53 - DNS</li>
+        <li>80 - HTTP</li>
+        <li>443 - HTTPS</li>
+      </ul>
+
+      <div class="warning-box">
+        Open ports may expose services to attackers.
+      </div>
+
+    </section>
+
+    <!-- LESSON PAGE 5 -->
+    <section class="single-card lesson-slide">
+
+      <h2>Page 5 - Protocols</h2>
+
+      <p>
+        Protocols define how devices communicate.
+      </p>
+
+      <h3>HTTP and HTTPS</h3>
+
+      <p>
+        HTTPS is the secure encrypted version of HTTP.
+      </p>
+
+      <h3>DNS</h3>
+
+      <p>
+        DNS converts domain names into IP addresses.
+      </p>
+
+      <div class="code-box">
+        google.com → 142.250.179.14
+      </div>
+
+      <h3>SSH</h3>
+
+      <p>
+        SSH allows secure remote access to systems.
+      </p>
+
+    </section>
+
+    <!-- LESSON PAGE 6 -->
+    <section class="single-card lesson-slide">
+
+      <h2>Page 6 - Network Scanning</h2>
+
+      <p>
+        Security professionals scan systems to identify:
+      </p>
+
+      <ul>
+        <li>Open ports</li>
+        <li>Running services</li>
+        <li>Active devices</li>
+        <li>Potential weaknesses</li>
+      </ul>
+
+      <div class="code-box">
+        Example:
+        nmap -sV 192.168.1.10
+      </div>
+
+    </section>
+
+    <!-- LESSON PAGE 7 -->
+    <section class="single-card lesson-slide">
+
+      <h2>Page 7 - Quick Knowledge Check</h2>
+
+      <ul>
+        <li>What is an IP address?</li>
+        <li>What does DNS do?</li>
+        <li>Why are ports important?</li>
+        <li>What does HTTPS provide?</li>
+      </ul>
+
+    </section>
+
+    <!-- LESSON PROGRESS -->
+    <p id="lessonProgress" class="lesson-progress"></p>
+
+    <!-- LESSON CONTROLS -->
+    <div class="lesson-controls">
+
+      <button onclick="previousLessonSlide()">
+        Previous
+      </button>
+
+      <button onclick="nextLessonSlide()">
+        Next
+      </button>
+
     </div>
 
-    <h3>IPv6</h3>
+    <!-- BACK BUTTON -->
+    <section class="single-card" style="margin-top: 20px; text-align: center;">
 
-    <div class="code-box">
-      Example:
-      2001:0db8:85a3::8a2e:0370:7334
-    </div>
+      <a class="card-btn" href="learning.html">
+        Back to Learning Centre
+      </a>
 
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
     <p>
-      Devices use IP addresses to send and receive information.
+      Jameel's Cyber Tool © 2026 | Educational Cybersecurity Platform
     </p>
+  </footer>
 
-  </section>
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 
-  <!-- LESSON PAGE 3 -->
-  <section class="single-card lesson-slide">
-
-    <h2>Page 3 - Public and Private IP Addresses</h2>
-
-    <h3>Public IP</h3>
-
-    <p>
-      Public IP addresses are accessible over the internet.
-    </p>
-
-    <h3>Private IP</h3>
-
-    <p>
-      Private IP addresses are used inside local networks.
-    </p>
-
-    <div class="code-box">
-      Common Private Ranges:
-
-      192.168.x.x
-      10.x.x.x
-      172.16.x.x - 172.31.x.x
-    </div>
-
-  </section>
-
-  <!-- LESSON PAGE 4 -->
-  <section class="single-card lesson-slide">
-
-    <h2>Page 4 - Ports and Services</h2>
-
-    <p>
-      Ports are communication endpoints used by services.
-    </p>
-
-    <h3>Common Ports</h3>
-
-    <ul>
-      <li>21 - FTP</li>
-      <li>22 - SSH</li>
-      <li>53 - DNS</li>
-      <li>80 - HTTP</li>
-      <li>443 - HTTPS</li>
-    </ul>
-
-    <div class="warning-box">
-      Open ports may expose services to attackers.
-    </div>
-
-  </section>
-
-  <!-- LESSON PAGE 5 -->
-  <section class="single-card lesson-slide">
-
-    <h2>Page 5 - Protocols</h2>
-
-    <p>
-      Protocols define how devices communicate.
-    </p>
-
-    <h3>HTTP and HTTPS</h3>
-
-    <p>
-      HTTPS is the secure encrypted version of HTTP.
-    </p>
-
-    <h3>DNS</h3>
-
-    <p>
-      DNS converts domain names into IP addresses.
-    </p>
-
-    <div class="code-box">
-      google.com → 142.250.179.14
-    </div>
-
-    <h3>SSH</h3>
-
-    <p>
-      SSH allows secure remote access to systems.
-    </p>
-
-  </section>
-
-  <!-- LESSON PAGE 6 -->
-  <section class="single-card lesson-slide">
-
-    <h2>Page 6 - Network Scanning</h2>
-
-    <p>
-      Security professionals scan systems to identify:
-    </p>
-
-    <ul>
-      <li>Open ports</li>
-      <li>Running services</li>
-      <li>Active devices</li>
-      <li>Potential weaknesses</li>
-    </ul>
-
-    <div class="code-box">
-      Example:
-      nmap -sV 192.168.1.10
-    </div>
-
-  </section>
-
-  <!-- LESSON PAGE 7 -->
-  <section class="single-card lesson-slide">
-
-    <h2>Page 7 - Quick Knowledge Check</h2>
-
-    <ul>
-      <li>What is an IP address?</li>
-      <li>What does DNS do?</li>
-      <li>Why are ports important?</li>
-      <li>What does HTTPS provide?</li>
-    </ul>
-
-  </section>
-
-  <!-- LESSON PROGRESS -->
-  <p id="lessonProgress" class="lesson-progress"></p>
-
-  <!-- LESSON CONTROLS -->
-  <div class="lesson-controls">
-
-    <button onclick="previousLessonSlide()">
-      Previous
-    </button>
-
-    <button onclick="nextLessonSlide()">
-      Next
-    </button>
-
-  </div>
-
-  <!-- BACK BUTTON -->
-  <section class="single-card" style="margin-top: 20px; text-align: center;">
-
-    <a class="card-btn" href="learning.html">
-      Back to Learning Centre
-    </a>
-
-  </section>
-
-</main>
+</body>
+</html>
