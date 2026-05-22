@@ -1,279 +1,228 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Character encoding -->
-  <meta charset="UTF-8" />
+<!-- MAIN CONTENT -->
+<main class="page-container">
 
-  <!-- Responsive design -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- LESSON PAGE 1 -->
+  <section class="single-card lesson-slide active">
 
-  <!-- Browser tab title -->
-  <title>Defensive Security</title>
+    <h2>Page 1 - Introduction to Defensive Security</h2>
 
-  <!-- Shared stylesheet -->
-  <link rel="stylesheet" href="style.css" />
-</head>
+    <p>
+      Defensive security focuses on protecting systems,
+      networks, applications, and users from cyber attacks.
+    </p>
 
-<body>
+    <p>
+      Security teams work to:
+    </p>
 
-  <script>
-    // Redirect user if not logged in
-    if (localStorage.getItem("loggedIn") !== "true") {
-      window.location.href = "login.html";
-    }
-  </script>
+    <ul>
+      <li>Prevent attacks</li>
+      <li>Detect suspicious activity</li>
+      <li>Respond to incidents</li>
+      <li>Protect sensitive information</li>
+    </ul>
 
-  <!-- HEADER -->
-  <header class="site-header">
-
-    <div>
-      <h1>CYBERLEARN</h1>
-      <p class="subtitle">Defensive Security</p>
+    <div class="warning-box">
+      Defensive security reduces risk exposure
+      and improves organisational protection.
     </div>
 
-    <!-- NAVIGATION -->
-    <nav class="navbar">
-      <a href="index.html">Home</a>
-      <a href="learning.html">Learning</a>
-      <a href="download.html">Download Tool</a>
-      <a href="tutorial.html">Tutorial</a>
-      <a href="quiz.html">Quiz</a>
-      <a href="forum.html">Forum</a>
+  </section>
 
-      <button class="logout-btn" onclick="logout()">Logout</button>
-    </nav>
+  <!-- LESSON PAGE 2 -->
+  <section class="single-card lesson-slide">
 
-  </header>
+    <h2>Page 2 - Firewalls</h2>
 
-  <!-- MAIN CONTENT -->
-  <main class="page-container">
-
-    <!-- INTRO -->
-    <section class="single-card">
-
-      <h2>Defensive Security</h2>
-
-      <p>
-        Defensive security focuses on protecting systems, networks,
-        applications, and users from cyber threats and attacks.
-      </p>
-
-      <p>
-        Defensive teams work to prevent attacks, detect suspicious activity,
-        and respond to security incidents quickly and effectively.
-      </p>
-
-    </section>
-
-    <!-- FIREWALLS -->
-    <section class="single-card" style="margin-top: 20px;">
-
-      <h2>Firewalls</h2>
-
-      <p>
-        Firewalls filter incoming and outgoing network traffic.
-        They help block unauthorised access and reduce exposure to threats.
-      </p>
-
-      <p>
-        Firewalls can:
-      </p>
-
-      <ul>
-        <li>Allow trusted traffic</li>
-        <li>Block suspicious traffic</li>
-        <li>Monitor connections</li>
-        <li>Restrict exposed services</li>
-      </ul>
-
-    </section>
-
-    <!-- ANTIVIRUS -->
-    <section class="single-card" style="margin-top: 20px;">
-
-      <h2>Antivirus and Endpoint Protection</h2>
-
-      <p>
-        Antivirus software helps detect and remove malicious software
-        from systems and devices.
-      </p>
-
-      <p>
-        Modern endpoint protection tools may also monitor behaviour,
-        detect suspicious activity, and isolate infected devices.
-      </p>
-
-    </section>
-
-    <!-- PATCHING -->
-    <section class="single-card" style="margin-top: 20px;">
-
-      <h2>Patching</h2>
-
-      <p>
-        Patching means applying updates to software, applications,
-        and operating systems.
-      </p>
-
-      <p>
-        Updates often fix vulnerabilities that attackers could exploit.
-      </p>
-
-      <div class="warning-box">
-        Outdated systems may contain known vulnerabilities
-        that are publicly documented.
-      </div>
-
-    </section>
-
-    <!-- LOGGING -->
-    <section class="single-card" style="margin-top: 20px;">
-
-      <h2>Logging and Monitoring</h2>
-
-      <p>
-        Logging records activity that occurs on systems and networks.
-      </p>
-
-      <p>
-        Monitoring helps security teams identify suspicious behaviour,
-        failed logins, malware activity, or unusual traffic patterns.
-      </p>
-
-      <div class="code-box">
-        Example Log Entry:
-
-        Failed Login Attempt
-        Username: admin
-        Time: 14:22
-      </div>
-
-    </section>
-
-    <!-- IDS IPS -->
-    <section class="single-card" style="margin-top: 20px;">
-
-      <h2>IDS and IPS</h2>
-
-      <h3>Intrusion Detection System (IDS)</h3>
-
-      <p>
-        IDS tools monitor traffic and generate alerts
-        when suspicious behaviour is detected.
-      </p>
-
-      <h3>Intrusion Prevention System (IPS)</h3>
-
-      <p>
-        IPS systems can actively block suspicious traffic
-        before it reaches a target.
-      </p>
-
-    </section>
-
-    <!-- BACKUPS -->
-    <section class="single-card" style="margin-top: 20px;">
-
-      <h2>Backups</h2>
-
-      <p>
-        Backups help organisations recover data after
-        accidental deletion, hardware failure, or cyber attacks.
-      </p>
-
-      <p>
-        Backups should be:
-      </p>
-
-      <ul>
-        <li>Regularly tested</li>
-        <li>Stored securely</li>
-        <li>Protected from ransomware</li>
-      </ul>
-
-    </section>
-
-    <!-- INCIDENT RESPONSE -->
-    <section class="single-card" style="margin-top: 20px;">
-
-      <h2>Incident Response</h2>
-
-      <p>
-        Incident response is the process of handling security incidents
-        and recovering from attacks.
-      </p>
-
-      <p>
-        Incident response usually includes:
-      </p>
-
-      <ol>
-        <li>Preparation</li>
-        <li>Detection</li>
-        <li>Containment</li>
-        <li>Eradication</li>
-        <li>Recovery</li>
-        <li>Lessons Learned</li>
-      </ol>
-
-    </section>
-
-    <!-- SECURITY AWARENESS -->
-    <section class="single-card" style="margin-top: 20px;">
-
-      <h2>Security Awareness</h2>
-
-      <p>
-        Human error is a major cause of security incidents.
-      </p>
-
-      <p>
-        Security awareness training helps users recognise:
-      </p>
-
-      <ul>
-        <li>Phishing emails</li>
-        <li>Suspicious links</li>
-        <li>Unsafe downloads</li>
-        <li>Password risks</li>
-      </ul>
-
-    </section>
-
-    <!-- QUICK CHECK -->
-    <section class="single-card" style="margin-top: 20px;">
-
-      <h2>Quick Knowledge Check</h2>
-
-      <ul>
-        <li>What does a firewall do?</li>
-        <li>Why are patches important?</li>
-        <li>What is incident response?</li>
-        <li>Why are backups important?</li>
-      </ul>
-
-    </section>
-
-    <!-- BACK BUTTON -->
-    <section class="single-card" style="margin-top: 20px; text-align: center;">
-
-      <a class="card-btn" href="learning.html">
-        Back to Learning Centre
-      </a>
-
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
     <p>
-      Jameel's Cyber Tool © 2026 | Educational Cybersecurity Platform
+      Firewalls filter incoming and outgoing network traffic.
     </p>
-  </footer>
 
-  <!-- JavaScript -->
-  <script src="script.js"></script>
+    <p>
+      Firewalls help:
+    </p>
 
-</body>
-</html>
+    <ul>
+      <li>Block suspicious traffic</li>
+      <li>Allow trusted communication</li>
+      <li>Restrict exposed services</li>
+      <li>Monitor connections</li>
+    </ul>
+
+    <div class="code-box">
+      Example:
+      Firewall blocks unauthorised remote access.
+    </div>
+
+  </section>
+
+  <!-- LESSON PAGE 3 -->
+  <section class="single-card lesson-slide">
+
+    <h2>Page 3 - Antivirus and Endpoint Protection</h2>
+
+    <p>
+      Antivirus software detects and removes malware.
+    </p>
+
+    <p>
+      Modern endpoint protection systems may:
+    </p>
+
+    <ul>
+      <li>Monitor suspicious behaviour</li>
+      <li>Block malicious files</li>
+      <li>Isolate infected devices</li>
+      <li>Alert security teams</li>
+    </ul>
+
+  </section>
+
+  <!-- LESSON PAGE 4 -->
+  <section class="single-card lesson-slide">
+
+    <h2>Page 4 - Patching</h2>
+
+    <p>
+      Patching means applying updates
+      to software and operating systems.
+    </p>
+
+    <div class="warning-box">
+      Outdated systems may contain publicly known vulnerabilities.
+    </div>
+
+    <p>
+      Regular patching reduces security risks
+      and improves protection.
+    </p>
+
+  </section>
+
+  <!-- LESSON PAGE 5 -->
+  <section class="single-card lesson-slide">
+
+    <h2>Page 5 - Logging and Monitoring</h2>
+
+    <p>
+      Logging records activity on systems and networks.
+    </p>
+
+    <p>
+      Monitoring helps identify suspicious behaviour.
+    </p>
+
+    <div class="code-box">
+      Example Log Entry:
+
+      Failed Login Attempt
+      Username: admin
+      Time: 14:22
+    </div>
+
+  </section>
+
+  <!-- LESSON PAGE 6 -->
+  <section class="single-card lesson-slide">
+
+    <h2>Page 6 - IDS and IPS</h2>
+
+    <h3>Intrusion Detection System (IDS)</h3>
+
+    <p>
+      IDS tools monitor traffic and generate alerts.
+    </p>
+
+    <h3>Intrusion Prevention System (IPS)</h3>
+
+    <p>
+      IPS tools can actively block suspicious activity.
+    </p>
+
+  </section>
+
+  <!-- LESSON PAGE 7 -->
+  <section class="single-card lesson-slide">
+
+    <h2>Page 7 - Backups and Incident Response</h2>
+
+    <h3>Backups</h3>
+
+    <p>
+      Backups help organisations recover data
+      after attacks or failures.
+    </p>
+
+    <h3>Incident Response</h3>
+
+    <ol>
+      <li>Preparation</li>
+      <li>Detection</li>
+      <li>Containment</li>
+      <li>Recovery</li>
+    </ol>
+
+  </section>
+
+  <!-- LESSON PAGE 8 -->
+  <section class="single-card lesson-slide">
+
+    <h2>Page 8 - Security Awareness</h2>
+
+    <p>
+      Human error is a major cause of security incidents.
+    </p>
+
+    <p>
+      Security awareness training helps users recognise:
+    </p>
+
+    <ul>
+      <li>Phishing emails</li>
+      <li>Suspicious links</li>
+      <li>Password risks</li>
+      <li>Unsafe downloads</li>
+    </ul>
+
+  </section>
+
+  <!-- LESSON PAGE 9 -->
+  <section class="single-card lesson-slide">
+
+    <h2>Page 9 - Quick Knowledge Check</h2>
+
+    <ul>
+      <li>What does a firewall do?</li>
+      <li>Why is patching important?</li>
+      <li>What is incident response?</li>
+      <li>Why are backups important?</li>
+    </ul>
+
+  </section>
+
+  <!-- LESSON PROGRESS -->
+  <p id="lessonProgress" class="lesson-progress"></p>
+
+  <!-- LESSON CONTROLS -->
+  <div class="lesson-controls">
+
+    <button onclick="previousLessonSlide()">
+      Previous
+    </button>
+
+    <button onclick="nextLessonSlide()">
+      Next
+    </button>
+
+  </div>
+
+  <!-- BACK BUTTON -->
+  <section class="single-card" style="margin-top: 20px; text-align: center;">
+
+    <a class="card-btn" href="learning.html">
+      Back to Learning Centre
+    </a>
+
+  </section>
+
+</main>
