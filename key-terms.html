@@ -1,220 +1,271 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Character encoding -->
-  <meta charset="UTF-8" />
+<!-- MAIN CONTENT -->
+<main class="page-container">
 
-  <!-- Responsive layout -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- LESSON PAGE 1 -->
+  <section class="single-card lesson-slide active">
 
-  <!-- Browser tab title -->
-  <title>Cybersecurity Key Terms</title>
+    <h2>Page 1 - Introduction to Cybersecurity Terms</h2>
 
-  <!-- Shared stylesheet -->
-  <link rel="stylesheet" href="style.css" />
-</head>
+    <p>
+      Cybersecurity contains many technical terms and concepts.
+      Understanding these terms helps users understand reports,
+      tools, and security discussions more effectively.
+    </p>
 
-<body>
-
-  <script>
-    // Redirect user if not logged in
-    if (localStorage.getItem("loggedIn") !== "true") {
-      window.location.href = "login.html";
-    }
-  </script>
-
-  <!-- HEADER -->
-  <header class="site-header">
-
-    <div>
-      <h1>CYBERLEARN</h1>
-      <p class="subtitle">Cybersecurity Key Terms</p>
+    <div class="warning-box">
+      Understanding terminology is essential
+      for cybersecurity learning and communication.
     </div>
 
-    <!-- NAVIGATION -->
-    <nav class="navbar">
-      <a href="index.html">Home</a>
-      <a href="learning.html">Learning</a>
-      <a href="download.html">Download Tool</a>
-      <a href="tutorial.html">Tutorial</a>
-      <a href="quiz.html">Quiz</a>
-      <a href="forum.html">Forum</a>
+  </section>
 
-      <button class="logout-btn" onclick="logout()">Logout</button>
-    </nav>
+  <!-- LESSON PAGE 2 -->
+  <section class="single-card lesson-slide">
 
-  </header>
+    <h2>Page 2 - Vulnerabilities and Exploits</h2>
 
-  <!-- MAIN CONTENT -->
-  <main class="page-container">
+    <h3>Vulnerability</h3>
 
-    <!-- INTRODUCTION -->
-    <section class="single-card">
-
-      <h2>Cybersecurity Key Terms</h2>
-
-      <p>
-        Cybersecurity contains many technical terms and concepts.
-        Understanding this terminology helps users communicate clearly,
-        understand reports, and interpret technical information.
-      </p>
-
-    </section>
-
-    <!-- TERMS SECTION -->
-    <section class="single-card" style="margin-top: 20px;">
-
-      <h2>Important Terms</h2>
-
-      <h3>Vulnerability</h3>
-      <p>
-        A weakness in a system, application, or configuration
-        that could potentially be exploited.
-      </p>
-
-      <h3>Exploit</h3>
-      <p>
-        A method or technique used to take advantage of a vulnerability.
-      </p>
-
-      <h3>Threat</h3>
-      <p>
-        Anything capable of causing harm to a system or organisation.
-      </p>
-
-      <h3>Risk</h3>
-      <p>
-        The likelihood and impact of a threat affecting a system.
-      </p>
-
-      <h3>Patch</h3>
-      <p>
-        An update released to fix bugs or security vulnerabilities.
-      </p>
-
-      <h3>Firewall</h3>
-      <p>
-        A security control that filters network traffic
-        entering or leaving a system.
-      </p>
-
-      <h3>Malware</h3>
-      <p>
-        Malicious software designed to damage systems,
-        steal information, or disrupt services.
-      </p>
-
-      <h3>Phishing</h3>
-      <p>
-        A social engineering attack that tricks users
-        into revealing sensitive information.
-      </p>
-
-      <h3>Reconnaissance</h3>
-      <p>
-        The process of gathering information about a target environment.
-      </p>
-
-      <h3>Enumeration</h3>
-      <p>
-        Collecting detailed information from systems and services.
-      </p>
-
-      <h3>Authentication</h3>
-      <p>
-        Verifying a user’s identity before granting access.
-      </p>
-
-      <h3>Authorisation</h3>
-      <p>
-        Defining what actions or resources a user can access.
-      </p>
-
-      <h3>Encryption</h3>
-      <p>
-        Transforming data into unreadable form to protect confidentiality.
-      </p>
-
-      <h3>Incident Response</h3>
-      <p>
-        The process of responding to and recovering from security incidents.
-      </p>
-
-      <h3>Remediation</h3>
-      <p>
-        The process of fixing vulnerabilities or reducing risk.
-      </p>
-
-    </section>
-
-    <!-- COMMON SECURITY TOOLS -->
-    <section class="single-card" style="margin-top: 20px;">
-
-      <h2>Common Security Tools</h2>
-
-      <h3>Nmap</h3>
-      <p>
-        A network scanning tool used to identify hosts,
-        ports, and services.
-      </p>
-
-      <div class="code-box">
-        Example:
-        nmap -sV 192.168.1.10
-      </div>
-
-      <h3>Wireshark</h3>
-      <p>
-        A packet analysis tool used to inspect network traffic.
-      </p>
-
-      <h3>Burp Suite</h3>
-      <p>
-        A web application testing tool commonly used
-        during penetration testing.
-      </p>
-
-      <h3>Metasploit</h3>
-      <p>
-        A framework used for penetration testing and security research.
-      </p>
-
-    </section>
-
-    <!-- QUICK CHECK -->
-    <section class="single-card" style="margin-top: 20px;">
-
-      <h2>Quick Knowledge Check</h2>
-
-      <ul>
-        <li>What is a vulnerability?</li>
-        <li>What does authentication do?</li>
-        <li>What is phishing?</li>
-        <li>What is remediation?</li>
-      </ul>
-
-    </section>
-
-    <!-- BACK BUTTON -->
-    <section class="single-card" style="margin-top: 20px; text-align: center;">
-
-      <a class="card-btn" href="learning.html">
-        Back to Learning Centre
-      </a>
-
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
     <p>
-      Jameel's Cyber Tool © 2026 | Educational Cybersecurity Platform
+      A vulnerability is a weakness in a system,
+      application, or configuration.
     </p>
-  </footer>
 
-  <!-- JavaScript -->
-  <script src="script.js"></script>
+    <h3>Exploit</h3>
 
-</body>
-</html>
+    <p>
+      An exploit is a technique used
+      to take advantage of a vulnerability.
+    </p>
+
+    <div class="code-box">
+      Vulnerability → Exploit → Security Risk
+    </div>
+
+  </section>
+
+  <!-- LESSON PAGE 3 -->
+  <section class="single-card lesson-slide">
+
+    <h2>Page 3 - Threats and Risks</h2>
+
+    <h3>Threat</h3>
+
+    <p>
+      A threat is anything capable of causing harm
+      to systems or organisations.
+    </p>
+
+    <h3>Risk</h3>
+
+    <p>
+      Risk measures the likelihood and impact
+      of a threat affecting a system.
+    </p>
+
+    <div class="warning-box">
+      Organisations reduce risk through security controls.
+    </div>
+
+  </section>
+
+  <!-- LESSON PAGE 4 -->
+  <section class="single-card lesson-slide">
+
+    <h2>Page 4 - Authentication and Authorisation</h2>
+
+    <h3>Authentication</h3>
+
+    <p>
+      Authentication verifies a user’s identity.
+    </p>
+
+    <h3>Authorisation</h3>
+
+    <p>
+      Authorisation controls what users can access.
+    </p>
+
+    <div class="code-box">
+      Authentication = Who are you?
+
+      Authorisation = What can you access?
+    </div>
+
+  </section>
+
+  <!-- LESSON PAGE 5 -->
+  <section class="single-card lesson-slide">
+
+    <h2>Page 5 - Malware and Phishing</h2>
+
+    <h3>Malware</h3>
+
+    <p>
+      Malware is malicious software designed
+      to damage or disrupt systems.
+    </p>
+
+    <ul>
+      <li>Viruses</li>
+      <li>Ransomware</li>
+      <li>Spyware</li>
+    </ul>
+
+    <h3>Phishing</h3>
+
+    <p>
+      Phishing attacks trick users
+      into revealing sensitive information.
+    </p>
+
+  </section>
+
+  <!-- LESSON PAGE 6 -->
+  <section class="single-card lesson-slide">
+
+    <h2>Page 6 - Encryption and Firewalls</h2>
+
+    <h3>Encryption</h3>
+
+    <p>
+      Encryption protects data by converting it
+      into unreadable format.
+    </p>
+
+    <h3>Firewall</h3>
+
+    <p>
+      Firewalls filter network traffic
+      entering or leaving systems.
+    </p>
+
+    <div class="code-box">
+      HTTPS uses encryption to secure communication.
+    </div>
+
+  </section>
+
+  <!-- LESSON PAGE 7 -->
+  <section class="single-card lesson-slide">
+
+    <h2>Page 7 - Reconnaissance and Enumeration</h2>
+
+    <h3>Reconnaissance</h3>
+
+    <p>
+      Reconnaissance gathers information
+      about a target environment.
+    </p>
+
+    <h3>Enumeration</h3>
+
+    <p>
+      Enumeration collects detailed information
+      from systems and services.
+    </p>
+
+    <div class="code-box">
+      Example:
+      nmap -sV 192.168.1.10
+    </div>
+
+  </section>
+
+  <!-- LESSON PAGE 8 -->
+  <section class="single-card lesson-slide">
+
+    <h2>Page 8 - Incident Response and Remediation</h2>
+
+    <h3>Incident Response</h3>
+
+    <p>
+      Incident response handles security incidents
+      and recovery activities.
+    </p>
+
+    <h3>Remediation</h3>
+
+    <p>
+      Remediation fixes vulnerabilities
+      and reduces risk exposure.
+    </p>
+
+  </section>
+
+  <!-- LESSON PAGE 9 -->
+  <section class="single-card lesson-slide">
+
+    <h2>Page 9 - Common Security Tools</h2>
+
+    <h3>Nmap</h3>
+
+    <p>
+      Network scanning tool used to identify hosts and services.
+    </p>
+
+    <div class="code-box">
+      Example:
+      nmap -sV 192.168.1.10
+    </div>
+
+    <h3>Wireshark</h3>
+
+    <p>
+      Packet analysis tool used to inspect network traffic.
+    </p>
+
+    <h3>Burp Suite</h3>
+
+    <p>
+      Web application testing tool.
+    </p>
+
+    <h3>Metasploit</h3>
+
+    <p>
+      Penetration testing and security research framework.
+    </p>
+
+  </section>
+
+  <!-- LESSON PAGE 10 -->
+  <section class="single-card lesson-slide">
+
+    <h2>Page 10 - Quick Knowledge Check</h2>
+
+    <ul>
+      <li>What is a vulnerability?</li>
+      <li>What does authentication do?</li>
+      <li>What is phishing?</li>
+      <li>What is remediation?</li>
+    </ul>
+
+  </section>
+
+  <!-- LESSON PROGRESS -->
+  <p id="lessonProgress" class="lesson-progress"></p>
+
+  <!-- LESSON CONTROLS -->
+  <div class="lesson-controls">
+
+    <button onclick="previousLessonSlide()">
+      Previous
+    </button>
+
+    <button onclick="nextLessonSlide()">
+      Next
+    </button>
+
+  </div>
+
+  <!-- BACK BUTTON -->
+  <section class="single-card" style="margin-top: 20px; text-align: center;">
+
+    <a class="card-btn" href="learning.html">
+      Back to Learning Centre
+    </a>
+
+  </section>
+
+</main>
