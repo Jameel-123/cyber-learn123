@@ -452,6 +452,24 @@ function previousLessonSlide() {
     showLessonSlide(currentLessonSlide);
   }
 }
+// ---------- JOB VACANCY TOGGLE ----------
 
+function toggleVacancies() {
+
+  const vacancyBox =
+    document.getElementById("vacancyBox");
+
+  if (!vacancyBox) return;
+
+  if (vacancyBox.style.display === "none") {
+
+    vacancyBox.style.display = "block";
+
+  } else {
+
+    vacancyBox.style.display = "none";
+
+  }
+}
 // Load the first lesson slide automatically
 showLessonSlide(currentLessonSlide);
