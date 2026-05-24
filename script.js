@@ -500,3 +500,30 @@ function previewReport() {
   reportMessage.textContent =
     "Report uploaded temporarily for preview. It has not been permanently saved.";
 }
+// ---------- REPORT UPLOAD PREVIEW ----------
+
+function previewReport() {
+  const reportFile = document.getElementById("reportFile");
+  const reportMessage = document.getElementById("reportMessage");
+  const reportPreviewBox = document.getElementById("reportPreviewBox");
+
+  const reportName = document.getElementById("reportName");
+  const reportType = document.getElementById("reportType");
+  const reportSize = document.getElementById("reportSize");
+
+  if (!reportFile || reportFile.files.length === 0) {
+    reportMessage.textContent = "Please choose a report file first.";
+    return;
+  }
+
+  const file = reportFile.files[0];
+
+  reportName.textContent = file.name;
+  reportType.textContent = file.type || "Unknown file type";
+  reportSize.textContent = `${Math.round(file.size / 1024)} KB`;
+
+  reportPreviewBox.style.display = "block";
+
+  reportMessage.textContent =
+    "Report uploaded temporarily for preview. It has not been permanently saved.";
+}
