@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Cybersecurity Jobs</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <script>
+    // Redirect user if not logged in
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <!-- HEADER -->
+  <header class="site-header">
+
+    <div>
+      <h1>CYBERLEARN</h1>
+      <p class="subtitle">
+        Cybersecurity careers and job pathways
+      </p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+
+      <a href="index.html">Home</a>
+      <a href="learning.html">Learning</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="download.html">Download Tool</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="forum.html">Forum</a>
+
+      <button class="logout-btn" onclick="logout()">
+        Logout
+      </button>
+
+    </nav>
+
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="page-container">
+
+    <!-- INTRODUCTION -->
+    <section class="single-card">
+
+      <h2>Cybersecurity Job Board</h2>
+
+      <p>
+        Cybersecurity offers many career paths.
+        This page explains common roles,
+        what they involve,
+        and the skills learners should build.
+      </p>
+
+      <!-- VACANCY BUTTON -->
+      <button onclick="toggleVacancies()" style="margin-top: 15px;">
+
+        View Current Vacancies
+
+      </button>
+
+      <!-- VACANCY BOX -->
+      <div
+        id="vacancyBox"
+        class="single-card"
+        style="display: none; margin-top: 20px;"
+      >
+
+        <h3>Current Vacancies</h3>
+
+        <p>
+          There are currently no live vacancies available.
+        </p>
+
+        <div class="warning-box">
+
+          Future versions of the platform may connect
+          to real cybersecurity job APIs or databases.
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- JOB CARDS -->
+    <section class="card-grid" style="margin-top: 20px;">
+
+      <!-- CYBERSECURITY ANALYST -->
+      <div class="card">
+
+        <h3>Cybersecurity Analyst</h3>
+
+        <p>
+          Monitors systems, investigates alerts,
+          reviews logs,
+          and helps protect organisations from threats.
+        </p>
+
+        <ul>
+          <li>Good for beginners</li>
+          <li>Uses SIEM tools</li>
+          <li>Threat monitoring</li>
+        </ul>
+
+      </div>
+
+      <!-- SOC ANALYST -->
+      <div class="card">
+
+        <h3>SOC Analyst</h3>
+
+        <p>
+          Works in a Security Operations Centre
+          responding to alerts and incidents.
+        </p>
+
+        <ul>
+          <li>Entry-level role</li>
+          <li>Incident response</li>
+          <li>Monitoring systems</li>
+        </ul>
+
+      </div>
+
+      <!-- PENETRATION TESTER -->
+      <div class="card">
+
+        <h3>Penetration Tester</h3>
+
+        <p>
+          Tests systems legally to identify vulnerabilities
+          before attackers can exploit them.
+        </p>
+
+        <ul>
+          <li>Ethical hacking</li>
+          <li>Reconnaissance</li>
+          <li>Security reporting</li>
+        </ul>
+
+      </div>
+
+      <!-- VULNERABILITY ANALYST -->
+      <div class="card">
+
+        <h3>Vulnerability Analyst</h3>
+
+        <p>
+          Reviews vulnerability scan results
+          and helps prioritise security fixes.
+        </p>
+
+        <ul>
+          <li>Risk analysis</li>
+          <li>Patch management</li>
+          <li>Security scanning</li>
+        </ul>
+
+      </div>
+
+      <!-- INCIDENT RESPONSE -->
+      <div class="card">
+
+        <h3>Incident Response Analyst</h3>
+
+        <p>
+          Investigates security incidents
+          and supports recovery after attacks.
+        </p>
+
+        <ul>
+          <li>Forensics basics</li>
+          <li>Log analysis</li>
+          <li>Threat investigation</li>
+        </ul>
+
+      </div>
+
+      <!-- SECURITY ENGINEER -->
+      <div class="card">
+
+        <h3>Security Engineer</h3>
+
+        <p>
+          Builds and manages security controls,
+          firewalls,
+          monitoring systems,
+          and protection tools.
+        </p>
+
+        <ul>
+          <li>Technical role</li>
+          <li>Defensive security</li>
+          <li>Infrastructure security</li>
+        </ul>
+
+      </div>
+
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>Skills to Build</h2>
+
+      <ul>
+        <li>Networking basics</li>
+        <li>Linux fundamentals</li>
+        <li>Security awareness</li>
+        <li>Log analysis</li>
+        <li>Risk assessment</li>
+        <li>Ethical hacking principles</li>
+        <li>Vulnerability management</li>
+        <li>Report writing</li>
+      </ul>
+
+    </section>
+
+    <!-- CAREER PATH -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>Suggested Career Path</h2>
+
+      <ol>
+        <li>Learn cybersecurity fundamentals</li>
+        <li>Build networking knowledge</li>
+        <li>Practise Linux and security tools</li>
+        <li>Complete labs and quizzes</li>
+        <li>Build practical projects</li>
+        <li>Apply for junior cybersecurity roles</li>
+      </ol>
+
+    </section>
+
+    <!-- FUTURE FEATURES -->
+    <section class="single-card" style="margin-top: 20px;">
+
+      <h2>Future Job Board Features</h2>
+
+      <p>
+        Future versions of this platform may include:
+      </p>
+
+      <ul>
+        <li>Live cybersecurity vacancies</li>
+        <li>Graduate scheme listings</li>
+        <li>Internship opportunities</li>
+        <li>Remote job filtering</li>
+        <li>Application tracking</li>
+      </ul>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <p>
+      Jameel's Cyber Tool © 2026 |
+      Educational Cybersecurity Platform
+    </p>
+
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
