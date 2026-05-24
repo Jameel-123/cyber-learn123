@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Reports</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <script>
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <header class="site-header">
+    <div>
+      <h1>CYBERLEARN</h1>
+      <p class="subtitle">Report upload prototype</p>
+    </div>
+
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="learning.html">Learning</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="reports.html">Reports</a>
+      <a href="download.html">Download Tool</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="forum.html">Forum</a>
+
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </nav>
+  </header>
+
+  <main class="page-container">
+
+    <section class="single-card">
+      <h2>Report Upload</h2>
+
+      <p>
+        Upload a generated report to preview it temporarily.
+        This prototype does not permanently save reports because it does not use a backend database.
+      </p>
+
+      <label for="reportFile">Choose report file</label>
+      <input type="file" id="reportFile" />
+
+      <button onclick="previewReport()">
+        Upload Report
+      </button>
+
+      <p id="reportMessage" class="result-box"></p>
+    </section>
+
+    <section id="reportPreviewBox" class="single-card" style="display: none; margin-top: 20px;">
+      <h2>Uploaded Report Preview</h2>
+
+      <p><strong>File Name:</strong> <span id="reportName"></span></p>
+      <p><strong>File Type:</strong> <span id="reportType"></span></p>
+      <p><strong>File Size:</strong> <span id="reportSize"></span></p>
+
+      <div class="warning-box">
+        This report is only displayed temporarily in the browser.
+        It is not uploaded to a server or saved permanently.
+      </div>
+    </section>
+
+    <section class="single-card" style="margin-top: 20px;">
+      <h2>Future Report System</h2>
+
+      <p>
+        In a full production version, generated reports would be uploaded securely
+        to a backend server or cloud database and displayed only to authorised users.
+      </p>
+
+      <ul>
+        <li>Secure report storage</li>
+        <li>User-specific report history</li>
+        <li>Admin review panel</li>
+        <li>Report download and deletion options</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Jameel's Cyber Tool © 2026 | Educational Cybersecurity Platform
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
