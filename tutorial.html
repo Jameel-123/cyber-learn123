@@ -1,321 +1,345 @@
-<!-- INTRODUCTION -->
-<section class="single-card">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <h2>Cybersecurity Toolkit Tutorial</h2>
+  <title>Tutorial</title>
 
-  <p>
-    This tutorial explains how the Cybersecurity Toolkit works,
-    how each module functions,
-    and what the generated results mean.
-  </p>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-  <p>
-    The toolkit has been designed for educational
-    and authorised cybersecurity testing purposes only.
-  </p>
+<body>
 
-</section>
+  <script>
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
 
-<!-- STEP 1 -->
-<section class="single-card lesson-slide active" style="margin-top: 20px;">
+  <header class="site-header">
+    <div>
+      <h1>CYBERLEARN</h1>
+      <p class="subtitle">Interactive toolkit tutorial</p>
+    </div>
 
-  <h2>Step 1 - Download and Open the Tool</h2>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="learning.html">Learning</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="reports.html">Reports</a>
+      <a href="download.html">Download Tool</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="forum.html">Forum</a>
 
-  <p>
-    Download the toolkit from the Download page,
-    extract the ZIP folder,
-    and open the project inside Visual Studio Code.
-  </p>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </nav>
+  </header>
 
-  <div class="code-box">
-    File → Open Folder
-  </div>
+  <main class="page-container">
 
-  <p>
-    Once opened,
-    press the Run button to launch the application window.
-  </p>
+    <section class="single-card lesson-slide active">
+      <h2>Tool Tutorial Overview</h2>
 
-</section>
+      <p>
+        This tutorial explains how to use Jameel’s Cyber Tool and what each
+        module inside the toolkit does.
+      </p>
 
-<!-- PORT SCANNER -->
-<section class="single-card lesson-slide" style="margin-top: 20px;">
+      <p>
+        The tool is designed for educational and authorised cybersecurity
+        testing only. It helps users understand scanning, services, banners,
+        processes, file hashing, and report handling.
+      </p>
 
-  <h2>Port Scanner</h2>
+      <div class="warning-box">
+        Only use this tool on systems you own or have permission to test.
+      </div>
+    </section>
 
-  <p>
-    The Port Scanner checks whether ports are open on a target system.
-  </p>
+    <section class="single-card lesson-slide">
+      <h2>Step 1 - Opening the Tool</h2>
 
-  <p>
-    Open ports may indicate active services
-    that could potentially be exposed.
-  </p>
+      <p>
+        First, download the toolkit ZIP file from the Download Tool page.
+        Extract the ZIP folder, then open the extracted folder in Visual Studio Code.
+      </p>
 
-  <h3>Main Function</h3>
+      <div class="code-box">
+        File → Open Folder
+      </div>
 
-  <div class="code-box">
+      <p>
+        Once the folder is open, press the Run button in Visual Studio Code.
+        The graphical toolkit window should open.
+      </p>
+    </section>
+
+    <section class="single-card lesson-slide">
+      <h2>Port Scanner</h2>
+
+      <p>
+        The Port Scanner checks whether a port, or a range of ports, is open on
+        a target host. This helps users identify which network services may be
+        exposed.
+      </p>
+
+      <p>
+        The key part of the code is:
+      </p>
+
+      <div class="code-box">
 def scan_ports(host, ports_text):
-  </div>
+      </div>
 
-  <h3>Port Check Logic</h3>
+      <p>
+        The scanner uses a socket connection test. If the connection succeeds,
+        the port is treated as open.
+      </p>
 
-  <div class="code-box">
+      <div class="code-box">
 result = s.connect_ex((host, port))
-  </div>
+return result == 0
+      </div>
 
-  <p>
-    If the connection succeeds,
-    the port is considered open.
-  </p>
+      <p>
+        The function returns the target and a list of open ports.
+      </p>
 
-  <div class="warning-box">
+      <div class="warning-box">
+        Open ports are not automatically vulnerabilities, but they show what
+        services may be reachable.
+      </div>
+    </section>
 
-    Open ports may reveal services
-    that attackers could target.
+    <section class="single-card lesson-slide">
+      <h2>Service Checker</h2>
 
-  </div>
+      <p>
+        The Service Checker maps common port numbers to likely service names.
+        For example, port 22 is usually SSH, port 80 is HTTP, and port 443 is HTTPS.
+      </p>
 
-</section>
-
-<!-- SERVICE CHECKER -->
-<section class="single-card lesson-slide" style="margin-top: 20px;">
-
-  <h2>Service Checker</h2>
-
-  <p>
-    The Service Checker identifies common services
-    associated with port numbers.
-  </p>
-
-  <h3>Example Services</h3>
-
-  <ul>
-    <li>21 → FTP</li>
-    <li>22 → SSH</li>
-    <li>80 → HTTP</li>
-    <li>443 → HTTPS</li>
-  </ul>
-
-  <h3>Main Function</h3>
-
-  <div class="code-box">
+      <div class="code-box">
 def get_service_name(port):
-  </div>
+      </div>
 
-  <p>
-    The module compares port numbers
-    against a predefined service dictionary.
-  </p>
+      <p>
+        The module uses a dictionary of common ports and services.
+      </p>
 
-</section>
+      <div class="code-box">
+22: "SSH"
+80: "HTTP"
+443: "HTTPS"
+3389: "RDP"
+      </div>
 
-<!-- BANNER GRABBER -->
-<section class="single-card lesson-slide" style="margin-top: 20px;">
+      <p>
+        This helps users understand what a detected open port may be used for.
+        If the port is not in the dictionary, the tool returns “Unknown”.
+      </p>
+    </section>
 
-  <h2>Banner Grabber</h2>
+    <section class="single-card lesson-slide">
+      <h2>Banner Grabber</h2>
 
-  <p>
-    The Banner Grabber connects to services
-    and attempts to retrieve banner information.
-  </p>
+      <p>
+        The Banner Grabber connects to a target service and tries to read
+        information sent back by that service.
+      </p>
 
-  <p>
-    Banners may reveal:
-  </p>
-
-  <ul>
-    <li>Software names</li>
-    <li>Version numbers</li>
-    <li>Operating system information</li>
-  </ul>
-
-  <h3>Main Function</h3>
-
-  <div class="code-box">
+      <div class="code-box">
 def grab_banner(host, port, timeout=2):
-  </div>
+      </div>
 
-  <h3>Banner Retrieval</h3>
+      <p>
+        For web ports such as 80, 8080, and 8000, the tool sends a simple HTTP
+        HEAD request.
+      </p>
 
-  <div class="code-box">
+      <div class="code-box">
+request = "HEAD / HTTP/1.0\r\n\r\n"
+s.send(request.encode())
+      </div>
+
+      <p>
+        The important command that receives the banner is:
+      </p>
+
+      <div class="code-box">
 banner = s.recv(1024)
-  </div>
+      </div>
 
-  <div class="warning-box">
+      <p>
+        Banners can sometimes reveal software names, versions, or service details.
+      </p>
 
-    Exposed service banners may provide
-    useful reconnaissance information.
+      <div class="warning-box">
+        Exposed banner information can help attackers during reconnaissance,
+        so unnecessary banner exposure should be reduced.
+      </div>
+    </section>
 
-  </div>
+    <section class="single-card lesson-slide">
+      <h2>Process Viewer</h2>
 
-</section>
+      <p>
+        The Process Viewer lists running processes on the local machine. This
+        helps users understand what applications and background services are active.
+      </p>
 
-<!-- PROCESS VIEWER -->
-<section class="single-card lesson-slide" style="margin-top: 20px;">
-
-  <h2>Process Viewer</h2>
-
-  <p>
-    The Process Viewer displays running processes
-    on the local system.
-  </p>
-
-  <p>
-    This helps users understand:
-  </p>
-
-  <ul>
-    <li>Background activity</li>
-    <li>Running applications</li>
-    <li>Potential suspicious processes</li>
-  </ul>
-
-  <h3>Main Function</h3>
-
-  <div class="code-box">
+      <div class="code-box">
 def list_processes():
-  </div>
+      </div>
 
-  <h3>Process Enumeration</h3>
+      <p>
+        The main command loops through running processes and collects the process
+        ID and process name.
+      </p>
 
-  <div class="code-box">
+      <div class="code-box">
 for process in psutil.process_iter(["pid", "name"]):
-  </div>
+      </div>
 
-</section>
+      <p>
+        This module can help identify suspicious or unfamiliar processes during
+        basic system review.
+      </p>
+    </section>
 
-<!-- FILE HASHER -->
-<section class="single-card lesson-slide" style="margin-top: 20px;">
+    <section class="single-card lesson-slide">
+      <h2>File Hasher</h2>
 
-  <h2>File Hasher</h2>
+      <p>
+        The File Hasher creates a cryptographic hash for a selected file.
+        Hashes are useful because even a small change to a file will produce
+        a different hash value.
+      </p>
 
-  <p>
-    The File Hasher generates cryptographic hash values
-    for selected files.
-  </p>
-
-  <p>
-    Hashing helps verify:
-  </p>
-
-  <ul>
-    <li>File integrity</li>
-    <li>Whether files were modified</li>
-    <li>Evidence consistency</li>
-  </ul>
-
-  <h3>Main Function</h3>
-
-  <div class="code-box">
+      <div class="code-box">
 def hash_file(file_path, algorithm="sha256"):
-  </div>
+      </div>
 
-  <h3>Hash Generation</h3>
+      <p>
+        The tool reads the file in chunks instead of loading the full file at once.
+        This is better for larger files.
+      </p>
 
-  <div class="code-box">
+      <div class="code-box">
+chunk = file.read(4096)
 hash_object.update(chunk)
-  </div>
+      </div>
 
-  <p>
-    The tool reads file data in chunks
-    and generates a SHA-256 hash value.
-  </p>
+      <p>
+        The final hash is produced using:
+      </p>
 
-</section>
+      <div class="code-box">
+hash_object.hexdigest()
+      </div>
 
-<!-- REPORTS -->
-<section class="single-card lesson-slide" style="margin-top: 20px;">
+      <p>
+        File hashing is useful for checking integrity, detecting modification,
+        and supporting digital evidence handling.
+      </p>
+    </section>
 
-  <h2>Report Generation</h2>
+    <section class="single-card lesson-slide">
+      <h2>Report Viewer</h2>
 
-  <p>
-    Generated scan reports are stored locally
-    inside the reports folder.
-  </p>
+      <p>
+        The Report Viewer allows users to open and review reports generated by
+        the tool.
+      </p>
 
-  <div class="code-box">
+      <p>
+        Reports are saved locally inside the tool folder, usually inside a folder
+        called:
+      </p>
+
+      <div class="code-box">
+reports
+      </div>
+
+      <p>
+        An example report name may look like:
+      </p>
+
+      <div class="code-box">
 reports/report_88_20260524_211612.json
-  </div>
+      </div>
 
-  <p>
-    Reports may contain:
-  </p>
+      <p>
+        These reports may contain scan results, detected open ports, service
+        information, banner output, hashes, and other generated findings.
+      </p>
+    </section>
 
-  <ul>
-    <li>Open ports</li>
-    <li>Detected services</li>
-    <li>Banner information</li>
-    <li>Generated hashes</li>
-  </ul>
+    <section class="single-card lesson-slide">
+      <h2>Upload Report</h2>
 
-</section>
+      <p>
+        The Upload Report feature demonstrates how a generated report could be
+        sent to a future web platform.
+      </p>
 
-<!-- REPORT UPLOAD -->
-<section class="single-card lesson-slide" style="margin-top: 20px;">
+      <p>
+        The upload window includes an API key field. An API key is like a secret
+        access code that a real backend system would use to confirm the tool is
+        allowed to upload data.
+      </p>
 
-  <h2>Report Upload System</h2>
+      <p>
+        In the current GitHub Pages version, reports are not permanently uploaded
+        because GitHub Pages is a static website and does not include a backend
+        database or file storage system.
+      </p>
 
-  <p>
-    The Upload Report interface demonstrates
-    how reports could be uploaded
-    to a future backend platform.
-  </p>
+      <div class="warning-box">
+        This upload feature is currently a prototype workflow. A full version
+        would require a backend API, secure authentication, and database or cloud
+        storage.
+      </div>
+    </section>
 
-  <p>
-    Users can:
-  </p>
+    <section class="single-card lesson-slide">
+      <h2>Ethical Usage</h2>
 
-  <ul>
-    <li>Select report files</li>
-    <li>Enter API keys</li>
-    <li>Simulate uploads</li>
-  </ul>
+      <p>
+        This toolkit should only be used in authorised environments. The purpose
+        of the tool is to support learning, awareness, and safe cybersecurity
+        practice.
+      </p>
 
-  <div class="warning-box">
+      <ul>
+        <li>Do not scan systems without permission.</li>
+        <li>Do not attempt to misuse discovered services.</li>
+        <li>Use results for learning, reporting, or defence.</li>
+        <li>Store reports responsibly.</li>
+      </ul>
 
-    The current website uses GitHub Pages
-    and does not include backend storage.
+      <div class="warning-box">
+        Unauthorised testing may be illegal.
+      </div>
+    </section>
 
-    Reports are not permanently uploaded online.
+    <p id="lessonProgress" class="lesson-progress"></p>
 
-  </div>
+    <div class="lesson-controls">
+      <button onclick="previousLessonSlide()">Previous</button>
+      <button onclick="nextLessonSlide()">Next</button>
+    </div>
 
-</section>
+  </main>
 
-<!-- ETHICS -->
-<section class="single-card lesson-slide" style="margin-top: 20px;">
+  <footer class="site-footer">
+    <p>
+      Jameel's Cyber Tool © 2026 | Educational Cybersecurity Platform
+    </p>
+  </footer>
 
-  <h2>Ethical and Legal Usage</h2>
-
-  <p>
-    This toolkit has been created
-    for educational and authorised
-    cybersecurity testing only.
-  </p>
-
-  <div class="warning-box">
-
-    Never test systems,
-    services,
-    or networks without permission.
-
-  </div>
-
-</section>
-
-<!-- LESSON PROGRESS -->
-<p id="lessonProgress" class="lesson-progress"></p>
-
-<!-- CONTROLS -->
-<div class="lesson-controls">
-
-  <button onclick="previousLessonSlide()">
-    Previous
-  </button>
-
-  <button onclick="nextLessonSlide()">
-    Next
-  </button>
-
-</div>
+  <script src="script.js"></script>
+</body>
+</html>
