@@ -1,362 +1,321 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- INTRODUCTION -->
+<section class="single-card">
 
-  <title>Tutorial</title>
+  <h2>Cybersecurity Toolkit Tutorial</h2>
 
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <p>
+    This tutorial explains how the Cybersecurity Toolkit works,
+    how each module functions,
+    and what the generated results mean.
+  </p>
 
-<body>
+  <p>
+    The toolkit has been designed for educational
+    and authorised cybersecurity testing purposes only.
+  </p>
 
-  <script>
-    // Block access if the user is not logged in
-    if (localStorage.getItem("loggedIn") !== "true") {
-      window.location.href = "login.html";
-    }
-  </script>
+</section>
 
-  <!-- HEADER -->
-  <header class="site-header">
+<!-- STEP 1 -->
+<section class="single-card lesson-slide active" style="margin-top: 20px;">
 
-    <div>
-      <h1>CYBERLEARN</h1>
-      <p class="subtitle">
-        Interactive Tool Tutorial
-      </p>
-    </div>
+  <h2>Step 1 - Download and Open the Tool</h2>
 
-    <!-- NAVIGATION -->
-    <nav class="navbar">
+  <p>
+    Download the toolkit from the Download page,
+    extract the ZIP folder,
+    and open the project inside Visual Studio Code.
+  </p>
 
-      <a href="index.html">Home</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="learning.html">Learning</a>
-      <a href="jobs.html">Jobs</a>
-      <a href="reports.html">Reports</a>
-      <a href="download.html">Download Tool</a>
-      <a href="tutorial.html">Tutorial</a>
-      <a href="quiz.html">Quiz</a>
-      <a href="forum.html">Forum</a>
+  <div class="code-box">
+    File → Open Folder
+  </div>
 
-      <button class="logout-btn" onclick="logout()">
-        Logout
-      </button>
+  <p>
+    Once opened,
+    press the Run button to launch the application window.
+  </p>
 
-    </nav>
+</section>
 
-  </header>
+<!-- PORT SCANNER -->
+<section class="single-card lesson-slide" style="margin-top: 20px;">
 
-  <!-- MAIN CONTENT -->
-  <main class="page-container">
+  <h2>Port Scanner</h2>
 
-    <!-- SLIDE 1 -->
-    <section class="single-card lesson-slide active">
+  <p>
+    The Port Scanner checks whether ports are open on a target system.
+  </p>
 
-      <h2>Step 1 - Download the Tool</h2>
+  <p>
+    Open ports may indicate active services
+    that could potentially be exposed.
+  </p>
 
-      <p>
-        Download the Cybersecurity Toolkit
-        from the Download Tool page.
-      </p>
+  <h3>Main Function</h3>
 
-      <p>
-        The toolkit contains several educational
-        cybersecurity modules designed to demonstrate
-        scanning, service analysis, hashing,
-        and reporting workflows.
-      </p>
+  <div class="code-box">
+def scan_ports(host, ports_text):
+  </div>
 
-    </section>
+  <h3>Port Check Logic</h3>
 
-    <!-- SLIDE 2 -->
-    <section class="single-card lesson-slide">
+  <div class="code-box">
+result = s.connect_ex((host, port))
+  </div>
 
-      <h2>Step 2 - Open the Project</h2>
+  <p>
+    If the connection succeeds,
+    the port is considered open.
+  </p>
 
-      <p>
-        Extract the ZIP folder and open the project
-        inside Visual Studio Code.
-      </p>
+  <div class="warning-box">
 
-      <div class="code-box">
-        File → Open Folder
-      </div>
+    Open ports may reveal services
+    that attackers could target.
 
-      <p>
-        Once the project is open,
-        all toolkit files and modules
-        will be visible inside the editor.
-      </p>
+  </div>
 
-    </section>
+</section>
 
-    <!-- SLIDE 3 -->
-    <section class="single-card lesson-slide">
+<!-- SERVICE CHECKER -->
+<section class="single-card lesson-slide" style="margin-top: 20px;">
 
-      <h2>Step 3 - Run the Application</h2>
+  <h2>Service Checker</h2>
 
-      <p>
-        Press the Run button inside Visual Studio Code
-        to launch the graphical user interface.
-      </p>
+  <p>
+    The Service Checker identifies common services
+    associated with port numbers.
+  </p>
 
-      <div class="code-box">
-        Run → Start Debugging
-      </div>
+  <h3>Example Services</h3>
 
-      <p>
-        After launching,
-        the Cybersecurity Toolkit window will open.
-      </p>
+  <ul>
+    <li>21 → FTP</li>
+    <li>22 → SSH</li>
+    <li>80 → HTTP</li>
+    <li>443 → HTTPS</li>
+  </ul>
 
-    </section>
+  <h3>Main Function</h3>
 
-    <!-- SLIDE 4 -->
-    <section class="single-card lesson-slide">
+  <div class="code-box">
+def get_service_name(port):
+  </div>
 
-      <h2>Step 4 - Port Scanner</h2>
+  <p>
+    The module compares port numbers
+    against a predefined service dictionary.
+  </p>
 
-      <p>
-        The Port Scanner checks systems for open ports.
-      </p>
+</section>
 
-      <ul>
-        <li>Identifies open ports</li>
-        <li>Detects exposed services</li>
-        <li>Supports reconnaissance activities</li>
-      </ul>
+<!-- BANNER GRABBER -->
+<section class="single-card lesson-slide" style="margin-top: 20px;">
 
-      <div class="warning-box">
+  <h2>Banner Grabber</h2>
 
-        Open ports may expose services
-        to potential attackers.
+  <p>
+    The Banner Grabber connects to services
+    and attempts to retrieve banner information.
+  </p>
 
-      </div>
+  <p>
+    Banners may reveal:
+  </p>
 
-    </section>
+  <ul>
+    <li>Software names</li>
+    <li>Version numbers</li>
+    <li>Operating system information</li>
+  </ul>
 
-    <!-- SLIDE 5 -->
-    <section class="single-card lesson-slide">
+  <h3>Main Function</h3>
 
-      <h2>Step 5 - Service Checker</h2>
+  <div class="code-box">
+def grab_banner(host, port, timeout=2):
+  </div>
 
-      <p>
-        The Service Checker verifies whether
-        network services are active and accessible.
-      </p>
+  <h3>Banner Retrieval</h3>
 
-      <ul>
-        <li>Checks availability</li>
-        <li>Reviews active services</li>
-        <li>Helps understand exposure</li>
-      </ul>
+  <div class="code-box">
+banner = s.recv(1024)
+  </div>
 
-    </section>
+  <div class="warning-box">
 
-    <!-- SLIDE 6 -->
-    <section class="single-card lesson-slide">
+    Exposed service banners may provide
+    useful reconnaissance information.
 
-      <h2>Step 6 - Banner Grabber</h2>
+  </div>
 
-      <p>
-        The Banner Grabber retrieves
-        available banner information from services.
-      </p>
+</section>
 
-      <ul>
-        <li>Software names</li>
-        <li>Version information</li>
-        <li>Potential operating system details</li>
-      </ul>
+<!-- PROCESS VIEWER -->
+<section class="single-card lesson-slide" style="margin-top: 20px;">
 
-      <div class="warning-box">
+  <h2>Process Viewer</h2>
 
-        Exposed banners may reveal
-        useful reconnaissance information.
+  <p>
+    The Process Viewer displays running processes
+    on the local system.
+  </p>
 
-      </div>
+  <p>
+    This helps users understand:
+  </p>
 
-    </section>
+  <ul>
+    <li>Background activity</li>
+    <li>Running applications</li>
+    <li>Potential suspicious processes</li>
+  </ul>
 
-    <!-- SLIDE 7 -->
-    <section class="single-card lesson-slide">
+  <h3>Main Function</h3>
 
-      <h2>Step 7 - Process Viewer</h2>
+  <div class="code-box">
+def list_processes():
+  </div>
 
-      <p>
-        The Process Viewer displays
-        running processes on the local machine.
-      </p>
+  <h3>Process Enumeration</h3>
 
-      <ul>
-        <li>Shows active applications</li>
-        <li>Displays background services</li>
-        <li>Helps identify suspicious activity</li>
-      </ul>
+  <div class="code-box">
+for process in psutil.process_iter(["pid", "name"]):
+  </div>
 
-    </section>
+</section>
 
-    <!-- SLIDE 8 -->
-    <section class="single-card lesson-slide">
+<!-- FILE HASHER -->
+<section class="single-card lesson-slide" style="margin-top: 20px;">
 
-      <h2>Step 8 - File Hasher</h2>
+  <h2>File Hasher</h2>
 
-      <p>
-        The File Hasher generates hash values
-        for selected files.
-      </p>
+  <p>
+    The File Hasher generates cryptographic hash values
+    for selected files.
+  </p>
 
-      <ul>
-        <li>Checks file integrity</li>
-        <li>Detects file modification</li>
-        <li>Supports digital evidence handling</li>
-      </ul>
+  <p>
+    Hashing helps verify:
+  </p>
 
-      <div class="code-box">
-        Example MD5 Hash:
-        5f4dcc3b5aa765d61d8327deb882cf99
-      </div>
+  <ul>
+    <li>File integrity</li>
+    <li>Whether files were modified</li>
+    <li>Evidence consistency</li>
+  </ul>
 
-    </section>
+  <h3>Main Function</h3>
 
-    <!-- SLIDE 9 -->
-    <section class="single-card lesson-slide">
+  <div class="code-box">
+def hash_file(file_path, algorithm="sha256"):
+  </div>
 
-      <h2>Step 9 - Report Viewer</h2>
+  <h3>Hash Generation</h3>
 
-      <p>
-        The Report Viewer allows users
-        to open and review generated reports.
-      </p>
+  <div class="code-box">
+hash_object.update(chunk)
+  </div>
 
-      <ul>
-        <li>Displays scan findings</li>
-        <li>Shows output information</li>
-        <li>Reviews saved results</li>
-      </ul>
+  <p>
+    The tool reads file data in chunks
+    and generates a SHA-256 hash value.
+  </p>
 
-    </section>
+</section>
 
-    <!-- SLIDE 10 -->
-    <section class="single-card lesson-slide">
+<!-- REPORTS -->
+<section class="single-card lesson-slide" style="margin-top: 20px;">
 
-      <h2>Step 10 - Upload Report</h2>
+  <h2>Report Generation</h2>
 
-      <p>
-        The Upload Report feature demonstrates
-        how reports could be uploaded
-        to a future backend platform.
-      </p>
+  <p>
+    Generated scan reports are stored locally
+    inside the reports folder.
+  </p>
 
-      <ul>
-        <li>Select report files</li>
-        <li>Enter API keys</li>
-        <li>Simulate uploads</li>
-      </ul>
+  <div class="code-box">
+reports/report_88_20260524_211612.json
+  </div>
 
-      <div class="warning-box">
+  <p>
+    Reports may contain:
+  </p>
 
-        Reports are not permanently uploaded online.
-        The current system is a frontend prototype only.
+  <ul>
+    <li>Open ports</li>
+    <li>Detected services</li>
+    <li>Banner information</li>
+    <li>Generated hashes</li>
+  </ul>
 
-      </div>
+</section>
 
-    </section>
+<!-- REPORT UPLOAD -->
+<section class="single-card lesson-slide" style="margin-top: 20px;">
 
-    <!-- SLIDE 11 -->
-    <section class="single-card lesson-slide">
+  <h2>Report Upload System</h2>
 
-      <h2>Step 11 - Report Storage</h2>
+  <p>
+    The Upload Report interface demonstrates
+    how reports could be uploaded
+    to a future backend platform.
+  </p>
 
-      <p>
-        Generated reports are saved locally
-        inside the reports folder.
-      </p>
+  <p>
+    Users can:
+  </p>
 
-      <div class="code-box">
-        reports/report_88_20260524_211612.json
-      </div>
+  <ul>
+    <li>Select report files</li>
+    <li>Enter API keys</li>
+    <li>Simulate uploads</li>
+  </ul>
 
-    </section>
+  <div class="warning-box">
 
-    <!-- SLIDE 12 -->
-    <section class="single-card lesson-slide">
+    The current website uses GitHub Pages
+    and does not include backend storage.
 
-      <h2>Step 12 - Quick Knowledge Check</h2>
+    Reports are not permanently uploaded online.
 
-      <p>
-        Where are generated reports saved?
-      </p>
+  </div>
 
-      <button onclick="checkMiniAnswer('correct', 'tutorialQuiz1')">
-        Inside the reports folder
-      </button>
+</section>
 
-      <button onclick="checkMiniAnswer('wrong', 'tutorialQuiz1')">
-        Directly on GitHub Pages
-      </button>
+<!-- ETHICS -->
+<section class="single-card lesson-slide" style="margin-top: 20px;">
 
-      <button onclick="checkMiniAnswer('wrong', 'tutorialQuiz1')">
-        Inside the browser cache
-      </button>
+  <h2>Ethical and Legal Usage</h2>
 
-      <p id="tutorialQuiz1" class="result-box"></p>
+  <p>
+    This toolkit has been created
+    for educational and authorised
+    cybersecurity testing only.
+  </p>
 
-    </section>
+  <div class="warning-box">
 
-    <!-- SLIDE 13 -->
-    <section class="single-card lesson-slide">
+    Never test systems,
+    services,
+    or networks without permission.
 
-      <h2>Ethical and Legal Usage</h2>
+  </div>
 
-      <p>
-        This toolkit has been created
-        for educational and authorised
-        cybersecurity testing purposes only.
-      </p>
+</section>
 
-      <div class="warning-box">
+<!-- LESSON PROGRESS -->
+<p id="lessonProgress" class="lesson-progress"></p>
 
-        Never test systems or services
-        without permission.
+<!-- CONTROLS -->
+<div class="lesson-controls">
 
-      </div>
+  <button onclick="previousLessonSlide()">
+    Previous
+  </button>
 
-    </section>
+  <button onclick="nextLessonSlide()">
+    Next
+  </button>
 
-    <!-- LESSON PROGRESS -->
-    <p id="lessonProgress" class="lesson-progress"></p>
-
-    <!-- LESSON CONTROLS -->
-    <div class="lesson-controls">
-
-      <button onclick="previousLessonSlide()">
-        Previous
-      </button>
-
-      <button onclick="nextLessonSlide()">
-        Next
-      </button>
-
-    </div>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-
-    <p>
-      Jameel's Cyber Tool © 2026 |
-      Educational Cybersecurity Platform
-    </p>
-
-  </footer>
-
-  <!-- JAVASCRIPT -->
-  <script src="script.js"></script>
-
-</body>
-</html>
+</div>
