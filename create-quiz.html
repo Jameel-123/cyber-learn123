@@ -2,51 +2,58 @@
 <html lang="en">
 <head>
 
-  <!-- Character encoding -->
+  <!-- Sets the text format -->
   <meta charset="UTF-8" />
 
-  <!-- Mobile responsive settings -->
+  <!-- Makes the page work on phones and tablets -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Browser tab title -->
+  <!-- Name shown in the browser tab -->
   <title>Create Quiz</title>
 
-  <!-- External stylesheet -->
+  <!-- Connects the CSS file -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
   <script>
-    // SECURITY CHECK
-    // Redirects users if not logged in
+
+    <!-- Checks if the user is logged in -->
+    <!-- Sends them back to the login page if they are not -->
 
     if (localStorage.getItem("loggedIn") !== "true") {
       window.location.href = "login.html";
     }
+
   </script>
 
-  <!-- WEBSITE HEADER -->
+  <!-- Website header section -->
   <header class="site-header">
 
     <div>
+
+      <!-- Website title -->
       <h1>CYBERLEARN</h1>
 
+      <!-- Page description -->
       <p class="subtitle">
         Create Your Own Quiz
       </p>
+
     </div>
 
-    <!-- NAVIGATION -->
+    <!-- Navigation menu -->
     <nav class="navbar">
 
+      <!-- Navigation links -->
       <a href="index.html">Home</a>
       <a href="download.html">Download Tool</a>
       <a href="tutorial.html">Tutorial</a>
       <a href="quiz.html">Quiz</a>
       <a href="forum.html">Forum</a>
 
-      <!-- Logout button -->
+      <!-- Logs the user out -->
       <button class="logout-btn" onclick="logout()">
         Logout
       </button>
@@ -54,38 +61,39 @@
     </nav>
   </header>
 
-  <!-- MAIN CONTENT -->
+  <!-- Main page content -->
   <main class="page-container">
 
     <section class="single-card">
 
+      <!-- Page heading -->
       <h2>Create Your Own Quiz</h2>
 
+      <!-- Instructions for the user -->
       <p>
         Build a custom quiz with between 3 and 15 questions.
       </p>
 
-      <!-- BUTTON USED TO ADD QUESTIONS -->
+      <!-- Adds a new question -->
       <button id="addQuestionBtn">
         Add Question
       </button>
 
-      <!-- QUESTION CONTAINER -->
-      <!-- JavaScript inserts new question blocks here -->
+      <!-- New questions are placed here by JavaScript -->
       <div id="questionsContainer"></div>
 
-      <!-- SAVE QUIZ BUTTON -->
+      <!-- Saves the completed quiz -->
       <button id="saveQuizBtn" style="margin-top: 20px;">
         Save Quiz
       </button>
 
-      <!-- RESULT MESSAGE -->
+      <!-- Shows success or error messages -->
       <p id="quizSaveMessage" class="result-box"></p>
 
     </section>
   </main>
 
-  <!-- JAVASCRIPT -->
+  <!-- Loads the JavaScript file -->
   <script src="script.js"></script>
 
 </body>
