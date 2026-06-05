@@ -1,164 +1,167 @@
-<!-- MAIN CONTENT AREA -->
-<!-- Contains all visible quiz hub content -->
-<main class="page-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-  <!-- Main content card -->
-  <!-- Used to group the quiz hub into one styled section -->
-  <section class="single-card">
+  <!-- Character encoding -->
+  <meta charset="UTF-8" />
 
-    <!-- Main page heading -->
-    <h2>Pre-made Quiz Hub</h2>
+  <!-- Mobile responsive settings -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Introductory text explaining the purpose of the page -->
+  <!-- Browser tab title -->
+  <title>Pre-made Quiz Hub</title>
+
+  <!-- Links the main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+  <script>
+    // Checks if the user is logged in
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <!-- WEBSITE HEADER -->
+  <header class="site-header">
+
+    <div>
+      <h1>CYBERLEARN</h1>
+
+      <p class="subtitle">
+        Pre-made Quiz Hub
+      </p>
+    </div>
+
+    <!-- Navigation menu -->
+    <nav class="navbar">
+
+      <a href="index.html">Home</a>
+      <a href="learning.html">Learning</a>
+      <a href="download.html">Download Tool</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="forum.html">Forum</a>
+      <a href="jobs.html">Jobs</a>
+
+      <button class="logout-btn" onclick="logout()">
+        Logout
+      </button>
+
+    </nav>
+
+  </header>
+
+  <!-- MAIN CONTENT AREA -->
+  <main class="page-container">
+
+    <section class="single-card">
+
+      <h2>Pre-made Quiz Hub</h2>
+
+      <p>
+        Choose a quiz level below. Each quiz will contain 10 questions based on
+        penetration testing and cybersecurity topics.
+      </p>
+
+      <!-- EASY QUIZZES -->
+      <h3>Easy Quizzes</h3>
+
+      <div class="card-grid">
+
+        <div class="card">
+          <h3>Easy Quiz 1</h3>
+          <p>Basic cybersecurity and ethical testing concepts.</p>
+          <a class="card-btn" href="easy-quiz-1.html">Start Quiz</a>
+        </div>
+
+        <div class="card">
+          <h3>Easy Quiz 2</h3>
+          <p>Password safety, permissions, and safe online behaviour.</p>
+          <a class="card-btn" href="easy-quiz-2.html">Start Quiz</a>
+        </div>
+
+        <div class="card">
+          <h3>Easy Quiz 3</h3>
+          <p>Basic networking, IP addresses, ports, and services.</p>
+          <a class="card-btn" href="easy-quiz-3.html">Start Quiz</a>
+        </div>
+
+      </div>
+
+      <!-- MEDIUM QUIZZES -->
+      <h3>Medium Quizzes</h3>
+
+      <div class="card-grid">
+
+        <div class="card">
+          <h3>Medium Quiz 1</h3>
+          <p>Reconnaissance and information gathering.</p>
+          <a class="card-btn" href="medium-quiz-1.html">Start Quiz</a>
+        </div>
+
+        <div class="card">
+          <h3>Medium Quiz 2</h3>
+          <p>Scanning, enumeration, and service discovery.</p>
+          <a class="card-btn" href="medium-quiz-2.html">Start Quiz</a>
+        </div>
+
+        <div class="card">
+          <h3>Medium Quiz 3</h3>
+          <p>Vulnerability scanning and interpreting results.</p>
+          <a class="card-btn" href="medium-quiz-3.html">Start Quiz</a>
+        </div>
+
+      </div>
+
+      <!-- HARD QUIZZES -->
+      <h3>Hard Quizzes</h3>
+
+      <div class="card-grid">
+
+        <div class="card">
+          <h3>Hard Quiz 1</h3>
+          <p>Privilege escalation and access control concepts.</p>
+          <a class="card-btn" href="hard-quiz-1.html">Start Quiz</a>
+        </div>
+
+        <div class="card">
+          <h3>Hard Quiz 2</h3>
+          <p>Web security, authentication flaws, and secure design.</p>
+          <a class="card-btn" href="hard-quiz-2.html">Start Quiz</a>
+        </div>
+
+        <div class="card">
+          <h3>Hard Quiz 3</h3>
+          <p>Risk assessment, reporting, and remediation planning.</p>
+          <a class="card-btn" href="hard-quiz-3.html">Start Quiz</a>
+        </div>
+
+      </div>
+
+      <!-- Back Button -->
+      <a class="card-btn" href="quiz.html" style="margin-top: 20px;">
+        Back to Quiz Centre
+      </a>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
     <p>
-      Choose a quiz level below. Each quiz will contain 10 questions based on
-      penetration testing and cybersecurity topics.
+      Jameel's Cyber Tool © 2026 | Educational Cybersecurity Platform
     </p>
 
-    <!-- EASY QUIZ SECTION -->
-    <h3>Easy Quizzes</h3>
+  </footer>
 
-    <!-- Grid layout used to organise quiz cards -->
-    <div class="card-grid">
+  <!-- Loads JavaScript -->
+  <script src="script.js"></script>
 
-      <!-- EASY QUIZ 1 CARD -->
-      <div class="card">
-
-        <!-- Quiz title -->
-        <h3>Easy Quiz 1</h3>
-
-        <!-- Small description explaining the quiz topic -->
-        <p>Basic cybersecurity and ethical testing concepts.</p>
-
-        <!-- Button linking to the Easy Quiz 1 page -->
-        <a class="card-btn" href="easy-quiz-1.html">
-          Start Quiz
-        </a>
-      </div>
-
-      <!-- EASY QUIZ 2 CARD -->
-      <div class="card">
-
-        <h3>Easy Quiz 2</h3>
-
-        <p>Password safety, permissions, and safe online behaviour.</p>
-
-        <!-- Link to Easy Quiz 2 -->
-        <a class="card-btn" href="easy-quiz-2.html">
-          Start Quiz
-        </a>
-      </div>
-
-      <!-- EASY QUIZ 3 CARD -->
-      <div class="card">
-
-        <h3>Easy Quiz 3</h3>
-
-        <p>Basic networking, IP addresses, ports, and services.</p>
-
-        <!-- Link to Easy Quiz 3 -->
-        <a class="card-btn" href="easy-quiz-3.html">
-          Start Quiz
-        </a>
-      </div>
-    </div>
-
-    <!-- MEDIUM QUIZ SECTION -->
-    <h3>Medium Quizzes</h3>
-
-    <!-- Grid layout for medium quiz cards -->
-    <div class="card-grid">
-
-      <!-- MEDIUM QUIZ 1 -->
-      <div class="card">
-
-        <h3>Medium Quiz 1</h3>
-
-        <p>Reconnaissance and information gathering.</p>
-
-        <!-- Link to Medium Quiz 1 -->
-        <a class="card-btn" href="medium-quiz-1.html">
-          Start Quiz
-        </a>
-      </div>
-
-      <!-- MEDIUM QUIZ 2 -->
-      <div class="card">
-
-        <h3>Medium Quiz 2</h3>
-
-        <p>Scanning, enumeration, and service discovery.</p>
-
-        <!-- Link to Medium Quiz 2 -->
-        <a class="card-btn" href="medium-quiz-2.html">
-          Start Quiz
-        </a>
-      </div>
-
-      <!-- MEDIUM QUIZ 3 -->
-      <div class="card">
-
-        <h3>Medium Quiz 3</h3>
-
-        <p>Vulnerability scanning and interpreting results.</p>
-
-        <!-- Link to Medium Quiz 3 -->
-        <a class="card-btn" href="medium-quiz-3.html">
-          Start Quiz
-        </a>
-      </div>
-    </div>
-
-    <!-- HARD QUIZ SECTION -->
-    <h3>Hard Quizzes</h3>
-
-    <!-- Grid layout for hard quiz cards -->
-    <div class="card-grid">
-
-      <!-- HARD QUIZ 1 -->
-      <div class="card">
-
-        <h3>Hard Quiz 1</h3>
-
-        <p>Privilege escalation and access control concepts.</p>
-
-        <!-- Link to Hard Quiz 1 -->
-        <a class="card-btn" href="hard-quiz-1.html">
-          Start Quiz
-        </a>
-      </div>
-
-      <!-- HARD QUIZ 2 -->
-      <div class="card">
-
-        <h3>Hard Quiz 2</h3>
-
-        <p>Web security, authentication flaws, and secure design.</p>
-
-        <!-- Link to Hard Quiz 2 -->
-        <a class="card-btn" href="hard-quiz-2.html">
-          Start Quiz
-        </a>
-      </div>
-
-      <!-- HARD QUIZ 3 -->
-      <div class="card">
-
-        <h3>Hard Quiz 3</h3>
-
-        <p>Risk assessment, reporting, and remediation planning.</p>
-
-        <!-- Link to Hard Quiz 3 -->
-        <a class="card-btn" href="hard-quiz-3.html">
-          Start Quiz
-        </a>
-      </div>
-    </div>
-
-    <!-- Navigation button back to main quiz page -->
-    <a class="card-btn" href="quiz.html" style="margin-top: 20px;">
-      Back to Quiz Centre
-    </a>
-
-  </section>
-</main>
+</body>
+</html>
